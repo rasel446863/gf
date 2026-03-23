@@ -2,1790 +2,1255 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Get FREE $100 Gift Cards – Limited Time!</title>
-    <meta name="description" content="Claim your FREE $100 gift card today. Limited stock available!">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free $100 Gift Cards - Limited Time Offers</title>
     <style>
-        :root {
-            --primary-gold: #FFD700;
-            --secondary-gold: #FFA500;
-            --accent-orange: #FF6B35;
-            --success-green: #00C853;
-            --danger-red: #FF3D3D;
-            --bg-dark: #06061a;
-            --bg-card: rgba(255,255,255,0.04);
-            --glass-border: rgba(255,255,255,0.08);
-            --text-primary: #ffffff;
-            --text-secondary: #9ca3af;
-            --text-muted: #6b7280;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            -webkit-text-size-adjust: 100%;
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg-dark);
+            font-family: 'Poppins', sans-serif;
+            background: #ffffff;
             min-height: 100vh;
+            color: #333;
             overflow-x: hidden;
-            color: var(--text-primary);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* ========== ANIMATED BACKGROUND ========== */
-        .bg-effects {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 0;
-            overflow: hidden;
-        }
-
-        .bg-orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.15;
-            animation: orbFloat 20s ease-in-out infinite;
-        }
-
-        .bg-orb:nth-child(1) {
-            width: 600px; height: 600px;
-            background: radial-gradient(circle, #7c3aed, transparent);
-            top: -200px; left: -200px;
-            animation-duration: 25s;
-        }
-
-        .bg-orb:nth-child(2) {
-            width: 500px; height: 500px;
-            background: radial-gradient(circle, #2563eb, transparent);
-            bottom: -150px; right: -150px;
-            animation-duration: 30s; animation-delay: -5s;
-        }
-
-        .bg-orb:nth-child(3) {
-            width: 400px; height: 400px;
-            background: radial-gradient(circle, #FFD700, transparent);
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            animation-duration: 20s; animation-delay: -10s;
-            opacity: 0.07;
-        }
-
-        .bg-orb:nth-child(4) {
-            width: 300px; height: 300px;
-            background: radial-gradient(circle, #ec4899, transparent);
-            top: 30%; right: -100px;
-            animation-duration: 22s; animation-delay: -3s;
-            opacity: 0.1;
-        }
-
-        @keyframes orbFloat {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            25% { transform: translate(30px, -40px) scale(1.1); }
-            50% { transform: translate(-20px, 20px) scale(0.9); }
-            75% { transform: translate(40px, 30px) scale(1.05); }
-        }
-
-        .bg-grid {
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-            background-size: 60px 60px;
-            mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
-            -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
-        }
-
-        .particles-container {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .floating-particle {
-            position: absolute;
-            border-radius: 50%;
-            animation: particleRise linear infinite;
-            opacity: 0;
-        }
-
-        @keyframes particleRise {
-            0% { transform: translateY(100vh) translateX(0) scale(0); opacity: 0; }
-            5% { opacity: 0.6; }
-            50% { transform: translateY(50vh) translateX(30px) scale(1); opacity: 0.4; }
-            95% { opacity: 0; }
-            100% { transform: translateY(-10vh) translateX(-20px) scale(0.5); opacity: 0; }
-        }
-
-        /* ========== MAIN CONTENT ========== */
-        .main-wrapper {
+        .header {
+            text-align: center;
+            padding: 40px 20px 20px;
             position: relative;
             z-index: 2;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 16px;
         }
 
-        /* ========== HEADER ========== */
-        .hero-section {
-            text-align: center;
-            padding: 50px 0 30px;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,107,53,0.1));
-            border: 1px solid rgba(255,215,0,0.25);
-            padding: 8px 20px;
-            border-radius: 100px;
-            font-size: 0.8em;
-            font-weight: 600;
-            color: var(--primary-gold);
-            margin-bottom: 20px;
-            animation: badgePulse 3s ease-in-out infinite;
-        }
-
-        @keyframes badgePulse {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(255,215,0,0.2); }
-            50% { box-shadow: 0 0 20px 5px rgba(255,215,0,0.1); }
-        }
-
-        .hero-badge .live-dot {
-            width: 8px; height: 8px;
-            background: var(--success-green);
-            border-radius: 50%;
-            animation: livePulse 1.5s ease-in-out infinite;
-        }
-
-        @keyframes livePulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.4; transform: scale(0.8); }
-        }
-
-        .hero-title {
-            font-size: clamp(2em, 6vw, 3.5em);
+        .header h1 {
+            font-size: 3rem;
             font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 16px;
-            letter-spacing: -0.02em;
-        }
-
-        .hero-title .gradient-text {
-            background: linear-gradient(135deg, #FFD700 0%, #FF8C00 25%, #FF6B35 50%, #FFD700 75%, #FF8C00 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: textShine 4s linear infinite;
-        }
-
-        @keyframes textShine {
-            to { background-position: 200% center; }
-        }
-
-        .hero-subtitle {
-            font-size: clamp(0.9em, 2.5vw, 1.15em);
-            color: var(--text-secondary);
-            max-width: 550px;
-            margin: 0 auto;
-            line-height: 1.6;
-            font-weight: 400;
-        }
-
-        /* ========== STATS BAR ========== */
-        .stats-bar {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin: 25px 0;
-        }
-
-        .stat-chip {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            background: var(--bg-card);
-            border: 1px solid var(--glass-border);
-            padding: 8px 16px;
-            border-radius: 100px;
-            font-size: 0.8em;
-            font-weight: 500;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-
-        .stat-chip i { font-size: 0.85em; }
-        .stat-chip .green { color: var(--success-green); }
-        .stat-chip .gold { color: var(--primary-gold); }
-        .stat-chip .blue { color: #60a5fa; }
-
-        /* ========== TIMER ========== */
-        .timer-section {
-            background: linear-gradient(135deg, rgba(255,61,61,0.08), rgba(255,61,61,0.03));
-            border: 1px solid rgba(255,61,61,0.15);
-            border-radius: 20px;
-            padding: 24px;
-            max-width: 600px;
-            margin: 0 auto 30px;
-            text-align: center;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .timer-section::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%;
-            width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,61,61,0.05), transparent);
-            animation: timerSweep 4s ease-in-out infinite;
-        }
-
-        @keyframes timerSweep {
-            0% { left: -100%; }
-            100% { left: 200%; }
-        }
-
-        .timer-label {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            font-size: 0.85em;
-            font-weight: 700;
-            color: var(--danger-red);
-            margin-bottom: 16px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .timer-label i {
-            animation: timerIcon 1s ease-in-out infinite;
-        }
-
-        @keyframes timerIcon {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
-
-        .countdown-grid {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-        }
-
-        .countdown-block {
-            background: rgba(255,61,61,0.08);
-            border: 1px solid rgba(255,61,61,0.2);
-            border-radius: 16px;
-            padding: 12px 0;
-            min-width: 72px;
-        }
-
-        .countdown-block .cd-number {
-            font-size: 2em;
-            font-weight: 900;
-            color: var(--danger-red);
-            line-height: 1;
-            font-variant-numeric: tabular-nums;
-        }
-
-        .countdown-block .cd-label {
-            font-size: 0.65em;
-            color: rgba(255,61,61,0.6);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 4px;
-            font-weight: 600;
-        }
-
-        .countdown-separator {
-            display: flex;
-            align-items: center;
-            font-size: 1.8em;
-            font-weight: 800;
-            color: rgba(255,61,61,0.3);
-            animation: colonBlink 1s step-end infinite;
-        }
-
-        @keyframes colonBlink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.2; }
-        }
-
-        /* ========== GIFT CARD GRID ========== */
-        .grid-section { padding: 10px 0 50px; }
-
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        /* ========== GIFT CARD BOX ========== */
-        .gc-box {
-            position: relative;
-            border-radius: 24px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s ease;
-            will-change: transform;
-        }
-
-        .gc-box:active { transform: scale(0.97) !important; }
-
-        .gc-border-glow {
-            position: absolute;
-            inset: 0;
-            border-radius: 24px;
-            padding: 1px;
-            background: linear-gradient(135deg, rgba(255,215,0,0.3), rgba(139,92,246,0.2), rgba(59,130,246,0.2), rgba(255,215,0,0.3));
+            background: linear-gradient(135deg, #FFD700, #FFA500, #FFD700, #FF6347);
             background-size: 300% 300%;
-            animation: borderRotate 6s ease infinite;
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            opacity: 0.5;
-            transition: opacity 0.4s ease;
-        }
-
-        .gc-box:hover .gc-border-glow { opacity: 1; }
-
-        @keyframes borderRotate {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .gc-inner {
-            position: relative;
-            background: linear-gradient(165deg, rgba(15,15,45,0.9), rgba(8,8,30,0.95));
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 28px 24px;
-            text-align: center;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            overflow: hidden;
-        }
-
-        .gc-shine {
-            position: absolute;
-            top: 0; left: -150%;
-            width: 80%; height: 100%;
-            background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.03) 45%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0.03) 55%, transparent 60%);
-            transform: skewX(-25deg);
-            animation: shinePass 5s ease-in-out infinite;
-            pointer-events: none;
-        }
-
-        @keyframes shinePass {
-            0% { left: -150%; }
-            100% { left: 250%; }
-        }
-
-        .gc-glow-dot {
-            position: absolute;
-            top: 20px; right: 20px;
-            width: 10px; height: 10px;
-            border-radius: 50%;
-            background: var(--success-green);
-            box-shadow: 0 0 10px var(--success-green), 0 0 20px rgba(0,200,83,0.3);
-            animation: livePulse 2s ease-in-out infinite;
-        }
-
-        /* ========== OFFICIAL LOGO STYLES ========== */
-        .gc-logo-wrapper {
-            width: 90px;
-            height: 90px;
-            margin: 0 auto 16px;
-            position: relative;
-        }
-
-        .gc-logo-bg {
-            position: absolute;
-            inset: -6px;
-            border-radius: 26px;
-            opacity: 0.4;
-            animation: logoPulse 3s ease-in-out infinite;
-        }
-
-        @keyframes logoPulse {
-            0%, 100% { transform: scale(1); opacity: 0.3; }
-            50% { transform: scale(1.1); opacity: 0.6; }
-        }
-
-        .gc-logo {
-            width: 90px;
-            height: 90px;
-            border-radius: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
-            border: 2px solid rgba(255,255,255,0.08);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .gc-box:hover .gc-logo {
-            transform: scale(1.05);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-        }
-
-        .gc-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Fallback icon styling */
-        .gc-logo .logo-fallback {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.2em;
-            font-weight: 900;
-            border-radius: 20px;
-        }
-
-        .gc-name {
-            font-size: 1.15em;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .gc-type {
-            font-size: 0.78em;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-            font-weight: 500;
-        }
-
-        .gc-amount {
-            font-size: 2.5em;
-            font-weight: 900;
-            background: linear-gradient(135deg, var(--primary-gold), var(--accent-orange));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 6px;
-            line-height: 1;
-        }
-
-        .gc-free-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            background: linear-gradient(135deg, rgba(0,200,83,0.15), rgba(0,230,118,0.08));
-            border: 1px solid rgba(0,200,83,0.3);
-            color: var(--success-green);
-            padding: 5px 16px;
-            border-radius: 100px;
-            font-size: 0.72em;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 16px;
-        }
-
-        .gc-stock-row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 18px;
-        }
-
-        .gc-stock-indicator {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .stock-pulse {
-            width: 7px; height: 7px;
-            border-radius: 50%;
-            animation: livePulse 1.5s ease-in-out infinite;
-        }
-
-        .stock-pulse.low { background: var(--danger-red); box-shadow: 0 0 8px rgba(255,61,61,0.5); }
-        .stock-pulse.medium { background: var(--secondary-gold); box-shadow: 0 0 8px rgba(255,165,0,0.5); }
-        .stock-pulse.high { background: var(--success-green); box-shadow: 0 0 8px rgba(0,200,83,0.5); }
-
-        .stock-label { font-size: 0.78em; font-weight: 600; }
-        .stock-label.low { color: var(--danger-red); }
-        .stock-label.medium { color: var(--secondary-gold); }
-        .stock-label.high { color: var(--success-green); }
-
-        .gc-progress {
-            width: 100%; height: 4px;
-            background: rgba(255,255,255,0.06);
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 18px;
-        }
-
-        .gc-progress-fill {
-            height: 100%;
-            border-radius: 10px;
-            transition: width 1s ease;
-        }
-
-        .gc-progress-fill.low {
-            background: linear-gradient(90deg, var(--danger-red), #ff6b6b);
-            animation: progressGlow 2s ease-in-out infinite;
-        }
-
-        .gc-progress-fill.medium { background: linear-gradient(90deg, var(--secondary-gold), #ffd700); }
-        .gc-progress-fill.high { background: linear-gradient(90deg, var(--success-green), #69f0ae); }
-
-        @keyframes progressGlow {
-            0%, 100% { box-shadow: 0 0 10px rgba(255,61,61,0.5); }
-            50% { box-shadow: 0 0 20px rgba(255,61,61,0.8); }
-        }
-
-        .gc-claim-btn {
-            width: 100%;
-            padding: 14px 24px;
-            border: none;
-            border-radius: 14px;
-            font-size: 0.95em;
-            font-weight: 800;
-            font-family: inherit;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold), var(--accent-orange));
-            background-size: 200% 200%;
-            animation: btnShimmer 3s ease infinite;
-            color: #000;
-            box-shadow: 0 4px 20px rgba(255,215,0,0.25);
-            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        @keyframes btnShimmer {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .gc-claim-btn::after {
-            content: '';
-            position: absolute;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background: linear-gradient(transparent, rgba(255,255,255,0.1), transparent);
-            transform: rotate(45deg);
-            animation: btnShine 3s ease-in-out infinite;
-            pointer-events: none;
-        }
-
-        @keyframes btnShine {
-            0% { transform: rotate(45deg) translateY(-120%); }
-            100% { transform: rotate(45deg) translateY(120%); }
-        }
-
-        .gc-claim-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(255,215,0,0.4);
-        }
-
-        .gc-box:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 30px rgba(255,215,0,0.05);
-        }
-
-        /* ========== MODAL ========== */
-        .modal-backdrop {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.85);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-
-        .modal-backdrop.open {
-            display: flex;
-            animation: modalFadeIn 0.3s ease;
-        }
-
-        @keyframes modalFadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal-box {
-            width: 100%;
-            max-width: 460px;
-            max-height: 90vh;
-            overflow-y: auto;
-            background: linear-gradient(170deg, #141438, #0a0a28, #0d0d30);
-            border: 1px solid rgba(255,215,0,0.15);
-            border-radius: 28px;
-            padding: 36px 28px;
-            text-align: center;
-            position: relative;
-            animation: modalSlideUp 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-            box-shadow: 0 25px 80px rgba(0,0,0,0.5), 0 0 60px rgba(255,215,0,0.05), inset 0 1px 0 rgba(255,255,255,0.05);
-        }
-
-        .modal-box::-webkit-scrollbar { width: 4px; }
-        .modal-box::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
-
-        @keyframes modalSlideUp {
-            from { opacity: 0; transform: translateY(40px) scale(0.95); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
-
-        .modal-close-btn {
-            position: absolute;
-            top: 16px; right: 16px;
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.1);
-            color: var(--text-secondary);
-            width: 36px; height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: all 0.3s;
-            z-index: 5;
-        }
-
-        .modal-close-btn:hover {
-            background: rgba(255,61,61,0.15);
-            color: var(--danger-red);
-            border-color: rgba(255,61,61,0.3);
-        }
-
-        .modal-icon-wrap {
-            width: 88px; height: 88px;
-            margin: 0 auto 18px;
-            position: relative;
-        }
-
-        .modal-icon-ring {
-            position: absolute;
-            inset: -8px;
-            border-radius: 28px;
-            border: 2px solid rgba(255,215,0,0.2);
-            animation: ringPulse 2s ease-in-out infinite;
-        }
-
-        @keyframes ringPulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.08); opacity: 1; }
-        }
-
-        .modal-icon-box {
-            width: 88px; height: 88px;
-            border-radius: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
-            border: 2px solid rgba(255,255,255,0.08);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-        }
-
-        .modal-icon-box img {
-            width: 100%; height: 100%;
-            object-fit: cover;
-        }
-
-        .modal-card-title {
-            font-size: 1.5em;
-            font-weight: 800;
-            margin-bottom: 4px;
-        }
-
-        .modal-card-amount {
-            font-size: 2.8em;
-            font-weight: 900;
-            background: linear-gradient(135deg, var(--success-green), #69f0ae);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
-            margin-bottom: 4px;
-        }
-
-        .modal-card-subtitle {
-            font-size: 0.8em;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
-
-        .code-card {
-            background: rgba(0,0,0,0.35);
-            border: 1.5px dashed rgba(255,215,0,0.3);
-            border-radius: 18px;
-            padding: 22px 18px;
-            margin: 0 0 20px;
-            position: relative;
-        }
-
-        .code-card-label {
-            font-size: 0.7em;
-            color: var(--text-muted);
+            animation: gradientShift 3s ease infinite;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 10px;
-            font-weight: 600;
         }
 
-        .code-card-value {
-            font-family: 'Courier New', 'SF Mono', monospace;
-            font-size: clamp(1.1em, 4vw, 1.6em);
-            font-weight: 800;
-            letter-spacing: 2px;
-            word-break: break-all;
-            line-height: 1.4;
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
 
-        .code-hidden { color: #333; }
-        .code-visible { color: var(--primary-gold); }
-        .code-separator { color: #333; }
+        .header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-        .code-lock-overlay {
-            position: absolute;
-            inset: 0;
+        .info-bar {
             display: flex;
-            align-items: center;
             justify-content: center;
-            pointer-events: none;
-        }
-
-        .code-lock-overlay i {
-            font-size: 2em;
-            color: rgba(255,215,0,0.12);
-        }
-
-        .modal-progress { margin-bottom: 18px; }
-
-        .modal-progress-bar {
-            width: 100%; height: 6px;
-            background: rgba(255,255,255,0.06);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .modal-progress-fill {
-            width: 87%; height: 100%;
-            background: linear-gradient(90deg, var(--primary-gold), var(--accent-orange));
-            border-radius: 10px;
+            align-items: stretch;
+            gap: 30px;
+            padding: 25px 20px;
+            flex-wrap: wrap;
             position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .modal-progress-fill::after {
-            content: '';
-            position: absolute;
-            right: 0; top: 0;
-            width: 20px; height: 100%;
-            background: rgba(255,255,255,0.4);
-            border-radius: 10px;
-            animation: progressPulse 1.5s ease-in-out infinite;
-        }
-
-        @keyframes progressPulse {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.8; }
-        }
-
-        .modal-progress-text {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            font-size: 0.75em;
-            color: var(--primary-gold);
-            margin-top: 8px;
-            font-weight: 600;
-        }
-
-        .modal-claimed-row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .avatar-group { display: flex; }
-
-        .avatar-circle {
-            width: 30px; height: 30px;
-            border-radius: 50%;
-            border: 2px solid #141438;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.55em;
-            font-weight: 700;
-            color: #000;
-            margin-left: -7px;
-        }
-
-        .avatar-circle:first-child { margin-left: 0; background: linear-gradient(135deg, #FFD700, #FFA500); }
-        .avatar-circle:nth-child(2) { background: linear-gradient(135deg, #60a5fa, #3b82f6); }
-        .avatar-circle:nth-child(3) { background: linear-gradient(135deg, #34d399, #10b981); }
-        .avatar-circle:nth-child(4) { background: linear-gradient(135deg, #a78bfa, #8b5cf6); }
-        .avatar-circle:nth-child(5) { background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.2); }
-
-        .claimed-count-text {
-            font-size: 0.78em;
-            color: var(--success-green);
-            font-weight: 600;
-        }
-
-        .unlock-action-btn {
-            width: 100%;
-            padding: 16px;
-            border: none;
-            border-radius: 16px;
-            font-size: 1.05em;
-            font-weight: 800;
-            font-family: inherit;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            background: linear-gradient(135deg, var(--success-green), #00E676, #69F0AE);
-            background-size: 200% 200%;
-            animation: btnShimmer 3s ease infinite;
-            color: #000;
-            box-shadow: 0 6px 25px rgba(0,200,83,0.3);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .unlock-action-btn::after {
-            content: '';
-            position: absolute;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background: linear-gradient(transparent, rgba(255,255,255,0.15), transparent);
-            transform: rotate(45deg);
-            animation: btnShine 3s ease-in-out infinite;
-            pointer-events: none;
-        }
-
-        .unlock-action-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 35px rgba(0,200,83,0.45);
-        }
-
-        .unlock-action-btn:active { transform: scale(0.97); }
-
-        .error-msg {
-            color: var(--danger-red);
-            font-weight: 700;
-            font-size: 0.88em;
-            margin-top: 14px;
-            display: none;
-            padding: 10px;
-            background: rgba(255,61,61,0.08);
-            border: 1px solid rgba(255,61,61,0.2);
-            border-radius: 12px;
-        }
-
-        .error-msg.visible {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            animation: shakeError 0.5s ease;
-        }
-
-        @keyframes shakeError {
-            0%, 100% { transform: translateX(0); }
-            20% { transform: translateX(-8px); }
-            40% { transform: translateX(8px); }
-            60% { transform: translateX(-5px); }
-            80% { transform: translateX(5px); }
-        }
-
-        .modal-fine-print {
-            font-size: 0.72em;
-            color: var(--text-muted);
-            margin-top: 16px;
-            line-height: 1.5;
-        }
-
-        .modal-fine-print i { color: var(--primary-gold); }
-
-        /* ========== LOCKER OVERLAY ========== */
-        .locker-backdrop {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.92);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-            padding: 16px;
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-        }
-
-        .locker-backdrop.open {
-            display: flex;
-            animation: modalFadeIn 0.3s ease;
-        }
-
-        .locker-frame-wrap {
-            width: 100%;
-            max-width: 550px;
-            height: 85vh;
-            background: #fff;
-            border-radius: 24px;
-            overflow: hidden;
-            position: relative;
-            animation: modalSlideUp 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-            box-shadow: 0 30px 90px rgba(0,0,0,0.6);
-        }
-
-        .locker-close-btn {
-            position: absolute;
-            top: 12px; right: 12px;
-            background: rgba(0,0,0,0.75);
-            color: #fff;
-            border: none;
-            width: 38px; height: 38px;
-            border-radius: 50%;
-            font-size: 1.2em;
-            cursor: pointer;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-
-        .locker-close-btn:hover { background: var(--danger-red); }
-
-        .locker-frame-wrap iframe {
-            width: 100%; height: 100%;
-            border: none;
-        }
-
-        /* ========== NOTIFICATION TOASTS ========== */
-        .toast-stack {
-            position: fixed;
-            bottom: 20px;
-            left: 16px;
-            z-index: 900;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            max-width: 370px;
-            width: calc(100% - 32px);
-        }
-
-        .toast-item {
-            background: linear-gradient(135deg, rgba(15,15,50,0.97), rgba(10,10,35,0.98));
-            border: 1px solid rgba(0,200,83,0.2);
-            border-left: 3px solid var(--success-green);
-            border-radius: 14px;
-            padding: 12px 16px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-            animation: toastIn 0.5s cubic-bezier(0.23, 1, 0.32, 1), toastOut 0.5s ease 8.5s forwards;
-        }
-
-        @keyframes toastIn {
-            from { opacity: 0; transform: translateX(-40px) scale(0.95); }
-            to { opacity: 1; transform: translateX(0) scale(1); }
-        }
-
-        @keyframes toastOut {
-            to { opacity: 0; transform: translateX(-40px) scale(0.95); }
-        }
-
-        .toast-check {
-            width: 36px; height: 36px;
-            background: rgba(0,200,83,0.12);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            font-size: 0.9em;
-            color: var(--success-green);
-        }
-
-        .toast-body { flex: 1; min-width: 0; }
-
-        .toast-body p {
-            font-size: 0.82em;
-            color: #d1d5db;
-            margin: 0;
-            line-height: 1.4;
-        }
-
-        .toast-body strong { color: var(--primary-gold); }
-        .toast-body .toast-brand { color: #60a5fa; font-weight: 600; }
-
-        .toast-time {
-            font-size: 0.65em;
-            color: var(--text-muted);
-            flex-shrink: 0;
-        }
-
-        /* ========== FOOTER ========== */
-        .page-footer {
+        .timer-box {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            border: 2px solid rgba(255, 69, 0, 0.25);
+            border-radius: 18px;
+            padding: 20px 35px;
             text-align: center;
-            padding: 40px 20px 30px;
+            animation: pulseGlow 2s ease-in-out infinite;
+            box-shadow: 0 4px 20px rgba(255, 69, 0, 0.08);
+        }
+
+        .stock-box {
+            background: linear-gradient(135deg, #f0fff4, #f5fff8);
+            border: 2px solid rgba(0, 200, 83, 0.25);
+            border-radius: 18px;
+            padding: 20px 35px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 200, 83, 0.08);
+            min-width: 300px;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 4px 20px rgba(255, 69, 0, 0.08); }
+            50% { box-shadow: 0 4px 30px rgba(255, 69, 0, 0.15); }
+        }
+
+        .timer-box h3 {
+            font-size: 0.85rem;
+            color: #ff6347;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .stock-box h3 {
+            font-size: 0.85rem;
+            color: #00c853;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .timer-display {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ff6347;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .stock-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 6px 15px;
+            text-align: left;
+        }
+
+        .stock-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6px;
+            font-size: 0.75rem;
+            color: #555;
+            padding: 3px 8px;
+            border-radius: 6px;
+            background: rgba(0, 200, 83, 0.05);
+            transition: all 0.3s;
+        }
+
+        .stock-item:hover {
+            background: rgba(0, 200, 83, 0.12);
+        }
+
+        .stock-item.just-decreased {
+            background: rgba(255, 0, 64, 0.08);
+            transition: background 0s;
+        }
+
+        .stock-item-name {
+            font-weight: 600;
+            color: #333;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100px;
+        }
+
+        .stock-item-count {
+            font-weight: 800;
+            color: #ff6347;
+            white-space: nowrap;
+            transition: all 0.5s;
+        }
+
+        .stock-item-count.flash {
+            color: #ff0040;
+            transform: scale(1.2);
+        }
+
+        .stock-total-bar {
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(0, 200, 83, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .stock-total-label {
+            font-size: 0.8rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .stock-total-number {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: #00c853;
+            transition: all 0.5s;
+        }
+
+        .stock-live-dot {
+            width: 8px;
+            height: 8px;
+            background: #00c853;
+            border-radius: 50%;
+            animation: livePulse 1s ease-in-out infinite;
+        }
+
+        .grid-container {
+            max-width: 1400px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
             position: relative;
             z-index: 2;
         }
 
-        .footer-text {
-            font-size: 0.72em;
-            color: var(--text-muted);
-            max-width: 500px;
-            margin: 0 auto;
-            line-height: 1.7;
+        @media (max-width: 1200px) {
+            .grid-container { grid-template-columns: repeat(3, 1fr); }
         }
 
-        /* ========== MOBILE ========== */
         @media (max-width: 768px) {
-            .main-wrapper { padding: 0 12px; }
-            .hero-section { padding: 35px 0 20px; }
-            .card-grid { grid-template-columns: 1fr; gap: 16px; }
-            .gc-inner { padding: 24px 20px; }
-            .countdown-block { min-width: 60px; padding: 10px 0; }
-            .countdown-block .cd-number { font-size: 1.6em; }
-            .timer-section { padding: 20px 16px; margin-bottom: 20px; }
-            .modal-box { padding: 28px 20px; border-radius: 24px; }
-            .toast-stack { max-width: 310px; bottom: 12px; left: 12px; }
-            .toast-item { padding: 10px 12px; }
-            .stats-bar { gap: 8px; }
-            .stat-chip { padding: 6px 12px; font-size: 0.72em; }
-            .gc-logo-wrapper { width: 80px; height: 80px; }
-            .gc-logo { width: 80px; height: 80px; }
+            .grid-container { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 0 12px; }
         }
 
-        @media (max-width: 380px) {
-            .hero-title { font-size: 1.8em; }
-            .countdown-block { min-width: 52px; }
-            .countdown-block .cd-number { font-size: 1.4em; }
+        .gift-card-box {
+            background: #ffffff;
+            border: 1px solid #e8e8e8;
+            border-radius: 20px;
+            padding: 28px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
         }
 
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
+        .gift-card-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(255, 215, 0, 0.06), transparent, rgba(255, 215, 0, 0.03), transparent);
+            animation: rotateBorder 6s linear infinite;
         }
 
-        @media (hover: none) {
-            .gc-box:hover { transform: none; box-shadow: none; }
-            .gc-claim-btn:hover { transform: none; box-shadow: 0 4px 20px rgba(255,215,0,0.25); }
+        @keyframes rotateBorder { 100% { transform: rotate(360deg); } }
+
+        .gift-card-box::after {
+            content: '';
+            position: absolute;
+            inset: 1px;
+            background: #ffffff;
+            border-radius: 19px;
+            z-index: 0;
         }
+
+        .gift-card-box > * { position: relative; z-index: 1; }
+
+        .gift-card-box:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(255, 215, 0, 0.5);
+            box-shadow: 0 20px 50px rgba(255, 165, 0, 0.12), 0 0 30px rgba(255, 215, 0, 0.06);
+        }
+
+        .card-logo-container {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 12px;
+            background: linear-gradient(135deg, #f8f8ff, #f0f0f8);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .card-logo-container img { width: 55px; height: 55px; object-fit: contain; }
+
+        .shimmer-effect {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer { 0% { left: -100%; } 50% { left: 100%; } 100% { left: 100%; } }
+
+        .gift-card-box h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 3px; color: #222; }
+
+        .gift-card-box .amount {
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 5px;
+        }
+
+        .gift-card-box .subtitle { font-size: 0.8rem; color: #999; margin-bottom: 12px; }
+
+        .claim-btn {
+            background: linear-gradient(135deg, #FFD700, #FFA500, #FF8C00);
+            color: #000;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .claim-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.5s;
+        }
+
+        .claim-btn:hover::before { left: 100%; }
+        .claim-btn:hover { transform: scale(1.05); box-shadow: 0 6px 25px rgba(255, 165, 0, 0.5); }
+
+        .card-stock-individual { margin-top: 10px; font-size: 0.75rem; color: #ff6347; }
+        .card-stock-individual span { font-weight: 700; color: #e53935; transition: all 0.5s; }
+
+        .free-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: linear-gradient(135deg, #ff0040, #ff6600);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 2;
+            animation: badgePulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes badgePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(8px);
+        }
+
+        .modal-overlay.active { display: flex; animation: fadeIn 0.3s ease; }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .modal-content {
+            background: #ffffff;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 25px;
+            padding: 40px 35px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: #aaa;
+            cursor: pointer;
+            transition: color 0.3s;
+            background: none;
+            border: none;
+            z-index: 5;
+        }
+
+        .modal-close:hover { color: #FFD700; }
+
+        .modal-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            background: linear-gradient(135deg, #f8f8ff, #f0f0f8);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #eee;
+        }
+
+        .modal-logo img { width: 55px; height: 55px; object-fit: contain; }
+        .modal-content h2 { font-size: 1.5rem; margin-bottom: 5px; color: #222; }
+
+        .modal-amount {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+
+        .code-container {
+            background: #f9f9ff;
+            border: 2px dashed rgba(255, 215, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .code-label { font-size: 0.8rem; color: #999; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
+
+        .gift-code {
+            font-size: 1.5rem;
+            font-weight: 800;
+            font-family: 'Courier New', monospace;
+            color: #FFA500;
+            letter-spacing: 3px;
+            word-break: break-all;
+        }
+
+        .code-hidden-note { font-size: 0.75rem; color: #ff6347; margin-top: 8px; }
+        .lock-icon { font-size: 2rem; margin: 10px 0; }
+
+        .unlock-btn {
+            background: linear-gradient(135deg, #00c853, #00e676, #69f0ae);
+            color: #000;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 200, 83, 0.3);
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .unlock-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: btnShimmer 2s ease-in-out infinite;
+        }
+
+        @keyframes btnShimmer { 0% { left: -100%; } 50% { left: 100%; } 100% { left: 100%; } }
+        .unlock-btn:hover { transform: scale(1.05); box-shadow: 0 6px 30px rgba(0, 200, 83, 0.5); }
+
+        .error-message {
+            color: #ff0040;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-top: 15px;
+            display: none;
+            animation: shakeError 0.5s ease;
+        }
+
+        @keyframes shakeError { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-10px); } 75% { transform: translateX(10px); } }
+        .error-message.show { display: block; }
+
+        .progress-container { width: 100%; height: 6px; background: rgba(0,0,0,0.06); border-radius: 3px; margin-top: 15px; overflow: hidden; }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+            border-radius: 3px;
+            width: 75%;
+            animation: progressPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes progressPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+
+        .users-claiming {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 12px;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        .live-dot { width: 8px; height: 8px; background: #ff0040; border-radius: 50%; animation: livePulse 1s ease-in-out infinite; }
+
+        @keyframes livePulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.3); } }
+
+        .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(0, 200, 83, 0.1);
+            border: 1px solid rgba(0, 200, 83, 0.25);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #00c853;
+            margin-bottom: 15px;
+        }
+
+        .notification-container {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .notification-toast {
+            background: #ffffff;
+            border: 1px solid #eee;
+            border-left: 4px solid #FFD700;
+            border-radius: 12px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 320px;
+            max-width: 400px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: slideInLeft 0.5s ease, fadeOutRight 0.5s ease 4.5s forwards;
+        }
+
+        @keyframes slideInLeft { from { transform: translateX(-120%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        @keyframes fadeOutRight { from { transform: translateX(0); opacity: 1; } to { transform: translateX(-120%); opacity: 0; } }
+
+        .notif-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #00c853, #69f0ae);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            color: #fff;
+        }
+
+        .notif-text { font-size: 0.85rem; color: #555; }
+        .notif-text strong { color: #222; }
+        .notif-time { font-size: 0.7rem; color: #aaa; margin-top: 2px; }
+
+        .locker-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .locker-overlay.active { display: flex; }
+
+        .locker-container {
+            width: 95%;
+            max-width: 600px;
+            height: 85vh;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+            animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .locker-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.8rem;
+            color: #333;
+            cursor: pointer;
+            z-index: 10;
+            background: rgba(255,255,255,0.9);
+            border: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .locker-container iframe { width: 100%; height: 100%; border: none; }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #aaa;
+            font-size: 0.8rem;
+            position: relative;
+            z-index: 2;
+            border-top: 1px solid #f0f0f0;
+            margin-top: 30px;
+        }
+
+        .footer a { color: #999; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.8rem; }
+            .header p { font-size: 1rem; }
+            .info-bar { gap: 15px; }
+            .timer-display { font-size: 1.5rem; }
+            .stock-box { min-width: unset; width: 100%; }
+            .stock-grid { grid-template-columns: repeat(2, 1fr); gap: 4px 10px; }
+            .stock-item { font-size: 0.68rem; padding: 2px 6px; }
+            .stock-item-name { max-width: 70px; }
+            .notification-toast { min-width: 280px; max-width: 340px; }
+            .modal-content { padding: 30px 20px; }
+            .gift-code { font-size: 1.1rem; letter-spacing: 1px; }
+            .gift-card-box { padding: 20px 12px; }
+            .gift-card-box h2 { font-size: 0.9rem; }
+            .gift-card-box .amount { font-size: 1.6rem; }
+            .claim-btn { padding: 8px 20px; font-size: 0.78rem; }
+            .card-logo-container { width: 65px; height: 65px; }
+            .card-logo-container img { width: 42px; height: 42px; }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 { font-size: 1.4rem; }
+            .notification-toast { min-width: 250px; max-width: 300px; padding: 10px 15px; }
+            .notif-text { font-size: 0.78rem; }
+            .gift-card-box { padding: 15px 10px; }
+            .gift-card-box .subtitle { font-size: 0.7rem; margin-bottom: 8px; }
+            .free-badge { font-size: 0.55rem; padding: 2px 7px; top: 8px; right: 8px; }
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f5f5f5; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #FFD700, #FFA500); border-radius: 4px; }
     </style>
 </head>
 <body>
 
-    <div class="bg-effects">
-        <div class="bg-orb"></div>
-        <div class="bg-orb"></div>
-        <div class="bg-orb"></div>
-        <div class="bg-orb"></div>
-        <div class="bg-grid"></div>
+    <div class="header">
+        <h1>🎁 Free $100 Gift Cards</h1>
+        <p>Choose your favorite brand and claim your $100 gift card instantly. Limited stock available!</p>
     </div>
 
-    <div class="particles-container" id="particlesContainer"></div>
-
-    <div class="main-wrapper">
-
-        <section class="hero-section">
-            <div class="hero-badge">
-                <span class="live-dot"></span>
-                <span><span id="liveCount">2,847</span> people claiming right now</span>
-            </div>
-            <h1 class="hero-title">
-                Claim Your <span class="gradient-text">FREE $100</span><br>Gift Card Today
-            </h1>
-            <p class="hero-subtitle">
-                Choose from top brands below. Limited cards available per day – claim yours before stock runs out!
-            </p>
-        </section>
-
-        <div class="stats-bar">
-            <div class="stat-chip"><i class="fas fa-shield-halved green"></i><span>Verified Offers</span></div>
-            <div class="stat-chip"><i class="fas fa-lock gold"></i><span>Secure & Safe</span></div>
-            <div class="stat-chip"><i class="fas fa-check-double blue"></i><span>100% Legitimate</span></div>
-            <div class="stat-chip"><i class="fas fa-users green"></i><span id="totalClaimed">12,847</span>&nbsp;Claimed</div>
+    <div class="info-bar">
+        <div class="timer-box">
+            <h3>⏰ Offer Expires In</h3>
+            <div class="timer-display" id="countdown-timer">12:00:00</div>
         </div>
-
-        <div class="timer-section">
-            <div class="timer-label"><i class="fas fa-clock"></i><span>Offer Expires In</span></div>
-            <div class="countdown-grid">
-                <div class="countdown-block">
-                    <div class="cd-number" id="cdHours">12</div>
-                    <div class="cd-label">Hours</div>
-                </div>
-                <div class="countdown-separator">:</div>
-                <div class="countdown-block">
-                    <div class="cd-number" id="cdMinutes">00</div>
-                    <div class="cd-label">Min</div>
-                </div>
-                <div class="countdown-separator">:</div>
-                <div class="countdown-block">
-                    <div class="cd-number" id="cdSeconds">00</div>
-                    <div class="cd-label">Sec</div>
-                </div>
+        <div class="stock-box">
+            <h3>📦 Cards Remaining</h3>
+            <div class="stock-grid" id="stock-grid"></div>
+            <div class="stock-total-bar">
+                <div class="stock-live-dot"></div>
+                <span class="stock-total-label">Total Remaining:</span>
+                <span class="stock-total-number" id="stock-total">0</span>
             </div>
-        </div>
-
-        <section class="grid-section">
-            <div class="card-grid" id="cardGrid"></div>
-        </section>
-
-    </div>
-
-    <div class="page-footer">
-        <p class="footer-text">
-            © 2026 Gift Card Rewards. All rights reserved.<br>
-            All trademarks and logos belong to their respective owners.<br>
-            This is a promotional offer site.
-        </p>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal-backdrop" id="modalBackdrop">
-        <div class="modal-box">
-            <button class="modal-close-btn" onclick="closeModal()" aria-label="Close"><i class="fas fa-xmark"></i></button>
-            <div class="modal-icon-wrap">
-                <div class="modal-icon-ring"></div>
-                <div class="modal-icon-box" id="modalIconBox"></div>
-            </div>
-            <h2 class="modal-card-title" id="modalTitle"></h2>
-            <div class="modal-card-amount">$100 FREE</div>
-            <p class="modal-card-subtitle">Gift Card Code Generated Successfully</p>
-            <div class="code-card">
-                <div class="code-card-label">Your Gift Card Code</div>
-                <div class="code-card-value" id="modalCodeValue"></div>
-                <div class="code-lock-overlay"><i class="fas fa-lock"></i></div>
-            </div>
-            <div class="modal-progress">
-                <div class="modal-progress-bar">
-                    <div class="modal-progress-fill"></div>
-                </div>
-                <div class="modal-progress-text"><i class="fas fa-lock"></i> Complete verification to reveal full code</div>
-            </div>
-            <div class="modal-claimed-row">
-                <div class="avatar-group">
-                    <div class="avatar-circle">JD</div>
-                    <div class="avatar-circle">SK</div>
-                    <div class="avatar-circle">MR</div>
-                    <div class="avatar-circle">LT</div>
-                    <div class="avatar-circle">99+</div>
-                </div>
-                <span class="claimed-count-text" id="modalClaimedText">2,341 claimed today</span>
-            </div>
-            <button class="unlock-action-btn" onclick="handleUnlock()"><i class="fas fa-unlock-keyhole"></i> Unlock Full Code Now</button>
-            <div class="error-msg" id="errorMsg"><i class="fas fa-triangle-exclamation"></i> Your task is not completed</div>
-            <p class="modal-fine-print"><i class="fas fa-info-circle"></i> Complete a quick verification to prevent abuse and unlock your full gift card code.</p>
         </div>
     </div>
 
-    <!-- Content Locker -->
-    <div class="locker-backdrop" id="lockerBackdrop">
-        <div class="locker-frame-wrap">
-            <button class="locker-close-btn" onclick="closeLocker()" aria-label="Close"><i class="fas fa-xmark"></i></button>
-            <iframe src="about:blank" id="lockerIframe" loading="lazy"></iframe>
+    <div class="grid-container" id="cards-grid"></div>
+
+    <div class="footer">
+        <p>&copy; 2026 Gift Card Rewards. All rights reserved. | <a href="#">Terms</a> | <a href="#">Privacy</a></p>
+        <p style="margin-top:5px;">This is a promotional offer. Gift card brands and logos are trademarks of their respective owners.</p>
+    </div>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-logo" id="modal-logo"><img src="" alt="" id="modal-logo-img"></div>
+            <div class="verified-badge">✓ Verified Offer</div>
+            <h2 id="modal-title"></h2>
+            <div class="modal-amount">$100.00</div>
+            <div class="code-container">
+                <div class="code-label">Your Gift Card Code</div>
+                <div class="gift-code" id="modal-code"></div>
+                <div class="code-hidden-note">🔒 Complete verification to reveal full code</div>
+            </div>
+            <div class="lock-icon">🔐</div>
+            <button class="unlock-btn" id="unlock-btn">🔓 Unlock Full Code</button>
+            <div class="error-message" id="error-message">⚠️ Your task is not completed</div>
+            <div class="progress-container"><div class="progress-bar"></div></div>
+            <div class="users-claiming">
+                <div class="live-dot"></div>
+                <span id="claiming-count"></span>
+            </div>
         </div>
     </div>
 
-    <!-- Toasts -->
-    <div class="toast-stack" id="toastStack"></div>
+    <div class="locker-overlay" id="locker-overlay">
+        <div class="locker-container">
+            <button class="locker-close" id="locker-close">&times;</button>
+            <iframe src="https://confirmapp.store/cl/i/1xo2gx" allow="clipboard-write"></iframe>
+        </div>
+    </div>
+
+    <div class="notification-container" id="notification-container"></div>
 
     <script>
-        // ==================== GIFT CARD DATA WITH OFFICIAL LOGOS ====================
+        // ==================== DATA ====================
         const giftCards = [
-            {
-                name: "Amazon",
-                fullCode: "A7F3-K9P2-X6L8-M4G1",
-                masked: "XXXX-XXXX-XXXX-M4G1",
-                stock: 99,
-                color: "#FF9900",
-                logoBg: "#FF9900",
-                // Official Amazon logo
-                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/amazon-512.png",
-                fallbackIcon: "fab fa-amazon",
-                fallbackColor: "#FF9900",
-                fallbackBg: "linear-gradient(135deg, #232F3E, #37475A)"
-            },
-            {
-                name: "eBay",
-                fullCode: "X6Q3-L9K2-P4M7-R8H2",
-                masked: "XXXX-XXXX-XXXX-R8H2",
-                stock: 88,
-                color: "#E53238",
-                logoBg: "#E53238",
-                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/ebay-512.png",
-                fallbackIcon: "fab fa-ebay",
-                fallbackColor: "#E53238",
-                fallbackBg: "linear-gradient(135deg, #fff, #f5f5f5)"
-            },
-            {
-                name: "Walmart",
-                fullCode: "R4X7-K9M2-P6Q3-L8J3",
-                masked: "XXXX-XXXX-XXXX-L8J3",
-                stock: 44,
-                color: "#0071CE",
-                logoBg: "#0071CE",
-                logo: "https://cdn.worldvectorlogo.com/logos/walmart.svg",
-                fallbackIcon: "fas fa-store",
-                fallbackColor: "#0071CE",
-                fallbackBg: "linear-gradient(135deg, #0071CE, #004F9A)"
-            },
-            {
-                name: "Target",
-                fullCode: "X2L9-M4K7-P8Q3-R6K4",
-                masked: "XXXX-XXXX-XXXX-R6K4",
-                stock: 66,
-                color: "#CC0000",
-                logoBg: "#CC0000",
-                logo: "https://cdn.worldvectorlogo.com/logos/target-1.svg",
-                fallbackIcon: "fas fa-bullseye",
-                fallbackColor: "#CC0000",
-                fallbackBg: "linear-gradient(135deg, #CC0000, #990000)"
-            },
-            {
-                name: "Best Buy",
-                fullCode: "M9X2-K4P7-R3L8-Q6L5",
-                masked: "XXXX-XXXX-XXXX-Q6L5",
-                stock: 12,
-                color: "#0046BE",
-                logoBg: "#0046BE",
-                logo: "https://cdn.worldvectorlogo.com/logos/best-buy-2.svg",
-                fallbackIcon: "fas fa-tag",
-                fallbackColor: "#FFE000",
-                fallbackBg: "linear-gradient(135deg, #0046BE, #003399)"
-            },
-            {
-                name: "Apple",
-                fullCode: "K7X3-M9P2-R4L8-Q6M6",
-                masked: "XXXX-XXXX-XXXX-Q6M6",
-                stock: 65,
-                color: "#555555",
-                logoBg: "#000000",
-                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/apple-512.png",
-                fallbackIcon: "fab fa-apple",
-                fallbackColor: "#fff",
-                fallbackBg: "linear-gradient(135deg, #1a1a1a, #333)"
-            },
-            {
-                name: "Google Play",
-                fullCode: "M8K3-X9P2-R6L4-Q7N7",
-                masked: "XXXX-XXXX-XXXX-Q7N7",
-                stock: 53,
-                color: "#01875F",
-                logoBg: "#01875F",
-                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/google_play-512.png",
-                fallbackIcon: "fab fa-google-play",
-                fallbackColor: "#01875F",
-                fallbackBg: "linear-gradient(135deg, #E8F5E9, #C8E6C9)"
-            },
-            {
-                name: "Steam",
-                fullCode: "M7X3-K9P2-R4L6-Q8P8",
-                masked: "XXXX-XXXX-XXXX-Q8P8",
-                stock: 37,
-                color: "#1B2838",
-                logoBg: "#1B2838",
-                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/steam-512.png",
-                fallbackIcon: "fab fa-steam",
-                fallbackColor: "#fff",
-                fallbackBg: "linear-gradient(135deg, #1B2838, #2a475e)"
-            },
-            {
-                name: "Roblox",
-                fullCode: "X4K9-P7M2-R6L3-Q8Q9",
-                masked: "XXXX-XXXX-XXXX-Q8Q9",
-                stock: 71,
-                color: "#E2231A",
-                logoBg: "#E2231A",
-                logo: "https://cdn.worldvectorlogo.com/logos/roblox-1.svg",
-                fallbackIcon: "fas fa-gamepad",
-                fallbackColor: "#fff",
-                fallbackBg: "linear-gradient(135deg, #E2231A, #b71c1c)"
-            },
-            {
-                name: "PlayStation",
-                fullCode: "4938-7621-9054-1847",
-                masked: "XXXX-XXXX-XXXX-1847",
-                stock: 29,
-                color: "#003087",
-                logoBg: "#003087",
-                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/playstation-512.png",
-                fallbackIcon: "fab fa-playstation",
-                fallbackColor: "#fff",
-                fallbackBg: "linear-gradient(135deg, #003087, #00439c)"
-            },
-            {
-                name: "Xbox",
-                fullCode: "M6P3-X9K2-R7L4-Q8S2",
-                masked: "XXXX-XXXX-XXXX-Q8S2",
-                stock: 45,
-                color: "#107C10",
-                logoBg: "#107C10",
-                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/xbox-512.png",
-                fallbackIcon: "fab fa-xbox",
-                fallbackColor: "#fff",
-                fallbackBg: "linear-gradient(135deg, #107C10, #1a9f1a)"
-            },
-            {
-                name: "Netflix",
-                fullCode: "X9M2-K7P3-R6L4-Q8T3",
-                masked: "XXXX-XXXX-XXXX-Q8T3",
-                stock: 58,
-                color: "#E50914",
-                logoBg: "#E50914",
-                logo: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/227_Netflix_logo-512.png",
-                fallbackIcon: "fas fa-film",
-                fallbackColor: "#E50914",
-                fallbackBg: "linear-gradient(135deg, #000, #1a1a1a)"
-            },
-            {
-                name: "Spotify",
-                fullCode: "M7P2-K9X3-R6L4-Q8U4",
-                masked: "XXXX-XXXX-XXXX-Q8U4",
-                stock: 82,
-                color: "#1DB954",
-                logoBg: "#1DB954",
-                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/spotify-512.png",
-                fallbackIcon: "fab fa-spotify",
-                fallbackColor: "#1DB954",
-                fallbackBg: "linear-gradient(135deg, #191414, #282828)"
-            },
-            {
-                name: "Visa",
-                fullCode: "4839-7612-9054-1847",
-                masked: "XXXX-XXXX-XXXX-1847",
-                stock: 19,
-                color: "#1A1F71",
-                logoBg: "#1A1F71",
-                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/visa-512.png",
-                fallbackIcon: "fab fa-cc-visa",
-                fallbackColor: "#1A1F71",
-                fallbackBg: "linear-gradient(135deg, #fff, #E8EAF6)"
-            },
-            {
-                name: "Mastercard",
-                fullCode: "5284-7391-6402-9157",
-                masked: "XXXX-XXXX-XXXX-9157",
-                stock: 33,
-                color: "#EB001B",
-                logoBg: "#EB001B",
-                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/mastercard-512.png",
-                fallbackIcon: "fab fa-cc-mastercard",
-                fallbackColor: "#EB001B",
-                fallbackBg: "linear-gradient(135deg, #1a1a2e, #2d2d44)"
-            },
-            {
-                name: "American Express",
-                fullCode: "3714-9201-8364-015",
-                masked: "XXXX-XXXX-XXXX-015",
-                stock: 41,
-                color: "#006FCF",
-                logoBg: "#006FCF",
-                logo: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/amex-512.png",
-                fallbackIcon: "fab fa-cc-amex",
-                fallbackColor: "#fff",
-                fallbackBg: "linear-gradient(135deg, #006FCF, #0056a0)"
-            }
+            { name: "Amazon", fullCode: "A7F3-K9P2-X6L8-M4G1", maskedCode: "XXXX-XXXX-XXXX-M4G1", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
+            { name: "eBay", fullCode: "X6Q3-L9K2-P4M7-R8H2", maskedCode: "XXXX-XXXX-XXXX-R8H2", logo: "https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg" },
+            { name: "Walmart", fullCode: "R4X7-K9M2-P6Q3-L8J3", maskedCode: "XXXX-XXXX-XXXX-L8J3", logo: "https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg" },
+            { name: "Target", fullCode: "X2L9-M4K7-P8Q3-R6K4", maskedCode: "XXXX-XXXX-XXXX-R6K4", logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Target_logo.svg" },
+            { name: "Best Buy", fullCode: "M9X2-K4P7-R3L8-Q6L5", maskedCode: "XXXX-XXXX-XXXX-Q6L5", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Best_Buy_Logo.svg" },
+            { name: "Apple", subtitle: "App Store & iTunes", fullCode: "K7X3-M9P2-R4L8-Q6M6", maskedCode: "XXXX-XXXX-XXXX-Q6M6", logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" },
+            { name: "Google Play", fullCode: "M8K3-X9P2-R6L4-Q7N7", maskedCode: "XXXX-XXXX-XXXX-Q7N7", logo: "https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" },
+            { name: "Steam", fullCode: "M7X3-K9P2-R4L6-Q8P8", maskedCode: "XXXX-XXXX-XXXX-Q8P8", logo: "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" },
+            { name: "Roblox", fullCode: "X4K9-P7M2-R6L3-Q8Q9", maskedCode: "XXXX-XXXX-XXXX-Q8Q9", logo: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg" },
+            { name: "PlayStation", fullCode: "4938-7621-9054-1847", maskedCode: "XXXX-XXXX-XXXX-1847", logo: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Playstation_logo_colour.svg" },
+            { name: "Xbox", fullCode: "M6P3-X9K2-R7L4-Q8S2", maskedCode: "XXXX-XXXX-XXXX-Q8S2", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Xbox_one_logo.svg" },
+            { name: "Netflix", fullCode: "X9M2-K7P3-R6L4-Q8T3", maskedCode: "XXXX-XXXX-XXXX-Q8T3", logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" },
+            { name: "Spotify", fullCode: "M7P2-K9X3-R6L4-Q8U4", maskedCode: "XXXX-XXXX-XXXX-Q8U4", logo: "https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" },
+            { name: "Visa", fullCode: "4839-7612-9054-1847", maskedCode: "XXXX-XXXX-XXXX-1847", logo: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" },
+            { name: "Mastercard", fullCode: "5284-7391-6402-9157", maskedCode: "XXXX-XXXX-XXXX-9157", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" },
+            { name: "American Express", fullCode: "3714-9201-8364-015", maskedCode: "XXXX-XXXX-XXXX-015", logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg" }
         ];
 
-        const notifications = [
-            {n:"John D.",o:"Amazon"},{n:"Sarah K.",o:"eBay"},{n:"Michael R.",o:"Walmart"},
-            {n:"Jessica T.",o:"Target"},{n:"David W.",o:"Best Buy"},{n:"Amanda L.",o:"Amazon"},
-            {n:"Robert P.",o:"eBay"},{n:"Jennifer H.",o:"Walmart"},{n:"Christopher M.",o:"Target"},
-            {n:"Lisa R.",o:"Best Buy"},{n:"Daniel C.",o:"Amazon"},{n:"Patricia S.",o:"eBay"},
-            {n:"Thomas B.",o:"Walmart"},{n:"Nancy K.",o:"Target"},{n:"Charles J.",o:"Best Buy"},
-            {n:"Karen L.",o:"Amazon"},{n:"Steven G.",o:"eBay"},{n:"Betty F.",o:"Walmart"},
-            {n:"Paul D.",o:"Target"},{n:"Dorothy H.",o:"Best Buy"},{n:"Michelle K.",o:"Apple"},
-            {n:"Jason T.",o:"Google Play"},{n:"Emily R.",o:"Apple"},{n:"Brian S.",o:"Google Play"},
-            {n:"Laura M.",o:"Apple"},{n:"Kevin P.",o:"Google Play"},{n:"Amy C.",o:"Apple"},
-            {n:"Eric B.",o:"Google Play"},{n:"Maria L.",o:"Apple"},{n:"Scott W.",o:"Google Play"},
-            {n:"Rebecca J.",o:"Apple"},{n:"Gregory H.",o:"Google Play"},{n:"Stephanie F.",o:"Apple"},
-            {n:"Lawrence T.",o:"Google Play"},{n:"Carolyn D.",o:"Apple"},{n:"Russell N.",o:"Google Play"},
-            {n:"Janice R.",o:"Apple"},{n:"Philip S.",o:"Google Play"},{n:"Christine M.",o:"Apple"},
-            {n:"Randy P.",o:"Google Play"},{n:"William T.",o:"Steam"},{n:"Elizabeth A.",o:"Roblox"},
-            {n:"James L.",o:"PlayStation"},{n:"Mary R.",o:"Xbox"},{n:"Richard H.",o:"Steam"},
-            {n:"Susan M.",o:"Roblox"},{n:"Joseph B.",o:"PlayStation"},{n:"Margaret W.",o:"Xbox"},
-            {n:"Thomas K.",o:"Steam"},{n:"Sandra P.",o:"Roblox"},{n:"Charles D.",o:"PlayStation"},
-            {n:"Linda F.",o:"Xbox"},{n:"Christopher S.",o:"Steam"},{n:"Barbara G.",o:"Roblox"},
-            {n:"Daniel L.",o:"PlayStation"},{n:"Patricia H.",o:"Xbox"},{n:"Matthew C.",o:"Steam"},
-            {n:"Jennifer R.",o:"Roblox"},{n:"Anthony T.",o:"PlayStation"},{n:"Lisa M.",o:"Xbox"},
-            {n:"Mark S.",o:"Netflix"},{n:"Donna P.",o:"Spotify"},{n:"Paul W.",o:"Netflix"},
-            {n:"Carol B.",o:"Spotify"},{n:"Steven H.",o:"Netflix"},{n:"Kimberly F.",o:"Spotify"},
-            {n:"Andrew D.",o:"Netflix"},{n:"Deborah L.",o:"Spotify"},{n:"Joshua R.",o:"Netflix"},
-            {n:"Kathleen T.",o:"Spotify"},{n:"Kenneth C.",o:"Netflix"},{n:"Amy S.",o:"Spotify"},
-            {n:"Edward P.",o:"Netflix"},{n:"Anna M.",o:"Spotify"},{n:"George K.",o:"Netflix"},
-            {n:"Ruth B.",o:"Spotify"},{n:"Brian H.",o:"Netflix"},{n:"Michelle W.",o:"Spotify"},
-            {n:"Ronald L.",o:"Netflix"},{n:"Laura T.",o:"Spotify"},{n:"Kevin M.",o:"Visa"},
-            {n:"Nancy R.",o:"Mastercard"},{n:"Jason P.",o:"American Express"},{n:"Helen S.",o:"Visa"},
-            {n:"Gary D.",o:"Mastercard"},{n:"Betty F.",o:"American Express"},{n:"Larry C.",o:"Visa"},
-            {n:"Karen M.",o:"Mastercard"},{n:"Dennis K.",o:"American Express"},{n:"Cynthia B.",o:"Visa"},
-            {n:"Jerry L.",o:"Mastercard"},{n:"Angela H.",o:"American Express"},{n:"Peter W.",o:"Visa"},
-            {n:"Shirley T.",o:"Mastercard"},{n:"Eugene R.",o:"American Express"},{n:"Gloria P.",o:"Visa"},
-            {n:"Bruce S.",o:"Mastercard"},{n:"Marilyn D.",o:"American Express"},{n:"Ralph C.",o:"Visa"},
-            {n:"Lois B.",o:"Mastercard"}
+        const firstNames = [
+            "John","Sarah","Michael","Jessica","David","Amanda","Robert","Jennifer","Christopher","Lisa",
+            "Daniel","Patricia","Thomas","Nancy","Charles","Karen","Steven","Betty","Paul","Dorothy",
+            "Michelle","Jason","Emily","Brian","Laura","Kevin","Amy","Eric","Maria","Scott",
+            "Rebecca","Gregory","Stephanie","Lawrence","Carolyn","Russell","Janice","Philip","Christine","Randy",
+            "William","Elizabeth","James","Mary","Richard","Susan","Joseph","Margaret","Sandra","Linda",
+            "Barbara","Matthew","Anthony","Mark","Donna","Carol","Kimberly","Andrew","Deborah","Joshua",
+            "Kathleen","Kenneth","Edward","Anna","George","Ruth","Ronald","Gary","Helen","Larry",
+            "Dennis","Cynthia","Jerry","Angela","Peter","Shirley","Eugene","Gloria","Bruce","Marilyn",
+            "Ralph","Lois","Tyler","Megan","Ryan","Nicole","Brandon","Amber","Nathan","Tiffany",
+            "Samuel","Heather","Justin","Rachel","Aaron","Victoria","Derek","Natalie","Travis","Samantha",
+            "Joel","Diana","Keith","Pamela","Roger","Brenda","Terrence","Diane","Phillip","Teresa",
+            "Wayne","Janet","Alan","Evelyn","Harry","Frances","Roy","Katherine","Albert","Irene",
+            "Carl","Doris","Frank","Judith","Leonard","Lillian","Norman","Rose","Arthur","Annie",
+            "Gerald","Grace","Martin","Norma","Curtis","Marie","Patrick","Theresa","Clifford","Beverly",
+            "Oscar","Denise","Leslie","Tammy","Melvin","Sylvia","Zachary","Elaine","Warren","Cheryl",
+            "Alexander","Crystal","Blake","Valerie","Cameron","Monique","Derrick","Yolanda","Dustin","Wanda",
+            "Felix","Allison","Grant","Cassandra","Ivan","Gina","Jack","Jeanette","Nelson","Priscilla",
+            "Oliver","Regina","Preston","Roberta","Quentin","Sherry","Trevor","Vivian","Vince","Wendy",
+            "Wesley","Yvonne","Xavier","Adriana","Dominic","Bridget","Hector","Claudia","Jared","Darlene",
+            "Marcus","Eileen","Lionel","Felicia","Spencer","Hazel","Terrance","Iris","Victor","Joanna"
         ];
 
-        // ==================== PARTICLES ====================
-        (function createParticles(){
-            const c = document.getElementById('particlesContainer');
-            const colors = ['rgba(255,215,0,0.4)','rgba(139,92,246,0.3)','rgba(59,130,246,0.3)','rgba(255,255,255,0.2)','rgba(255,107,53,0.3)'];
-            for(let i=0;i<40;i++){
-                const p = document.createElement('div');
-                p.className='floating-particle';
-                const size = Math.random()*4+2;
-                p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${Math.random()*15+10}s;animation-delay:${Math.random()*15}s;`;
-                c.appendChild(p);
-            }
-        })();
+        const lastInits = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
-        // ==================== PERSISTENT STOCK ====================
-        function getStocks(){
-            const s = localStorage.getItem('gc_stocks_v3');
-            if(s) return JSON.parse(s);
-            const stocks = {};
-            giftCards.forEach(gc => stocks[gc.name] = gc.stock);
-            localStorage.setItem('gc_stocks_v3', JSON.stringify(stocks));
+        // ==================== SEEDED RANDOM ====================
+        const TWELVE_HOURS = 12 * 60 * 60 * 1000;
+        const SESSION_SEED_KEY = 'gc_seed_v6';
+        const START_KEY = 'gc_start_v6';
+        const STOCK_INIT_KEY = 'gc_init_v6';
+        const NOTIF_SCHEDULE_KEY = 'gc_sched_v6';
+        const NOTIF_INDEX_KEY = 'gc_nidx_v6';
+        const STOCK_STATE_KEY = 'gc_state_v6';
+        const CLAIMING_KEY = 'gc_claiming_v6';
+
+        let sessionSeed;
+
+        function seededRandom() {
+            sessionSeed = (sessionSeed * 16807 + 0) % 2147483647;
+            return (sessionSeed - 1) / 2147483646;
+        }
+
+        // ==================== STOCK SYSTEM ====================
+        let initialStocks, notifSchedule, stockState;
+
+        function generateInitialStocks() {
+            const stocks = [];
+            let total = 0;
+            for (let i = 0; i < giftCards.length; i++) {
+                const s = Math.floor(seededRandom() * 91) + 47;
+                stocks.push(s);
+                total += s;
+            }
+            while (total % 100 === 0 || total % 50 === 0 || total % 10 === 0) {
+                const idx = Math.floor(seededRandom() * stocks.length);
+                const adj = Math.floor(seededRandom() * 7) + 1;
+                stocks[idx] += adj;
+                total += adj;
+            }
             return stocks;
         }
 
-        let stocks = getStocks();
+        function generateNotificationSchedule(stocks) {
+            const schedule = [];
+            const totalNotifs = stocks.reduce((a, b) => a + b, 0);
+            const avgInterval = 43200 / totalNotifs;
+            let currentTime = 0;
 
-        function tickStocks(){
-            Object.keys(stocks).forEach(k => {
-                const dir = Math.random() > 0.5 ? -1 : 1;
-                let v = stocks[k] + dir * (Math.floor(Math.random()*3)+1);
-                if(v<3) v = Math.floor(Math.random()*15)+5;
-                if(v>99) v = 92;
-                stocks[k] = v;
+            const claims = [];
+            stocks.forEach((count, cardIdx) => {
+                for (let i = 0; i < count; i++) claims.push(cardIdx);
             });
-            localStorage.setItem('gc_stocks_v3', JSON.stringify(stocks));
-            refreshStockUI();
-        }
 
-        function refreshStockUI(){
-            giftCards.forEach((gc,i) => {
-                const v = stocks[gc.name] || gc.stock;
-                const el = document.getElementById(`stk-${i}`);
-                const dot = document.getElementById(`stkdot-${i}`);
-                const bar = document.getElementById(`stkbar-${i}`);
-                if(!el) return;
-                const cls = v < 20 ? 'low' : v < 50 ? 'medium' : 'high';
-                el.textContent = `Only ${v} left!`;
-                el.className = `stock-label ${cls}`;
-                dot.className = `stock-pulse ${cls}`;
-                bar.className = `gc-progress-fill ${cls}`;
-                bar.style.width = `${Math.min(v,100)}%`;
+            for (let i = claims.length - 1; i > 0; i--) {
+                const j = Math.floor(seededRandom() * (i + 1));
+                [claims[i], claims[j]] = [claims[j], claims[i]];
+            }
+
+            claims.forEach((cardIdx) => {
+                const interval = avgInterval * (0.5 + seededRandom());
+                currentTime += interval;
+                const nameIdx = Math.floor(seededRandom() * firstNames.length);
+                const lastIdx = Math.floor(seededRandom() * lastInits.length);
+                schedule.push({
+                    time: Math.floor(currentTime),
+                    cardIdx: cardIdx,
+                    name: firstNames[nameIdx] + " " + lastInits[lastIdx] + ".",
+                    brand: giftCards[cardIdx].name
+                });
             });
+
+            return schedule;
         }
 
-        setInterval(tickStocks, 60000);
+        function initializeStockSystem() {
+            let startTime = parseInt(localStorage.getItem(START_KEY)) || 0;
+            const now = Date.now();
 
-        // ==================== LOGO RENDERING HELPER ====================
-        function createLogoHTML(gc, size) {
-            const imgId = `logo-img-${gc.name.replace(/\s+/g,'-')}-${size}`;
-            return `
-                <img
-                    id="${imgId}"
-                    src="${gc.logo}"
-                    alt="${gc.name} Official Logo"
-                    style="width:100%;height:100%;object-fit:contain;display:block;padding:12%;"
-                    onerror="handleLogoError(this, '${gc.fallbackIcon}', '${gc.fallbackColor}', '${gc.fallbackBg}')"
-                >
-            `;
+            if (!startTime || (now - startTime) >= TWELVE_HOURS) {
+                startTime = now;
+                localStorage.setItem(START_KEY, startTime.toString());
+                sessionSeed = Math.floor(Math.random() * 2147483647);
+                localStorage.setItem(SESSION_SEED_KEY, sessionSeed.toString());
+
+                initialStocks = generateInitialStocks();
+                localStorage.setItem(STOCK_INIT_KEY, JSON.stringify(initialStocks));
+
+                notifSchedule = generateNotificationSchedule(initialStocks);
+                localStorage.setItem(NOTIF_SCHEDULE_KEY, JSON.stringify(notifSchedule));
+
+                stockState = initialStocks.slice();
+                localStorage.setItem(STOCK_STATE_KEY, JSON.stringify(stockState));
+                localStorage.setItem(NOTIF_INDEX_KEY, '0');
+            } else {
+                sessionSeed = parseInt(localStorage.getItem(SESSION_SEED_KEY)) || Math.floor(Math.random() * 2147483647);
+                initialStocks = JSON.parse(localStorage.getItem(STOCK_INIT_KEY));
+                notifSchedule = JSON.parse(localStorage.getItem(NOTIF_SCHEDULE_KEY));
+
+                if (!initialStocks || !notifSchedule) {
+                    localStorage.setItem(START_KEY, now.toString());
+                    sessionSeed = Math.floor(Math.random() * 2147483647);
+                    localStorage.setItem(SESSION_SEED_KEY, sessionSeed.toString());
+
+                    initialStocks = generateInitialStocks();
+                    localStorage.setItem(STOCK_INIT_KEY, JSON.stringify(initialStocks));
+                    notifSchedule = generateNotificationSchedule(initialStocks);
+                    localStorage.setItem(NOTIF_SCHEDULE_KEY, JSON.stringify(notifSchedule));
+                    stockState = initialStocks.slice();
+                    localStorage.setItem(STOCK_STATE_KEY, JSON.stringify(stockState));
+                    localStorage.setItem(NOTIF_INDEX_KEY, '0');
+                } else {
+                    const elapsedSec = Math.floor((now - startTime) / 1000);
+                    stockState = initialStocks.slice();
+                    let catchUpIdx = 0;
+                    for (let i = 0; i < notifSchedule.length; i++) {
+                        if (notifSchedule[i].time <= elapsedSec) {
+                            const cIdx = notifSchedule[i].cardIdx;
+                            if (stockState[cIdx] > 0) stockState[cIdx]--;
+                            catchUpIdx = i + 1;
+                        } else {
+                            break;
+                        }
+                    }
+                    localStorage.setItem(STOCK_STATE_KEY, JSON.stringify(stockState));
+                    localStorage.setItem(NOTIF_INDEX_KEY, catchUpIdx.toString());
+                }
+            }
         }
 
-        function handleLogoError(imgEl, icon, color, bg) {
-            const parent = imgEl.parentElement;
-            parent.style.background = bg;
-            parent.innerHTML = `<div class="logo-fallback" style="background:transparent;"><i class="${icon}" style="font-size:1em;color:${color};"></i></div>`;
+        initializeStockSystem();
+
+        // ==================== PERSISTENT CLAIMING COUNTER ====================
+        // Single persistent counter that grows slowly over the session
+        let claimingCount;
+
+        function initClaimingCounter() {
+            const stored = localStorage.getItem(CLAIMING_KEY);
+            if (stored) {
+                const data = JSON.parse(stored);
+                const startTime = parseInt(localStorage.getItem(START_KEY)) || Date.now();
+                const elapsed = Date.now() - startTime;
+
+                // Counter grows ~1 per 3-5 seconds from its base
+                // Calculate where it should be now based on elapsed time
+                const growthRate = data.growthRate || 0.27; // ~1 per 3.7 sec
+                const elapsedSec = elapsed / 1000;
+                const grown = Math.floor(elapsedSec * growthRate);
+
+                claimingCount = data.base + grown;
+
+                // Cap to avoid unrealistic numbers
+                if (claimingCount > 9999) {
+                    // Reset with new base
+                    claimingCount = Math.floor(Math.random() * 150) + 200;
+                    saveClaimingState(claimingCount, growthRate);
+                }
+            } else {
+                // First time — set initial base
+                claimingCount = Math.floor(Math.random() * 150) + 200;
+                const growthRate = (Math.random() * 0.15) + 0.2; // 0.2 to 0.35 per sec
+                saveClaimingState(claimingCount, growthRate);
+            }
         }
 
-        // ==================== RENDER GRID ====================
-        (function renderGrid(){
-            const grid = document.getElementById('cardGrid');
-            giftCards.forEach((gc, i) => {
-                const v = stocks[gc.name] || gc.stock;
-                const cls = v<20?'low':v<50?'medium':'high';
+        function saveClaimingState(base, growthRate) {
+            localStorage.setItem(CLAIMING_KEY, JSON.stringify({ base, growthRate }));
+        }
+
+        function getCurrentClaimingCount() {
+            const stored = localStorage.getItem(CLAIMING_KEY);
+            if (!stored) return 247;
+            const data = JSON.parse(stored);
+            const startTime = parseInt(localStorage.getItem(START_KEY)) || Date.now();
+            const elapsedSec = (Date.now() - startTime) / 1000;
+            const growthRate = data.growthRate || 0.27;
+            return data.base + Math.floor(elapsedSec * growthRate);
+        }
+
+        initClaimingCounter();
+
+        // ==================== EMOJI FALLBACK ====================
+        function getEmoji(name) {
+            const emojis = {
+                'Amazon':'📦','eBay':'🛒','Walmart':'🏪','Target':'🎯',
+                'Best Buy':'🏷️','Apple':'🍎','Google Play':'▶️','Steam':'🎮',
+                'Roblox':'🎲','PlayStation':'🎮','Xbox':'🎯','Netflix':'🎬',
+                'Spotify':'🎵','Visa':'💳','Mastercard':'💳','American Express':'💳'
+            };
+            return emojis[name] || '🎁';
+        }
+
+        // ==================== GENERATE CARDS ====================
+        function generateCards() {
+            const grid = document.getElementById('cards-grid');
+            giftCards.forEach((card, index) => {
                 const box = document.createElement('div');
-                box.className = 'gc-box';
-                box.setAttribute('role','button');
-                box.setAttribute('tabindex','0');
-                box.setAttribute('aria-label',`Claim ${gc.name} $100 gift card`);
-                box.onclick = () => openModal(i);
-                box.onkeydown = (e) => { if(e.key==='Enter') openModal(i); };
+                box.className = 'gift-card-box';
+                box.onclick = () => openModal(index);
                 box.innerHTML = `
-                    <div class="gc-border-glow"></div>
-                    <div class="gc-inner">
-                        <div class="gc-shine"></div>
-                        <div class="gc-glow-dot"></div>
-                        <div class="gc-logo-wrapper">
-                            <div class="gc-logo-bg" style="background:${gc.logoBg};filter:blur(15px);"></div>
-                            <div class="gc-logo" id="grid-logo-${i}">
-                                ${createLogoHTML(gc, 'grid')}
-                            </div>
-                        </div>
-                        <div class="gc-name">${gc.name}</div>
-                        <div class="gc-type">Gift Card</div>
-                        <div class="gc-amount">$100</div>
-                        <div class="gc-free-badge"><i class="fas fa-check-circle"></i> FREE</div>
-                        <div class="gc-stock-row">
-                            <div class="gc-stock-indicator">
-                                <div class="stock-pulse ${cls}" id="stkdot-${i}"></div>
-                                <span class="stock-label ${cls}" id="stk-${i}">Only ${v} left!</span>
-                            </div>
-                        </div>
-                        <div class="gc-progress">
-                            <div class="gc-progress-fill ${cls}" id="stkbar-${i}" style="width:${Math.min(v,100)}%"></div>
-                        </div>
-                        <button class="gc-claim-btn"><i class="fas fa-gift"></i> Claim Now</button>
+                    <div class="free-badge">FREE</div>
+                    <div class="card-logo-container">
+                        <img src="${card.logo}" alt="${card.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\\'font-size:2.5rem;\\'>${getEmoji(card.name)}</div>'">
+                        <div class="shimmer-effect"></div>
                     </div>
+                    <h2>${card.name}</h2>
+                    ${card.subtitle ? `<div style="font-size:0.72rem; color:#999; margin-bottom:4px;">${card.subtitle}</div>` : ''}
+                    <div class="amount">$100</div>
+                    <div class="subtitle">Gift Card</div>
+                    <button class="claim-btn">Claim Now →</button>
+                    <div class="card-stock-individual">Only <span id="card-stock-${index}">0</span> left!</div>
                 `;
                 grid.appendChild(box);
             });
-        })();
+        }
+        generateCards();
 
-        // ==================== MODAL ====================
-        let activeCardIdx = -1;
-
-        function openModal(idx){
-            activeCardIdx = idx;
-            const gc = giftCards[idx];
-            const iconBox = document.getElementById('modalIconBox');
-            iconBox.innerHTML = createLogoHTML(gc, 'modal');
-
-            document.getElementById('modalTitle').textContent = gc.name + ' Gift Card';
-
-            const parts = gc.masked.split('-');
-            let html = '';
-            parts.forEach((p,i) => {
-                if(p.includes('X')){
-                    html += `<span class="code-hidden">${p}</span>`;
-                } else {
-                    html += `<span class="code-visible">${p}</span>`;
-                }
-                if(i < parts.length - 1) html += `<span class="code-separator"> - </span>`;
+        // ==================== BUILD STOCK GRID ====================
+        function buildStockGrid() {
+            const grid = document.getElementById('stock-grid');
+            grid.innerHTML = '';
+            giftCards.forEach((card, idx) => {
+                const item = document.createElement('div');
+                item.className = 'stock-item';
+                item.id = `stock-item-${idx}`;
+                item.innerHTML = `
+                    <span class="stock-item-name">${card.name}</span>
+                    <span class="stock-item-count" id="sg-${idx}">${stockState[idx]} left</span>
+                `;
+                grid.appendChild(item);
             });
-            document.getElementById('modalCodeValue').innerHTML = html;
-
-            const count = (Math.floor(Math.random()*4000)+1000).toLocaleString();
-            document.getElementById('modalClaimedText').textContent = count + ' claimed today';
-
-            document.getElementById('errorMsg').classList.remove('visible');
-            document.getElementById('modalBackdrop').classList.add('open');
-            document.body.style.overflow = 'hidden';
         }
+        buildStockGrid();
 
-        function closeModal(){
-            document.getElementById('modalBackdrop').classList.remove('open');
-            document.body.style.overflow = '';
-        }
+        // ==================== DISPLAY STOCK ====================
+        function displayAllStock() {
+            let total = 0;
+            stockState.forEach((val, idx) => {
+                const cardEl = document.getElementById(`card-stock-${idx}`);
+                const gridEl = document.getElementById(`sg-${idx}`);
 
-        function handleUnlock(){
-            const errEl = document.getElementById('errorMsg');
-            errEl.classList.remove('visible');
-            void errEl.offsetWidth;
-            errEl.classList.add('visible');
-
-            setTimeout(() => {
-                const iframe = document.getElementById('lockerIframe');
-                iframe.src = 'https://confirmapp.store/cl/i/1xo2gx';
-                document.getElementById('lockerBackdrop').classList.add('open');
-            }, 900);
-        }
-
-        function closeLocker(){
-            document.getElementById('lockerBackdrop').classList.remove('open');
-            document.getElementById('lockerIframe').src = 'about:blank';
-        }
-
-        document.getElementById('modalBackdrop').addEventListener('click', function(e){
-            if(e.target === this) closeModal();
-        });
-
-        document.getElementById('lockerBackdrop').addEventListener('click', function(e){
-            if(e.target === this) closeLocker();
-        });
-
-        document.addEventListener('keydown', function(e){
-            if(e.key === 'Escape'){
-                if(document.getElementById('lockerBackdrop').classList.contains('open')) closeLocker();
-                else if(document.getElementById('modalBackdrop').classList.contains('open')) closeModal();
-            }
-        });
-
-        // ==================== PERSISTENT COUNTDOWN ====================
-        (function initCountdown(){
-            const KEY = 'gc_cd_end_v3';
-            let end = localStorage.getItem(KEY);
-            if(!end || parseInt(end) <= Date.now()){
-                end = Date.now() + 12*60*60*1000;
-                localStorage.setItem(KEY, end.toString());
-            } else {
-                end = parseInt(end);
-            }
-            function tick(){
-                let diff = end - Date.now();
-                if(diff <= 0){
-                    end = Date.now() + 12*60*60*1000;
-                    localStorage.setItem(KEY, end.toString());
-                    diff = end - Date.now();
+                if (cardEl) {
+                    cardEl.textContent = val;
+                    if (val <= 10) cardEl.style.color = '#ff0040';
+                    else if (val <= 25) cardEl.style.color = '#ff6600';
+                    else cardEl.style.color = '#e53935';
                 }
-                const h = Math.floor(diff/3600000);
-                const m = Math.floor((diff%3600000)/60000);
-                const s = Math.floor((diff%60000)/1000);
-                document.getElementById('cdHours').textContent = h.toString().padStart(2,'0');
-                document.getElementById('cdMinutes').textContent = m.toString().padStart(2,'0');
-                document.getElementById('cdSeconds').textContent = s.toString().padStart(2,'0');
+
+                if (gridEl) {
+                    gridEl.textContent = val + ' left';
+                    if (val <= 10) { gridEl.style.color = '#ff0040'; gridEl.style.fontWeight = '900'; }
+                    else if (val <= 25) gridEl.style.color = '#ff6600';
+                    else gridEl.style.color = '#ff6347';
+                }
+
+                total += val;
+            });
+            document.getElementById('stock-total').textContent = total;
+        }
+        displayAllStock();
+
+        // ==================== FLASH EFFECT ====================
+        function flashStockDecrease(cardIdx) {
+            const gridEl = document.getElementById(`sg-${cardIdx}`);
+            const itemEl = document.getElementById(`stock-item-${cardIdx}`);
+            const cardEl = document.getElementById(`card-stock-${cardIdx}`);
+
+            if (gridEl) {
+                gridEl.classList.add('flash');
+                setTimeout(() => gridEl.classList.remove('flash'), 700);
             }
-            tick();
-            setInterval(tick, 1000);
-        })();
+            if (itemEl) {
+                itemEl.classList.add('just-decreased');
+                setTimeout(() => itemEl.classList.remove('just-decreased'), 1500);
+            }
+            if (cardEl) {
+                cardEl.style.transform = 'scale(1.3)';
+                cardEl.style.color = '#ff0040';
+                setTimeout(() => { cardEl.style.transform = 'scale(1)'; }, 500);
+            }
+        }
 
-        // ==================== NOTIFICATIONS ====================
-        let notifIdx = 0;
+        // ==================== NOTIFICATION ENGINE ====================
+        let currentNotifIndex = parseInt(localStorage.getItem(NOTIF_INDEX_KEY)) || 0;
 
-        function showToast(){
-            const stack = document.getElementById('toastStack');
-            const n = notifications[notifIdx % notifications.length];
-            const ago = Math.floor(Math.random()*8)+1;
+        function startNotificationEngine() {
+            const cycleStart = parseInt(localStorage.getItem(START_KEY));
 
+            function checkAndFire() {
+                const now = Date.now();
+                const elapsedSec = Math.floor((now - cycleStart) / 1000);
+
+                if ((now - cycleStart) >= TWELVE_HOURS) {
+                    initializeStockSystem();
+                    buildStockGrid();
+                    displayAllStock();
+                    currentNotifIndex = 0;
+
+                    // Reset claiming counter too
+                    claimingCount = Math.floor(Math.random() * 150) + 200;
+                    const growthRate = (Math.random() * 0.15) + 0.2;
+                    saveClaimingState(claimingCount, growthRate);
+                    updateClaimingDisplayIfOpen();
+                    return;
+                }
+
+                let fired = false;
+                while (currentNotifIndex < notifSchedule.length && notifSchedule[currentNotifIndex].time <= elapsedSec) {
+                    const notif = notifSchedule[currentNotifIndex];
+                    if (stockState[notif.cardIdx] > 0) stockState[notif.cardIdx]--;
+                    fired = true;
+                    showNotificationToast(notif);
+                    flashStockDecrease(notif.cardIdx);
+                    currentNotifIndex++;
+                }
+
+                if (fired) {
+                    displayAllStock();
+                    localStorage.setItem(STOCK_STATE_KEY, JSON.stringify(stockState));
+                    localStorage.setItem(NOTIF_INDEX_KEY, currentNotifIndex.toString());
+                }
+            }
+
+            setInterval(checkAndFire, 1000);
+            checkAndFire();
+        }
+
+        function showNotificationToast(notif) {
+            const container = document.getElementById('notification-container');
             const toast = document.createElement('div');
-            toast.className = 'toast-item';
+            toast.className = 'notification-toast';
+            const timeAgo = Math.floor(Math.random() * 10) + 1;
+
             toast.innerHTML = `
-                <div class="toast-check"><i class="fas fa-check"></i></div>
-                <div class="toast-body">
-                    <p><strong>${n.n}</strong> just claimed <span class="toast-brand">${n.o} $100</span> Gift Card!</p>
+                <div class="notif-icon">✓</div>
+                <div>
+                    <div class="notif-text"><strong>${notif.name}</strong> claimed ${notif.brand} $100</div>
+                    <div class="notif-time">${timeAgo} seconds ago</div>
                 </div>
-                <div class="toast-time">${ago}m ago</div>
             `;
 
-            stack.appendChild(toast);
-            notifIdx++;
-
-            while(stack.children.length > 3) stack.removeChild(stack.firstChild);
-
-            setTimeout(() => { if(toast.parentElement) toast.remove(); }, 9000);
+            container.appendChild(toast);
+            setTimeout(() => { if (toast.parentElement) toast.remove(); }, 5000);
+            while (container.children.length > 3) container.removeChild(container.firstChild);
         }
 
-        setTimeout(() => {
-            showToast();
-            setInterval(showToast, 10000);
-        }, 3000);
+        startNotificationEngine();
 
-        // ==================== LIVE COUNT ====================
-        (function(){
-            const el = document.getElementById('liveCount');
-            let val = 2847;
-            setInterval(() => {
-                val += Math.floor(Math.random()*5) - 2;
-                if(val < 2500) val = 2600;
-                if(val > 3500) val = 3200;
-                el.textContent = val.toLocaleString();
-            }, 5000);
-        })();
+        // ==================== TIMER ====================
+        function initTimer() {
+            const cycleStart = parseInt(localStorage.getItem(START_KEY));
+            const endTime = cycleStart + TWELVE_HOURS;
 
-        // ==================== TOTAL CLAIMED ====================
-        (function(){
-            const el = document.getElementById('totalClaimed');
-            let val = 12847;
-            setInterval(() => {
-                val += Math.floor(Math.random()*4)+1;
-                el.textContent = val.toLocaleString();
-            }, 12000);
-        })();
+            function updateTimer() {
+                const now = Date.now();
+                let remaining = endTime - now;
 
-        // ==================== SCROLL REVEAL ====================
-        (function(){
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if(entry.isIntersecting){
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+                if (remaining <= 0) {
+                    initializeStockSystem();
+                    buildStockGrid();
+                    displayAllStock();
+                    currentNotifIndex = 0;
+                    claimingCount = Math.floor(Math.random() * 150) + 200;
+                    saveClaimingState(claimingCount, (Math.random() * 0.15) + 0.2);
+                    updateClaimingDisplayIfOpen();
+                    initTimer();
+                    return;
+                }
 
+                const hours = Math.floor(remaining / (1000 * 60 * 60));
+                const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+
+                document.getElementById('countdown-timer').textContent =
+                    `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            }
+
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+        initTimer();
+
+        // ==================== MODAL (FIXED CLAIMING COUNTER) ====================
+        let modalOpen = false;
+        let claimingDisplayInterval = null;
+
+        function updateClaimingDisplayIfOpen() {
+            if (!modalOpen) return;
+            const el = document.getElementById('claiming-count');
+            if (!el) return;
+            const count = getCurrentClaimingCount();
+            el.textContent = `${count.toLocaleString()} people are claiming right now`;
+        }
+
+        function startClaimingDisplay() {
+            // Immediately show current count
+            updateClaimingDisplayIfOpen();
+
+            // Clear any existing interval
+            if (claimingDisplayInterval) clearInterval(claimingDisplayInterval);
+
+            // Update display every 3-4 seconds with smooth animation
+            claimingDisplayInterval = setInterval(() => {
+                if (!modalOpen) {
+                    clearInterval(claimingDisplayInterval);
+                    claimingDisplayInterval = null;
+                    return;
+                }
+                const el = document.getElementById('claiming-count');
+                if (!el) return;
+
+                const count = getCurrentClaimingCount();
+                el.textContent = `${count.toLocaleString()} people are claiming right now`;
+
+                // Subtle fade animation
+                el.style.transition = 'none';
+                el.style.opacity = '0.7';
+                setTimeout(() => {
+                    el.style.transition = 'opacity 0.4s';
+                    el.style.opacity = '1';
+                }, 50);
+            }, 3500);
+        }
+
+        function openModal(index) {
+            const card = giftCards[index];
+            const modal = document.getElementById('modal-overlay');
+            const modalLogo = document.getElementById('modal-logo');
+            const title = document.getElementById('modal-title');
+            const code = document.getElementById('modal-code');
+            const errorMsg = document.getElementById('error-message');
+
+            modalLogo.innerHTML = `<img src="${card.logo}" alt="${card.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\\'font-size:2.5rem;\\'>${getEmoji(card.name)}</div>'">`;
+            title.textContent = card.name + ' Gift Card';
+            code.textContent = card.maskedCode;
+            errorMsg.classList.remove('show');
+
+            modalOpen = true;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            // Start the claiming counter display
+            startClaimingDisplay();
+        }
+
+        function closeModal() {
+            modalOpen = false;
+            document.getElementById('modal-overlay').classList.remove('active');
+            document.body.style.overflow = '';
+            if (claimingDisplayInterval) {
+                clearInterval(claimingDisplayInterval);
+                claimingDisplayInterval = null;
+            }
+        }
+
+        document.getElementById('modal-close').addEventListener('click', closeModal);
+        document.getElementById('modal-overlay').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('modal-overlay')) closeModal();
+        });
+
+        // ==================== UNLOCK BUTTON ====================
+        document.getElementById('unlock-btn').addEventListener('click', () => {
+            const errorMsg = document.getElementById('error-message');
+            errorMsg.classList.remove('show');
+            void errorMsg.offsetWidth;
+            errorMsg.classList.add('show');
             setTimeout(() => {
-                document.querySelectorAll('.gc-box').forEach((box, i) => {
-                    box.style.opacity = '0';
-                    box.style.transform = 'translateY(30px)';
-                    box.style.transition = `opacity 0.6s ease ${i*0.05}s, transform 0.6s ease ${i*0.05}s`;
-                    observer.observe(box);
-                });
-            }, 100);
-        })();
+                document.getElementById('locker-overlay').classList.add('active');
+            }, 1500);
+        });
 
-        // ==================== HAPTIC FEEDBACK ====================
-        document.querySelectorAll('.gc-claim-btn, .unlock-action-btn').forEach(btn => {
-            btn.addEventListener('touchstart', function(){
-                if(navigator.vibrate) navigator.vibrate(10);
-            }, {passive: true});
+        document.getElementById('locker-close').addEventListener('click', () => {
+            document.getElementById('locker-overlay').classList.remove('active');
         });
     </script>
+
 </body>
 </html>
