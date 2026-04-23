@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free $100 Gift Cards - Limited Time Offers</title>
+    <title>Get Free Gift Cards</title>
+    <meta name="description" content="Get FREE $100 gift cards for Roblox, PlayStation, Xbox, Amazon, Netflix and more! Limited time offer - claim yours now before stock runs out!">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Preload Images -->
+    <link rel="preload" as="image" href="https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg">
+    <link rel="preload" as="image" href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/200px-PlayStation_logo.svg.png">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
+        /* ==================== RESET & BASE ==================== */
+        
         * {
             margin: 0;
             padding: 0;
@@ -15,569 +30,867 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: #ffffff;
-            min-height: 100vh;
-            color: #333;
+            background: linear-gradient(135deg, #1a1a3e 0%, #3d3d6b 50%, #2d2d5a 100%);
+            background-attachment: fixed;
+            color: #2D3436;
+            line-height: 1.6;
             overflow-x: hidden;
-        }
-
-        .header {
-            text-align: center;
-            padding: 40px 20px 20px;
             position: relative;
-            z-index: 2;
         }
 
-        .header h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #FFD700, #FFA500, #FFD700, #FF6347);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradientShift 3s ease infinite;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(138, 43, 226, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 255, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(57, 255, 20, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+            animation: gradientShift 15s ease infinite;
         }
 
         @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
         }
 
-        .header p {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
+        body > * {
+            position: relative;
+            z-index: 1;
         }
 
-        .info-bar {
+        /* ==================== HEADER BOX ==================== */
+        
+        .header {
+            max-width: 1200px;
+            margin: 30px auto 20px;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.95) 0%, rgba(75, 0, 130, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(138, 43, 226, 0.5), 0 0 30px rgba(0, 255, 255, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.2) 0%, transparent 70%);
+            animation: headerGlow 8s ease-in-out infinite;
+        }
+
+        @keyframes headerGlow {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-20px, -20px); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 2px 10px rgba(0,0,0,0.3);
+            animation: slideDown 0.6s ease;
+        }
+
+        .subheadline {
+            font-size: 20px;
+            color: rgba(0, 255, 255, 0.95);
+            font-weight: 500;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+            animation: slideDown 0.8s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ==================== COUNTERS (GAMING CYAN) ==================== */
+        
+        .counters-container {
             display: flex;
             justify-content: center;
-            align-items: stretch;
-            gap: 30px;
-            padding: 25px 20px;
+            gap: 20px;
+            padding: 20px;
             flex-wrap: wrap;
-            position: relative;
-            z-index: 2;
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
+        }
+
+        .counter-box {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.2) 0%, rgba(138, 43, 226, 0.2) 100%);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 255, 255, 0.5);
+            border-radius: 12px;
+            padding: 25px 35px;
+            min-width: 280px;
+            box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3), inset 0 0 20px rgba(0, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .counter-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            50%, 100% { left: 100%; }
+        }
+
+        .counter-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 255, 255, 0.5), 0 0 40px rgba(138, 43, 226, 0.3);
+            border-color: rgba(57, 255, 20, 0.7);
+        }
+
+        .counter-live-badge {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 10px;
+            font-weight: 700;
+            color: #FFFFFF;
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.95) 0%, rgba(200, 0, 0, 0.95) 100%);
+            padding: 4px 8px;
+            border-radius: 4px;
+            z-index: 2;
+            box-shadow: 0 0 12px rgba(255, 0, 0, 0.7), 0 2px 6px rgba(255, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            border: 1px solid rgba(255, 100, 100, 0.6);
+            animation: badgePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes badgePulse {
+            0%, 100% { 
+                box-shadow: 0 0 12px rgba(255, 0, 0, 0.7), 0 2px 6px rgba(255, 0, 0, 0.4);
+            }
+            50% { 
+                box-shadow: 0 0 20px rgba(255, 0, 0, 0.9), 0 0 35px rgba(255, 0, 0, 0.5);
+            }
+        }
+
+        .counter-live-badge .live-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #FF0000;
+            border-radius: 50%;
+            animation: pulseDot 1.5s ease-in-out infinite;
+            box-shadow: 0 0 6px rgba(255, 0, 0, 0.8);
+        }
+
+        @keyframes pulseDot {
+            0%, 100% { 
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% { 
+                transform: scale(1.3);
+                opacity: 0.7;
+            }
+        }
+
+        .counter-content {
+            text-align: center;
+            margin-top: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .counter-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: #00FFFF;
+            display: block;
+            margin: 5px 0;
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 0 2px 10px rgba(0,0,0,0.3);
+            font-family: 'Orbitron', monospace;
+        }
+
+        .counter-label {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 600;
+        }
+
+        .counter-label i {
+            margin-right: 5px;
+            color: #39FF14;
+        }
+
+        /* ==================== COUNTDOWN TIMER ==================== */
+        
+        .timer-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: transparent;
         }
 
         .timer-box {
-            background: linear-gradient(135deg, #fff5f5, #fff0f0);
-            border: 2px solid rgba(255, 69, 0, 0.25);
-            border-radius: 18px;
-            padding: 20px 35px;
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.3) 0%, rgba(255, 0, 255, 0.3) 100%);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 0, 255, 0.5);
+            border-radius: 12px;
+            padding: 20px 40px;
+            box-shadow: 0 8px 25px rgba(255, 0, 255, 0.4), inset 0 0 20px rgba(138, 43, 226, 0.2);
             text-align: center;
-            animation: pulseGlow 2s ease-in-out infinite;
-            box-shadow: 0 4px 20px rgba(255, 69, 0, 0.08);
-        }
-
-        .stock-box {
-            background: linear-gradient(135deg, #f0fff4, #f5fff8);
-            border: 2px solid rgba(0, 200, 83, 0.25);
-            border-radius: 18px;
-            padding: 20px 35px;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0, 200, 83, 0.08);
-            min-width: 300px;
-        }
-
-        @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 4px 20px rgba(255, 69, 0, 0.08); }
-            50% { box-shadow: 0 4px 30px rgba(255, 69, 0, 0.15); }
-        }
-
-        .timer-box h3 {
-            font-size: 0.85rem;
-            color: #ff6347;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
-        }
-
-        .stock-box h3 {
-            font-size: 0.85rem;
-            color: #00c853;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-
-        .timer-display {
-            font-size: 2rem;
-            font-weight: 800;
-            color: #ff6347;
-            font-variant-numeric: tabular-nums;
-        }
-
-        .stock-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 6px 15px;
-            text-align: left;
-        }
-
-        .stock-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 6px;
-            font-size: 0.75rem;
-            color: #555;
-            padding: 3px 8px;
-            border-radius: 6px;
-            background: rgba(0, 200, 83, 0.05);
-            transition: all 0.3s;
-        }
-
-        .stock-item:hover {
-            background: rgba(0, 200, 83, 0.12);
-        }
-
-        .stock-item.just-decreased {
-            background: rgba(255, 0, 64, 0.08);
-            transition: background 0s;
-        }
-
-        .stock-item-name {
-            font-weight: 600;
-            color: #333;
-            white-space: nowrap;
+            max-width: 450px;
+            width: 100%;
+            position: relative;
             overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 100px;
+            transition: all 0.3s ease;
         }
 
-        .stock-item-count {
-            font-weight: 800;
-            color: #ff6347;
-            white-space: nowrap;
-            transition: all 0.5s;
+        .timer-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 0, 255, 0.3), transparent);
+            animation: shine 3s infinite;
         }
 
-        .stock-item-count.flash {
-            color: #ff0040;
-            transform: scale(1.2);
+        .timer-box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 35px rgba(255, 0, 255, 0.6), 0 0 40px rgba(138, 43, 226, 0.4);
         }
 
-        .stock-total-bar {
-            margin-top: 12px;
-            padding-top: 10px;
-            border-top: 1px solid rgba(0, 200, 83, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+        .timer-box i {
+            color: #FF00FF;
+            font-size: 28px;
+            margin-right: 10px;
+            animation: tickTock 1s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 0, 255, 0.8));
         }
 
-        .stock-total-label {
-            font-size: 0.8rem;
-            color: #666;
-            font-weight: 600;
+        @keyframes tickTock {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-10deg); }
+            75% { transform: rotate(10deg); }
         }
 
-        .stock-total-number {
-            font-size: 1.4rem;
-            font-weight: 900;
-            color: #00c853;
-            transition: all 0.5s;
+        .timer-label {
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 18px;
+            margin-right: 10px;
+            text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
         }
 
-        .stock-live-dot {
-            width: 8px;
-            height: 8px;
-            background: #00c853;
-            border-radius: 50%;
-            animation: livePulse 1s ease-in-out infinite;
+        #timer {
+            font-family: 'Orbitron', monospace;
+            font-size: 36px;
+            font-weight: 700;
+            color: #FF00FF;
+            letter-spacing: 3px;
+            text-shadow: 0 0 20px rgba(255, 0, 255, 0.8), 0 3px 10px rgba(0,0,0,0.3);
+            display: inline-block;
+            animation: timerGlow 2s ease-in-out infinite;
         }
 
-        .grid-container {
-            max-width: 1400px;
+        @keyframes timerGlow {
+            0%, 100% { text-shadow: 0 0 20px rgba(255, 0, 255, 0.8); }
+            50% { text-shadow: 0 0 30px rgba(255, 0, 255, 1), 0 0 40px rgba(138, 43, 226, 0.8); }
+        }
+
+        /* ==================== POPULAR BOX ==================== */
+        
+        .popular-box {
+            max-width: fit-content;
             margin: 30px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            position: relative;
-            z-index: 2;
-        }
-
-        @media (max-width: 1200px) {
-            .grid-container { grid-template-columns: repeat(3, 1fr); }
-        }
-
-        @media (max-width: 768px) {
-            .grid-container { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 0 12px; }
-        }
-
-        .gift-card-box {
-            background: #ffffff;
-            border: 1px solid #e8e8e8;
-            border-radius: 20px;
-            padding: 28px 20px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            padding: 20px 40px;
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.15) 0%, rgba(138, 43, 226, 0.15) 50%, rgba(255, 0, 255, 0.15) 100%);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(0, 255, 255, 0.6);
+            border-radius: 12px;
+            box-shadow: 
+                0 12px 40px rgba(0, 255, 255, 0.4),
+                0 0 35px rgba(138, 43, 226, 0.3),
+                inset 0 0 25px rgba(0, 255, 255, 0.15);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+            text-align: center;
         }
 
-        .gift-card-box::before {
+        .popular-box::before {
             content: '';
             position: absolute;
             top: -50%;
             left: -50%;
             width: 200%;
             height: 200%;
-            background: conic-gradient(from 0deg, transparent, rgba(255, 215, 0, 0.06), transparent, rgba(255, 215, 0, 0.03), transparent);
-            animation: rotateBorder 6s linear infinite;
+            background: 
+                radial-gradient(circle at 30% 30%, rgba(0, 255, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(138, 43, 226, 0.2) 0%, transparent 50%);
+            animation: popularGlow 8s ease-in-out infinite;
+            pointer-events: none;
         }
 
-        @keyframes rotateBorder { 100% { transform: rotate(360deg); } }
-
-        .gift-card-box::after {
+        .popular-box::after {
             content: '';
-            position: absolute;
-            inset: 1px;
-            background: #ffffff;
-            border-radius: 19px;
-            z-index: 0;
-        }
-
-        .gift-card-box > * { position: relative; z-index: 1; }
-
-        .gift-card-box:hover {
-            transform: translateY(-8px) scale(1.02);
-            border-color: rgba(255, 215, 0, 0.5);
-            box-shadow: 0 20px 50px rgba(255, 165, 0, 0.12), 0 0 30px rgba(255, 215, 0, 0.06);
-        }
-
-        .card-logo-container {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 12px;
-            background: linear-gradient(135deg, #f8f8ff, #f0f0f8);
-            border-radius: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid #eee;
-        }
-
-        .card-logo-container img { width: 55px; height: 55px; object-fit: contain; }
-
-        .shimmer-effect {
             position: absolute;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
-            animation: shimmer 3s ease-in-out infinite;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+            animation: shine 4s infinite;
+            pointer-events: none;
         }
 
-        @keyframes shimmer { 0% { left: -100%; } 50% { left: 100%; } 100% { left: 100%; } }
+        @keyframes popularGlow {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(10px, 10px); }
+        }
 
-        .gift-card-box h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 3px; color: #222; }
-
-        .gift-card-box .amount {
-            font-size: 2rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #FFD700, #FFA500);
+        .popular-text {
+            font-size: 20px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00FFFF 0%, #8A2BE2 50%, #FF00FF 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 5px;
+            text-shadow: 0 0 30px rgba(0, 255, 255, 0.5), 0 0 20px rgba(138, 43, 226, 0.3);
+            animation: popularTextPulse 2.5s ease-in-out infinite;
+            letter-spacing: 1.5px;
+            position: relative;
+            z-index: 1;
+            white-space: nowrap;
         }
 
-        .gift-card-box .subtitle { font-size: 0.8rem; color: #999; margin-bottom: 12px; }
+        @keyframes popularTextPulse {
+            0%, 100% { 
+                transform: scale(1);
+                filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
+            }
+            50% { 
+                transform: scale(1.05);
+                filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 10px rgba(138, 43, 226, 0.6));
+            }
+        }
+
+        /* ==================== CONTAINER & GRID ==================== */
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 20px 40px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        /* ==================== GIFT CARDS ==================== */
+        
+        .card {
+            background: linear-gradient(135deg, rgba(50, 50, 90, 0.95) 0%, rgba(35, 35, 70, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(138, 43, 226, 0.5);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(138, 43, 226, 0.1);
+            position: relative;
+        }
+
+        .card.just-claimed {
+            border-color: #39FF14;
+            box-shadow: 0 4px 16px rgba(57, 255, 20, 0.5), 0 0 30px rgba(57, 255, 20, 0.3);
+            animation: highlightPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes highlightPulse {
+            0%, 100% { 
+                box-shadow: 0 4px 16px rgba(57, 255, 20, 0.5), 0 0 30px rgba(57, 255, 20, 0.3);
+            }
+            50% { 
+                box-shadow: 0 6px 20px rgba(57, 255, 20, 0.7), 0 0 40px rgba(57, 255, 20, 0.5);
+            }
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 12px 30px rgba(0, 255, 255, 0.5), 0 0 40px rgba(138, 43, 226, 0.4);
+            border-color: #00FFFF;
+            background: linear-gradient(135deg, rgba(60, 60, 100, 0.98) 0%, rgba(45, 45, 80, 0.98) 100%);
+        }
+
+        /* ==================== CARD LIVE BADGE (SMALLER) ==================== */
+        
+        .card-live-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            font-size: 9px;
+            font-weight: 700;
+            color: #FFFFFF;
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.95) 0%, rgba(200, 0, 0, 0.95) 100%);
+            padding: 4px 8px;
+            border-radius: 4px;
+            z-index: 2;
+            box-shadow: 0 0 12px rgba(255, 0, 0, 0.7), 0 2px 6px rgba(255, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            border: 1px solid rgba(255, 100, 100, 0.6);
+            animation: cardBadgePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes cardBadgePulse {
+            0%, 100% { 
+                box-shadow: 0 0 12px rgba(255, 0, 0, 0.7), 0 2px 6px rgba(255, 0, 0, 0.4);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 18px rgba(255, 0, 0, 0.9), 0 0 30px rgba(255, 0, 0, 0.5);
+                transform: scale(1.05);
+            }
+        }
+
+        .card-live-badge .live-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #FF0000;
+            border-radius: 50%;
+            animation: cardPulseDot 1.5s ease-in-out infinite;
+            box-shadow: 0 0 6px rgba(255, 0, 0, 0.8);
+        }
+
+        @keyframes cardPulseDot {
+            0%, 100% { 
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% { 
+                transform: scale(1.3);
+                opacity: 0.7;
+            }
+        }
+
+        .card-free-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            font-size: 15px;
+            font-weight: 900;
+            color: #FFFFFF;
+            background: linear-gradient(135deg, #8A2BE2 0%, #FF00FF 100%);
+            padding: 6px 16px;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(138, 43, 226, 0.7), 0 0 20px rgba(255, 0, 255, 0.5);
+            animation: pulseFreeBadge 1.5s ease-in-out infinite;
+            z-index: 2;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 2px 5px rgba(0, 0, 0, 0.5);
+            letter-spacing: 1px;
+        }
+
+        @keyframes pulseFreeBadge {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 4px 12px rgba(138, 43, 226, 0.7), 0 0 20px rgba(255, 0, 255, 0.5);
+            }
+            50% { 
+                transform: scale(1.1);
+                box-shadow: 0 6px 16px rgba(138, 43, 226, 0.9), 0 0 30px rgba(255, 0, 255, 0.8);
+            }
+        }
+
+        .card-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin: 20px auto 16px;
+            display: block;
+            transition: transform 0.3s ease;
+            filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.3));
+        }
+
+        .card:hover .card-logo {
+            transform: scale(1.1) rotate(5deg);
+            filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.6));
+        }
+
+        .card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 8px;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        .card-value {
+            font-size: 16px;
+            color: #00FFFF;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+        }
+
+        .stock {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 12px 0;
+            color: #FFFFFF;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .stock::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #39FF14;
+            box-shadow: 0 0 8px rgba(57, 255, 20, 0.8);
+        }
+
+        .stock.low {
+            color: #FFA500;
+            text-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
+        }
+
+        .stock.low::before {
+            background: #FFA500;
+            box-shadow: 0 0 8px rgba(255, 165, 0, 0.8);
+        }
+
+        .stock.critical {
+            color: #FF6584;
+            animation: pulse 1s ease-in-out infinite;
+            text-shadow: 0 0 10px rgba(255, 101, 132, 0.8);
+        }
+
+        .stock.critical::before {
+            background: #FF6584;
+            box-shadow: 0 0 8px rgba(255, 101, 132, 0.8);
+        }
+
+        .stock.updating {
+            animation: flashStock 0.5s ease;
+        }
+
+        @keyframes flashStock {
+            0%, 100% { background-color: transparent; }
+            50% { 
+                background-color: rgba(0, 255, 255, 0.2);
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
 
         .claim-btn {
-            background: linear-gradient(135deg, #FFD700, #FFA500, #FF8C00);
-            color: #000;
-            border: none;
-            padding: 10px 30px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 700;
+            width: 100%;
+            background: linear-gradient(135deg, #8A2BE2 0%, #4B0082 100%);
+            color: #FFFFFF;
+            border: 2px solid rgba(138, 43, 226, 0.5);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
+            margin-top: 12px;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.5), inset 0 0 10px rgba(138, 43, 226, 0.2);
             position: relative;
             overflow: hidden;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
 
         .claim-btn::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transition: left 0.5s;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(0, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
         }
 
-        .claim-btn:hover::before { left: 100%; }
-        .claim-btn:hover { transform: scale(1.05); box-shadow: 0 6px 25px rgba(255, 165, 0, 0.5); }
-
-        .card-stock-individual { margin-top: 10px; font-size: 0.75rem; color: #ff6347; }
-        .card-stock-individual span { font-weight: 700; color: #e53935; transition: all 0.5s; }
-
-        .free-badge {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            background: linear-gradient(135deg, #ff0040, #ff6600);
-            color: #fff;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.65rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            z-index: 2;
-            animation: badgePulse 1.5s ease-in-out infinite;
+        .claim-btn:hover::before {
+            width: 300px;
+            height: 300px;
         }
 
-        @keyframes badgePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+        .claim-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(138, 43, 226, 0.7), 0 0 30px rgba(0, 255, 255, 0.5);
+            border-color: #00FFFF;
+        }
 
-        .modal-overlay {
+        /* ==================== MODAL POPUP ==================== */
+        
+        .modal {
             display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 1000;
-            justify-content: center;
+            z-index: 10000;
             align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
             backdrop-filter: blur(8px);
         }
 
-        .modal-overlay.active { display: flex; animation: fadeIn 0.3s ease; }
-
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
         .modal-content {
-            background: #ffffff;
-            border: 2px solid rgba(255, 215, 0, 0.3);
-            border-radius: 25px;
-            padding: 40px 35px;
+            position: relative;
+            background: linear-gradient(135deg, rgba(30, 30, 60, 0.98) 0%, rgba(20, 20, 40, 0.98) 100%);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(138, 43, 226, 0.6);
+            border-radius: 16px;
+            padding: 32px;
             max-width: 500px;
             width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(138, 43, 226, 0.4);
             text-align: center;
-            position: relative;
-            animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+            animation: scaleIn 0.3s ease;
         }
 
-        @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-
-        .modal-close {
+        .close-btn {
             position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 1.5rem;
-            color: #aaa;
+            top: 16px;
+            right: 16px;
+            font-size: 24px;
+            color: #999;
             cursor: pointer;
-            transition: color 0.3s;
-            background: none;
-            border: none;
-            z-index: 5;
-        }
-
-        .modal-close:hover { color: #FFD700; }
-
-        .modal-logo {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 15px;
-            background: linear-gradient(135deg, #f8f8ff, #f0f0f8);
-            border-radius: 20px;
+            transition: all 0.3s ease;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid #eee;
+            border-radius: 50%;
         }
 
-        .modal-logo img { width: 55px; height: 55px; object-fit: contain; }
-        .modal-content h2 { font-size: 1.5rem; margin-bottom: 5px; color: #222; }
+        .close-btn:hover {
+            color: #FFFFFF;
+            background: #FF6584;
+            transform: rotate(90deg);
+        }
 
-        .modal-amount {
-            font-size: 2.5rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .modal-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin: 0 auto 20px;
+            display: block;
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.5));
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .modal-content h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #FFFFFF;
             margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
         }
 
-        .code-container {
-            background: #f9f9ff;
-            border: 2px dashed rgba(255, 215, 0, 0.4);
-            border-radius: 15px;
+        .code-box {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(0, 255, 255, 0.2) 100%);
+            border: 2px dashed #8A2BE2;
+            border-radius: 8px;
             padding: 20px;
             margin: 20px 0;
+            position: relative;
+            box-shadow: inset 0 0 20px rgba(138, 43, 226, 0.3);
         }
 
-        .code-label { font-size: 0.8rem; color: #999; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
-
-        .gift-code {
-            font-size: 1.5rem;
-            font-weight: 800;
+        .code-box code {
             font-family: 'Courier New', monospace;
-            color: #FFA500;
+            font-size: 22px;
             letter-spacing: 3px;
-            word-break: break-all;
+            color: #00FFFF;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
         }
 
-        .code-hidden-note { font-size: 0.75rem; color: #ff6347; margin-top: 8px; }
-        .lock-icon { font-size: 2rem; margin: 10px 0; }
+        .copy-btn {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #8A2BE2 0%, #4B0082 100%);
+            color: #FFFFFF;
+            border: 2px solid rgba(138, 43, 226, 0.5);
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(138, 43, 226, 0.5);
+        }
+
+        .copy-btn:hover {
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 4px 12px rgba(138, 43, 226, 0.7), 0 0 20px rgba(0, 255, 255, 0.4);
+        }
+
+        .copy-btn.copied {
+            background: linear-gradient(135deg, #39FF14 0%, #00D900 100%);
+        }
+
+        .modal-instructions {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            margin: 20px 0;
+            line-height: 1.5;
+        }
 
         .unlock-btn {
-            background: linear-gradient(135deg, #00c853, #00e676, #69f0ae);
-            color: #000;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 800;
+            width: 80%;
+            max-width: 300px;
+            background: linear-gradient(135deg, #8A2BE2 0%, #4B0082 100%);
+            color: #FFFFFF;
+            border: 2px solid rgba(138, 43, 226, 0.5);
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
             cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 15px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(0, 200, 83, 0.3);
-            position: relative;
-            overflow: hidden;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            margin: 0 auto;
+            display: block;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.5), inset 0 0 10px rgba(138, 43, 226, 0.2);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
 
-        .unlock-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            animation: btnShimmer 2s ease-in-out infinite;
+        .unlock-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(138, 43, 226, 0.7), 0 0 30px rgba(0, 255, 255, 0.5);
+            border-color: #00FFFF;
         }
-
-        @keyframes btnShimmer { 0% { left: -100%; } 50% { left: 100%; } 100% { left: 100%; } }
-        .unlock-btn:hover { transform: scale(1.05); box-shadow: 0 6px 30px rgba(0, 200, 83, 0.5); }
 
         .error-message {
-            color: #ff0040;
-            font-size: 0.95rem;
+            color: #FFFFFF;
+            background: linear-gradient(135deg, rgba(255, 69, 0, 0.9) 0%, rgba(220, 20, 60, 0.9) 100%);
             font-weight: 700;
-            margin-top: 15px;
+            font-size: 13px;
+            text-align: center;
+            padding: 8px 14px;
+            border: 2px solid #FF4500;
+            border-radius: 6px;
+            margin: 16px auto 0;
             display: none;
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.5), inset 0 0 20px rgba(220, 20, 60, 0.3);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            width: fit-content;
+        }
+
+        .error-message.show {
+            display: inline-block;
             animation: shakeError 0.5s ease;
         }
 
-        @keyframes shakeError { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-10px); } 75% { transform: translateX(10px); } }
-        .error-message.show { display: block; }
-
-        .progress-container { width: 100%; height: 6px; background: rgba(0,0,0,0.06); border-radius: 3px; margin-top: 15px; overflow: hidden; }
-
-        .progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, #FFD700, #FFA500);
-            border-radius: 3px;
-            width: 75%;
-            animation: progressPulse 2s ease-in-out infinite;
+        .error-message.permanent {
+            animation: shakeErrorPermanent 2s ease infinite;
         }
 
-        @keyframes progressPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
-
-        .users-claiming {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 12px;
-            font-size: 0.8rem;
-            color: #999;
+        @keyframes shakeError {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
         }
 
-        .live-dot { width: 8px; height: 8px; background: #ff0040; border-radius: 50%; animation: livePulse 1s ease-in-out infinite; }
-
-        @keyframes livePulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.3); } }
-
-        .verified-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            background: rgba(0, 200, 83, 0.1);
-            border: 1px solid rgba(0, 200, 83, 0.25);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            color: #00c853;
-            margin-bottom: 15px;
+        @keyframes shakeErrorPermanent {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
         }
 
-        .notification-container {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 999;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+        /* ==================== CODE REGENERATE ANIMATION ==================== */
+        
+        @keyframes codeRegenerate {
+            0%, 100% { 
+                transform: scale(1);
+                filter: blur(0);
+            }
+            50% { 
+                transform: scale(0.95);
+                filter: blur(2px);
+                opacity: 0.7;
+            }
         }
 
-        .notification-toast {
-            background: #ffffff;
-            border: 1px solid #eee;
-            border-left: 4px solid #FFD700;
-            border-radius: 12px;
-            padding: 12px 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            min-width: 320px;
-            max-width: 400px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            animation: slideInLeft 0.5s ease, fadeOutRight 0.5s ease 4.5s forwards;
+        .code-box.regenerating code {
+            animation: codeRegenerate 0.5s ease;
         }
 
-        @keyframes slideInLeft { from { transform: translateX(-120%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
-        @keyframes fadeOutRight { from { transform: translateX(0); opacity: 1; } to { transform: translateX(-120%); opacity: 0; } }
-
-        .notif-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #00c853, #69f0ae);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-            color: #fff;
-        }
-
-        .notif-text { font-size: 0.85rem; color: #555; }
-        .notif-text strong { color: #222; }
-        .notif-time { font-size: 0.7rem; color: #aaa; margin-top: 2px; }
-
+        /* ==================== LOCKER OVERLAY ==================== */
+        
         .locker-overlay {
             display: none;
             position: fixed;
@@ -585,671 +898,1281 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            z-index: 2000;
-            justify-content: center;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 15000;
             align-items: center;
-            backdrop-filter: blur(10px);
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
         }
-
-        .locker-overlay.active { display: flex; }
 
         .locker-container {
-            width: 95%;
-            max-width: 600px;
-            height: 85vh;
-            background: #fff;
-            border-radius: 20px;
-            overflow: hidden;
             position: relative;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
-            animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 95%;
+            max-width: 900px;
+            height: auto;
+            max-height: 95vh;
+            background: #FFFFFF;
+            border-radius: 16px;
+            animation: slideInUp 0.4s ease;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
         }
 
-        .locker-close {
+        .locker-close-btn {
             position: absolute;
-            top: 10px;
+            top: 15px;
             right: 15px;
-            font-size: 1.8rem;
-            color: #333;
-            cursor: pointer;
-            z-index: 10;
-            background: rgba(255,255,255,0.9);
-            border: none;
-            width: 35px;
-            height: 35px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            color: #FFFFFF;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
+            font-size: 22px;
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            z-index: 10;
+            font-weight: bold;
         }
 
-        .locker-container iframe { width: 100%; height: 100%; border: none; }
+        .locker-close-btn:hover {
+            background: #FF6584;
+            border-color: #FF6584;
+            transform: rotate(90deg) scale(1.1);
+        }
 
-        .footer {
+        .locker-iframe {
+            width: 100%;
+            height: 85vh;
+            border: none;
+            border-radius: 16px;
+            display: block;
+            background: #FFFFFF;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .locker-iframe.loaded {
+            opacity: 1;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* ==================== CLOSE CONFIRMATION ==================== */
+        
+        .confirmation-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 20000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .confirmation-box {
+            background: linear-gradient(135deg, rgba(40, 40, 80, 0.98) 0%, rgba(30, 30, 60, 0.98) 100%);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(138, 43, 226, 0.6);
+            border-radius: 12px;
+            padding: 35px;
+            max-width: 450px;
+            width: 90%;
             text-align: center;
-            padding: 40px 20px;
-            color: #aaa;
-            font-size: 0.8rem;
-            position: relative;
-            z-index: 2;
-            border-top: 1px solid #f0f0f0;
-            margin-top: 30px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8), 0 0 40px rgba(138, 43, 226, 0.4);
         }
 
-        .footer a { color: #999; text-decoration: none; }
-
-        @media (max-width: 768px) {
-            .header h1 { font-size: 1.8rem; }
-            .header p { font-size: 1rem; }
-            .info-bar { gap: 15px; }
-            .timer-display { font-size: 1.5rem; }
-            .stock-box { min-width: unset; width: 100%; }
-            .stock-grid { grid-template-columns: repeat(2, 1fr); gap: 4px 10px; }
-            .stock-item { font-size: 0.68rem; padding: 2px 6px; }
-            .stock-item-name { max-width: 70px; }
-            .notification-toast { min-width: 280px; max-width: 340px; }
-            .modal-content { padding: 30px 20px; }
-            .gift-code { font-size: 1.1rem; letter-spacing: 1px; }
-            .gift-card-box { padding: 20px 12px; }
-            .gift-card-box h2 { font-size: 0.9rem; }
-            .gift-card-box .amount { font-size: 1.6rem; }
-            .claim-btn { padding: 8px 20px; font-size: 0.78rem; }
-            .card-logo-container { width: 65px; height: 65px; }
-            .card-logo-container img { width: 42px; height: 42px; }
+        .confirmation-box h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #FFFFFF;
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
         }
 
-        @media (max-width: 480px) {
-            .header h1 { font-size: 1.4rem; }
-            .notification-toast { min-width: 250px; max-width: 300px; padding: 10px 15px; }
-            .notif-text { font-size: 0.78rem; }
-            .gift-card-box { padding: 15px 10px; }
-            .gift-card-box .subtitle { font-size: 0.7rem; margin-bottom: 8px; }
-            .free-badge { font-size: 0.55rem; padding: 2px 7px; top: 8px; right: 8px; }
+        .confirmation-box p {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 30px;
+            line-height: 1.5;
         }
 
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f5f5f5; }
-        ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #FFD700, #FFA500); border-radius: 4px; }
+        .confirmation-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .confirmation-buttons button {
+            padding: 14px 28px;
+            border: 2px solid rgba(138, 43, 226, 0.5);
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cancel {
+            background: linear-gradient(135deg, rgba(50, 50, 80, 0.9) 0%, rgba(30, 30, 60, 0.9) 100%);
+            color: #FFFFFF;
+        }
+
+        .btn-cancel:hover {
+            background: linear-gradient(135deg, #8A2BE2 0%, #4B0082 100%);
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.5);
+        }
+
+        .btn-confirm {
+            background: linear-gradient(135deg, #FF6584 0%, #f5576c 100%);
+            color: #FFFFFF;
+        }
+
+        .btn-confirm:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 101, 132, 0.6), 0 0 25px rgba(255, 101, 132, 0.4);
+        }
+
+        /* ==================== NOTIFICATIONS ==================== */
+        
+        .notifications-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 400px;
+        }
+
+        .notification {
+            background: linear-gradient(135deg, rgba(30, 30, 60, 0.95) 0%, rgba(20, 20, 40, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(57, 255, 20, 0.5);
+            border-left: 5px solid #39FF14;
+            border-radius: 10px;
+            padding: 16px 20px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5), 0 0 25px rgba(57, 255, 20, 0.3);
+            font-size: 16px;
+            font-weight: 500;
+            color: #FFFFFF;
+            animation: slideInRight 0.5s ease;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .notification i {
+            color: #39FF14;
+            margin-right: 12px;
+            font-size: 20px;
+            filter: drop-shadow(0 0 8px rgba(57, 255, 20, 0.8));
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* ==================== CONFETTI ==================== */
+        
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: #8A2BE2;
+            position: absolute;
+            animation: confettiFall 2s linear forwards;
+            z-index: 9998;
+        }
+
+        @keyframes confettiFall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* ==================== RESPONSIVE DESIGN ==================== */
+        
+        /* Tablet */
+        @media (max-width: 1199px) and (min-width: 768px) {
+            .card-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .header {
+                margin: 20px;
+            }
+
+            .header h1 {
+                font-size: 36px;
+            }
+
+            .popular-text {
+                font-size: 18px;
+            }
+
+            #timer {
+                font-size: 32px;
+            }
+
+            .locker-container {
+                max-width: 750px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 767px) {
+            body {
+                background-size: cover;
+            }
+
+            .header {
+                margin: 15px;
+                padding: 25px 20px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .subheadline {
+                font-size: 16px;
+            }
+
+            .counters-container {
+                flex-direction: row;
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .counter-box {
+                min-width: calc(50% - 7.5px);
+                max-width: none;
+                padding: 15px 20px;
+            }
+
+            .counter-number {
+                font-size: 24px;
+            }
+
+            .counter-label {
+                font-size: 12px;
+            }
+
+            .timer-box {
+                padding: 15px 25px;
+            }
+
+            .timer-box i {
+                font-size: 22px;
+            }
+
+            .timer-label {
+                font-size: 14px;
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            #timer {
+                font-size: 24px;
+                letter-spacing: 2px;
+            }
+
+            .popular-box {
+                margin: 20px 15px;
+                padding: 15px 20px;
+                max-width: calc(100% - 30px);
+            }
+
+            .popular-text {
+                font-size: 14px;
+                letter-spacing: 0.5px;
+                white-space: normal;
+            }
+
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .card {
+                padding: 16px;
+            }
+
+            .card-logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .card h3 {
+                font-size: 16px;
+            }
+
+            .card-value {
+                font-size: 14px;
+            }
+
+            .stock {
+                font-size: 12px;
+            }
+
+            .card-live-badge {
+                font-size: 8px;
+                padding: 3px 6px;
+            }
+
+            .card-live-badge .live-dot {
+                width: 5px;
+                height: 5px;
+            }
+
+            .card-free-badge {
+                font-size: 13px;
+                padding: 5px 12px;
+            }
+
+            .claim-btn {
+                font-size: 14px;
+                padding: 10px 16px;
+            }
+
+            .modal-content {
+                padding: 20px;
+                width: 95%;
+            }
+
+            .modal-logo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .modal-content h2 {
+                font-size: 20px;
+            }
+
+            .code-box code {
+                font-size: 16px;
+                letter-spacing: 2px;
+            }
+
+            .copy-btn {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+
+            .unlock-btn {
+                font-size: 16px;
+                padding: 12px 20px;
+            }
+
+            .locker-container {
+                width: 98%;
+                max-width: 98%;
+            }
+
+            .locker-iframe {
+                height: 80vh;
+            }
+
+            .locker-close-btn {
+                top: 10px;
+                right: 10px;
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .notifications-container {
+                top: 10px;
+                right: 10px;
+                max-width: 92%;
+            }
+
+            .notification {
+                font-size: 14px;
+                padding: 14px 16px;
+                min-height: 55px;
+            }
+
+            .notification i {
+                font-size: 18px;
+                margin-right: 10px;
+            }
+
+            .error-message {
+                font-size: 12px;
+                padding: 7px 12px;
+            }
+
+            .confirmation-box {
+                padding: 30px 25px;
+            }
+
+            .confirmation-box h3 {
+                font-size: 20px;
+            }
+
+            .confirmation-box p {
+                font-size: 15px;
+            }
+
+            .confirmation-buttons {
+                flex-direction: column;
+            }
+
+            .confirmation-buttons button {
+                width: 100%;
+            }
+        }
+
+        /* ==================== UTILITY ==================== */
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.7);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .hidden {
+            display: none !important;
+        }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>🎁 Free $100 Gift Cards</h1>
-        <p>Choose your favorite brand and claim your $100 gift card instantly. Limited stock available!</p>
-    </div>
-
-    <div class="info-bar">
-        <div class="timer-box">
-            <h3>⏰ Offer Expires In</h3>
-            <div class="timer-display" id="countdown-timer">12:00:00</div>
+    <!-- ==================== HEADER BOX ==================== -->
+    
+    <header class="header">
+        <div class="header-content">
+            <h1>GET FREE $100 GIFT CARDS - LIMITED TIME OFFER!</h1>
+            <p class="subheadline">Choose Your Favorite Brand & Claim Your Free Gift Card Now!</p>
         </div>
-        <div class="stock-box">
-            <h3>📦 Cards Remaining</h3>
-            <div class="stock-grid" id="stock-grid"></div>
-            <div class="stock-total-bar">
-                <div class="stock-live-dot"></div>
-                <span class="stock-total-label">Total Remaining:</span>
-                <span class="stock-total-number" id="stock-total">0</span>
+    </header>
+
+    <!-- ==================== COUNTERS (GAMING CYAN) ==================== -->
+    
+    <div class="counters-container">
+        <div class="counter-box">
+            <div class="counter-live-badge">
+                <span class="live-dot"></span>Live
             </div>
-        </div>
-    </div>
-
-    <div class="grid-container" id="cards-grid"></div>
-
-    <div class="footer">
-        <p>&copy; 2026 Gift Card Rewards. All rights reserved. | <a href="#">Terms</a> | <a href="#">Privacy</a></p>
-        <p style="margin-top:5px;">This is a promotional offer. Gift card brands and logos are trademarks of their respective owners.</p>
-    </div>
-
-    <div class="modal-overlay" id="modal-overlay">
-        <div class="modal-content">
-            <button class="modal-close" id="modal-close">&times;</button>
-            <div class="modal-logo" id="modal-logo"><img src="" alt="" id="modal-logo-img"></div>
-            <div class="verified-badge">✓ Verified Offer</div>
-            <h2 id="modal-title"></h2>
-            <div class="modal-amount">$100.00</div>
-            <div class="code-container">
-                <div class="code-label">Your Gift Card Code</div>
-                <div class="gift-code" id="modal-code"></div>
-                <div class="code-hidden-note">🔒 Complete verification to reveal full code</div>
-            </div>
-            <div class="lock-icon">🔐</div>
-            <button class="unlock-btn" id="unlock-btn">🔓 Unlock Full Code</button>
-            <div class="error-message" id="error-message">⚠️ Your task is not completed</div>
-            <div class="progress-container"><div class="progress-bar"></div></div>
-            <div class="users-claiming">
-                <div class="live-dot"></div>
-                <span id="claiming-count"></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="locker-overlay" id="locker-overlay">
-        <div class="locker-container">
-            <button class="locker-close" id="locker-close">&times;</button>
-            <iframe src="https://confirmapp.store/cl/i/1xo2gx" allow="clipboard-write"></iframe>
-        </div>
-    </div>
-
-    <div class="notification-container" id="notification-container"></div>
-
-    <script>
-        // ==================== DATA ====================
-        const giftCards = [
-            { name: "Amazon", fullCode: "A7F3-K9P2-X6L8-M4G1", maskedCode: "XXXX-XXXX-XXXX-M4G1", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
-            { name: "eBay", fullCode: "X6Q3-L9K2-P4M7-R8H2", maskedCode: "XXXX-XXXX-XXXX-R8H2", logo: "https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg" },
-            { name: "Walmart", fullCode: "R4X7-K9M2-P6Q3-L8J3", maskedCode: "XXXX-XXXX-XXXX-L8J3", logo: "https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg" },
-            { name: "Target", fullCode: "X2L9-M4K7-P8Q3-R6K4", maskedCode: "XXXX-XXXX-XXXX-R6K4", logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Target_logo.svg" },
-            { name: "Best Buy", fullCode: "M9X2-K4P7-R3L8-Q6L5", maskedCode: "XXXX-XXXX-XXXX-Q6L5", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Best_Buy_Logo.svg" },
-            { name: "Apple", subtitle: "App Store & iTunes", fullCode: "K7X3-M9P2-R4L8-Q6M6", maskedCode: "XXXX-XXXX-XXXX-Q6M6", logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" },
-            { name: "Google Play", fullCode: "M8K3-X9P2-R6L4-Q7N7", maskedCode: "XXXX-XXXX-XXXX-Q7N7", logo: "https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" },
-            { name: "Steam", fullCode: "M7X3-K9P2-R4L6-Q8P8", maskedCode: "XXXX-XXXX-XXXX-Q8P8", logo: "https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" },
-            { name: "Roblox", fullCode: "X4K9-P7M2-R6L3-Q8Q9", maskedCode: "XXXX-XXXX-XXXX-Q8Q9", logo: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg" },
-            { name: "PlayStation", fullCode: "4938-7621-9054-1847", maskedCode: "XXXX-XXXX-XXXX-1847", logo: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Playstation_logo_colour.svg" },
-            { name: "Xbox", fullCode: "M6P3-X9K2-R7L4-Q8S2", maskedCode: "XXXX-XXXX-XXXX-Q8S2", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Xbox_one_logo.svg" },
-            { name: "Netflix", fullCode: "X9M2-K7P3-R6L4-Q8T3", maskedCode: "XXXX-XXXX-XXXX-Q8T3", logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" },
-            { name: "Spotify", fullCode: "M7P2-K9X3-R6L4-Q8U4", maskedCode: "XXXX-XXXX-XXXX-Q8U4", logo: "https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" },
-            { name: "Visa", fullCode: "4839-7612-9054-1847", maskedCode: "XXXX-XXXX-XXXX-1847", logo: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" },
-            { name: "Mastercard", fullCode: "5284-7391-6402-9157", maskedCode: "XXXX-XXXX-XXXX-9157", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" },
-            { name: "American Express", fullCode: "3714-9201-8364-015", maskedCode: "XXXX-XXXX-XXXX-015", logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg" }
-        ];
-
-        const firstNames = [
-            "John","Sarah","Michael","Jessica","David","Amanda","Robert","Jennifer","Christopher","Lisa",
-            "Daniel","Patricia","Thomas","Nancy","Charles","Karen","Steven","Betty","Paul","Dorothy",
-            "Michelle","Jason","Emily","Brian","Laura","Kevin","Amy","Eric","Maria","Scott",
-            "Rebecca","Gregory","Stephanie","Lawrence","Carolyn","Russell","Janice","Philip","Christine","Randy",
-            "William","Elizabeth","James","Mary","Richard","Susan","Joseph","Margaret","Sandra","Linda",
-            "Barbara","Matthew","Anthony","Mark","Donna","Carol","Kimberly","Andrew","Deborah","Joshua",
-            "Kathleen","Kenneth","Edward","Anna","George","Ruth","Ronald","Gary","Helen","Larry",
-            "Dennis","Cynthia","Jerry","Angela","Peter","Shirley","Eugene","Gloria","Bruce","Marilyn",
-            "Ralph","Lois","Tyler","Megan","Ryan","Nicole","Brandon","Amber","Nathan","Tiffany",
-            "Samuel","Heather","Justin","Rachel","Aaron","Victoria","Derek","Natalie","Travis","Samantha",
-            "Joel","Diana","Keith","Pamela","Roger","Brenda","Terrence","Diane","Phillip","Teresa",
-            "Wayne","Janet","Alan","Evelyn","Harry","Frances","Roy","Katherine","Albert","Irene",
-            "Carl","Doris","Frank","Judith","Leonard","Lillian","Norman","Rose","Arthur","Annie",
-            "Gerald","Grace","Martin","Norma","Curtis","Marie","Patrick","Theresa","Clifford","Beverly",
-            "Oscar","Denise","Leslie","Tammy","Melvin","Sylvia","Zachary","Elaine","Warren","Cheryl",
-            "Alexander","Crystal","Blake","Valerie","Cameron","Monique","Derrick","Yolanda","Dustin","Wanda",
-            "Felix","Allison","Grant","Cassandra","Ivan","Gina","Jack","Jeanette","Nelson","Priscilla",
-            "Oliver","Regina","Preston","Roberta","Quentin","Sherry","Trevor","Vivian","Vince","Wendy",
-            "Wesley","Yvonne","Xavier","Adriana","Dominic","Bridget","Hector","Claudia","Jared","Darlene",
-            "Marcus","Eileen","Lionel","Felicia","Spencer","Hazel","Terrance","Iris","Victor","Joanna"
-        ];
-
-        const lastInits = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-
-        // ==================== SEEDED RANDOM ====================
-        const TWELVE_HOURS = 12 * 60 * 60 * 1000;
-        const SESSION_SEED_KEY = 'gc_seed_v6';
-        const START_KEY = 'gc_start_v6';
-        const STOCK_INIT_KEY = 'gc_init_v6';
-        const NOTIF_SCHEDULE_KEY = 'gc_sched_v6';
-        const NOTIF_INDEX_KEY = 'gc_nidx_v6';
-        const STOCK_STATE_KEY = 'gc_state_v6';
-        const CLAIMING_KEY = 'gc_claiming_v6';
-
-        let sessionSeed;
-
-        function seededRandom() {
-            sessionSeed = (sessionSeed * 16807 + 0) % 2147483647;
-            return (sessionSeed - 1) / 2147483646;
-        }
-
-        // ==================== STOCK SYSTEM ====================
-        let initialStocks, notifSchedule, stockState;
-
-        function generateInitialStocks() {
-            const stocks = [];
-            let total = 0;
-            for (let i = 0; i < giftCards.length; i++) {
-                const s = Math.floor(seededRandom() * 91) + 47;
-                stocks.push(s);
-                total += s;
-            }
-            while (total % 100 === 0 || total % 50 === 0 || total % 10 === 0) {
-                const idx = Math.floor(seededRandom() * stocks.length);
-                const adj = Math.floor(seededRandom() * 7) + 1;
-                stocks[idx] += adj;
-                total += adj;
-            }
-            return stocks;
-        }
-
-        function generateNotificationSchedule(stocks) {
-            const schedule = [];
-            const totalNotifs = stocks.reduce((a, b) => a + b, 0);
-            const avgInterval = 43200 / totalNotifs;
-            let currentTime = 0;
-
-            const claims = [];
-            stocks.forEach((count, cardIdx) => {
-                for (let i = 0; i < count; i++) claims.push(cardIdx);
-            });
-
-            for (let i = claims.length - 1; i > 0; i--) {
-                const j = Math.floor(seededRandom() * (i + 1));
-                [claims[i], claims[j]] = [claims[j], claims[i]];
-            }
-
-            claims.forEach((cardIdx) => {
-                const interval = avgInterval * (0.5 + seededRandom());
-                currentTime += interval;
-                const nameIdx = Math.floor(seededRandom() * firstNames.length);
-                const lastIdx = Math.floor(seededRandom() * lastInits.length);
-                schedule.push({
-                    time: Math.floor(currentTime),
-                    cardIdx: cardIdx,
-                    name: firstNames[nameIdx] + " " + lastInits[lastIdx] + ".",
-                    brand: giftCards[cardIdx].name
-                });
-            });
-
-            return schedule;
-        }
-
-        function initializeStockSystem() {
-            let startTime = parseInt(localStorage.getItem(START_KEY)) || 0;
-            const now = Date.now();
-
-            if (!startTime || (now - startTime) >= TWELVE_HOURS) {
-                startTime = now;
-                localStorage.setItem(START_KEY, startTime.toString());
-                sessionSeed = Math.floor(Math.random() * 2147483647);
-                localStorage.setItem(SESSION_SEED_KEY, sessionSeed.toString());
-
-                initialStocks = generateInitialStocks();
-                localStorage.setItem(STOCK_INIT_KEY, JSON.stringify(initialStocks));
-
-                notifSchedule = generateNotificationSchedule(initialStocks);
-                localStorage.setItem(NOTIF_SCHEDULE_KEY, JSON.stringify(notifSchedule));
-
-                stockState = initialStocks.slice();
-                localStorage.setItem(STOCK_STATE_KEY, JSON.stringify(stockState));
-                localStorage.setItem(NOTIF_INDEX_KEY, '0');
-            } else {
-                sessionSeed = parseInt(localStorage.getItem(SESSION_SEED_KEY)) || Math.floor(Math.random() * 2147483647);
-                initialStocks = JSON.parse(localStorage.getItem(STOCK_INIT_KEY));
-                notifSchedule = JSON.parse(localStorage.getItem(NOTIF_SCHEDULE_KEY));
-
-                if (!initialStocks || !notifSchedule) {
-                    localStorage.setItem(START_KEY, now.toString());
-                    sessionSeed = Math.floor(Math.random() * 2147483647);
-                    localStorage.setItem(SESSION_SEED_KEY, sessionSeed.toString());
-
-                    initialStocks = generateInitialStocks();
-                    localStorage.setItem(STOCK_INIT_KEY, JSON.stringify(initialStocks));
-                    notifSchedule = generateNotificationSchedule(initialStocks);
-                    localStorage.setItem(NOTIF_SCHEDULE_KEY, JSON.stringify(notifSchedule));
-                    stockState = initialStocks.slice();
-                    localStorage.setItem(STOCK_STATE_KEY, JSON.stringify(stockState));
-                    localStorage.setItem(NOTIF_INDEX_KEY, '0');
-                } else {
-                    const elapsedSec = Math.floor((now - startTime) / 1000);
-                    stockState = initialStocks.slice();
-                    let catchUpIdx = 0;
-                    for (let i = 0; i < notifSchedule.length; i++) {
-                        if (notifSchedule[i].time <= elapsedSec) {
-                            const cIdx = notifSchedule[i].cardIdx;
-                            if (stockState[cIdx] > 0) stockState[cIdx]--;
-                            catchUpIdx = i + 1;
-                        } else {
-                            break;
-                        }
-                    }
-                    localStorage.setItem(STOCK_STATE_KEY, JSON.stringify(stockState));
-                    localStorage.setItem(NOTIF_INDEX_KEY, catchUpIdx.toString());
-                }
-            }
-        }
-
-        initializeStockSystem();
-
-        // ==================== PERSISTENT CLAIMING COUNTER ====================
-        // Single persistent counter that grows slowly over the session
-        let claimingCount;
-
-        function initClaimingCounter() {
-            const stored = localStorage.getItem(CLAIMING_KEY);
-            if (stored) {
-                const data = JSON.parse(stored);
-                const startTime = parseInt(localStorage.getItem(START_KEY)) || Date.now();
-                const elapsed = Date.now() - startTime;
-
-                // Counter grows ~1 per 3-5 seconds from its base
-                // Calculate where it should be now based on elapsed time
-                const growthRate = data.growthRate || 0.27; // ~1 per 3.7 sec
-                const elapsedSec = elapsed / 1000;
-                const grown = Math.floor(elapsedSec * growthRate);
-
-                claimingCount = data.base + grown;
-
-                // Cap to avoid unrealistic numbers
-                if (claimingCount > 9999) {
-                    // Reset with new base
-                    claimingCount = Math.floor(Math.random() * 150) + 200;
-                    saveClaimingState(claimingCount, growthRate);
-                }
-            } else {
-                // First time — set initial base
-                claimingCount = Math.floor(Math.random() * 150) + 200;
-                const growthRate = (Math.random() * 0.15) + 0.2; // 0.2 to 0.35 per sec
-                saveClaimingState(claimingCount, growthRate);
-            }
-        }
-
-        function saveClaimingState(base, growthRate) {
-            localStorage.setItem(CLAIMING_KEY, JSON.stringify({ base, growthRate }));
-        }
-
-        function getCurrentClaimingCount() {
-            const stored = localStorage.getItem(CLAIMING_KEY);
-            if (!stored) return 247;
-            const data = JSON.parse(stored);
-            const startTime = parseInt(localStorage.getItem(START_KEY)) || Date.now();
-            const elapsedSec = (Date.now() - startTime) / 1000;
-            const growthRate = data.growthRate || 0.27;
-            return data.base + Math.floor(elapsedSec * growthRate);
-        }
-
-        initClaimingCounter();
-
-        // ==================== EMOJI FALLBACK ====================
-        function getEmoji(name) {
-            const emojis = {
-                'Amazon':'📦','eBay':'🛒','Walmart':'🏪','Target':'🎯',
-                'Best Buy':'🏷️','Apple':'🍎','Google Play':'▶️','Steam':'🎮',
-                'Roblox':'🎲','PlayStation':'🎮','Xbox':'🎯','Netflix':'🎬',
-                'Spotify':'🎵','Visa':'💳','Mastercard':'💳','American Express':'💳'
-            };
-            return emojis[name] || '🎁';
-        }
-
-        // ==================== GENERATE CARDS ====================
-        function generateCards() {
-            const grid = document.getElementById('cards-grid');
-            giftCards.forEach((card, index) => {
-                const box = document.createElement('div');
-                box.className = 'gift-card-box';
-                box.onclick = () => openModal(index);
-                box.innerHTML = `
-                    <div class="free-badge">FREE</div>
-                    <div class="card-logo-container">
-                        <img src="${card.logo}" alt="${card.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\\'font-size:2.5rem;\\'>${getEmoji(card.name)}</div>'">
-                        <div class="shimmer-effect"></div>
-                    </div>
-                    <h2>${card.name}</h2>
-                    ${card.subtitle ? `<div style="font-size:0.72rem; color:#999; margin-bottom:4px;">${card.subtitle}</div>` : ''}
-                    <div class="amount">$100</div>
-                    <div class="subtitle">Gift Card</div>
-                    <button class="claim-btn">Claim Now →</button>
-                    <div class="card-stock-individual">Only <span id="card-stock-${index}">0</span> left!</div>
-                `;
-                grid.appendChild(box);
-            });
-        }
-        generateCards();
-
-        // ==================== BUILD STOCK GRID ====================
-        function buildStockGrid() {
-            const grid = document.getElementById('stock-grid');
-            grid.innerHTML = '';
-            giftCards.forEach((card, idx) => {
-                const item = document.createElement('div');
-                item.className = 'stock-item';
-                item.id = `stock-item-${idx}`;
-                item.innerHTML = `
-                    <span class="stock-item-name">${card.name}</span>
-                    <span class="stock-item-count" id="sg-${idx}">${stockState[idx]} left</span>
-                `;
-                grid.appendChild(item);
-            });
-        }
-        buildStockGrid();
-
-        // ==================== DISPLAY STOCK ====================
-        function displayAllStock() {
-            let total = 0;
-            stockState.forEach((val, idx) => {
-                const cardEl = document.getElementById(`card-stock-${idx}`);
-                const gridEl = document.getElementById(`sg-${idx}`);
-
-                if (cardEl) {
-                    cardEl.textContent = val;
-                    if (val <= 10) cardEl.style.color = '#ff0040';
-                    else if (val <= 25) cardEl.style.color = '#ff6600';
-                    else cardEl.style.color = '#e53935';
-                }
-
-                if (gridEl) {
-                    gridEl.textContent = val + ' left';
-                    if (val <= 10) { gridEl.style.color = '#ff0040'; gridEl.style.fontWeight = '900'; }
-                    else if (val <= 25) gridEl.style.color = '#ff6600';
-                    else gridEl.style.color = '#ff6347';
-                }
-
-                total += val;
-            });
-            document.getElementById('stock-total').textContent = total;
-        }
-        displayAllStock();
-
-        // ==================== FLASH EFFECT ====================
-        function flashStockDecrease(cardIdx) {
-            const gridEl = document.getElementById(`sg-${cardIdx}`);
-            const itemEl = document.getElementById(`stock-item-${cardIdx}`);
-            const cardEl = document.getElementById(`card-stock-${cardIdx}`);
-
-            if (gridEl) {
-                gridEl.classList.add('flash');
-                setTimeout(() => gridEl.classList.remove('flash'), 700);
-            }
-            if (itemEl) {
-                itemEl.classList.add('just-decreased');
-                setTimeout(() => itemEl.classList.remove('just-decreased'), 1500);
-            }
-            if (cardEl) {
-                cardEl.style.transform = 'scale(1.3)';
-                cardEl.style.color = '#ff0040';
-                setTimeout(() => { cardEl.style.transform = 'scale(1)'; }, 500);
-            }
-        }
-
-        // ==================== NOTIFICATION ENGINE ====================
-        let currentNotifIndex = parseInt(localStorage.getItem(NOTIF_INDEX_KEY)) || 0;
-
-        function startNotificationEngine() {
-            const cycleStart = parseInt(localStorage.getItem(START_KEY));
-
-            function checkAndFire() {
-                const now = Date.now();
-                const elapsedSec = Math.floor((now - cycleStart) / 1000);
-
-                if ((now - cycleStart) >= TWELVE_HOURS) {
-                    initializeStockSystem();
-                    buildStockGrid();
-                    displayAllStock();
-                    currentNotifIndex = 0;
-
-                    // Reset claiming counter too
-                    claimingCount = Math.floor(Math.random() * 150) + 200;
-                    const growthRate = (Math.random() * 0.15) + 0.2;
-                    saveClaimingState(claimingCount, growthRate);
-                    updateClaimingDisplayIfOpen();
-                    return;
-                }
-
-                let fired = false;
-                while (currentNotifIndex < notifSchedule.length && notifSchedule[currentNotifIndex].time <= elapsedSec) {
-                    const notif = notifSchedule[currentNotifIndex];
-                    if (stockState[notif.cardIdx] > 0) stockState[notif.cardIdx]--;
-                    fired = true;
-                    showNotificationToast(notif);
-                    flashStockDecrease(notif.cardIdx);
-                    currentNotifIndex++;
-                }
-
-                if (fired) {
-                    displayAllStock();
-                    localStorage.setItem(STOCK_STATE_KEY, JSON.stringify(stockState));
-                    localStorage.setItem(NOTIF_INDEX_KEY, currentNotifIndex.toString());
-                }
-            }
-
-            setInterval(checkAndFire, 1000);
-            checkAndFire();
-        }
-
-        function showNotificationToast(notif) {
-            const container = document.getElementById('notification-container');
-            const toast = document.createElement('div');
-            toast.className = 'notification-toast';
-            const timeAgo = Math.floor(Math.random() * 10) + 1;
-
-            toast.innerHTML = `
-                <div class="notif-icon">✓</div>
-                <div>
-                    <div class="notif-text"><strong>${notif.name}</strong> claimed ${notif.brand} $100</div>
-                    <div class="notif-time">${timeAgo} seconds ago</div>
+            <div class="counter-content">
+                <span class="counter-number" id="cards-claimed">1,349</span>
+                <div class="counter-label">
+                    <i class="fas fa-gift"></i> TODAY CLAIMED
                 </div>
-            `;
+            </div>
+        </div>
 
-            container.appendChild(toast);
-            setTimeout(() => { if (toast.parentElement) toast.remove(); }, 5000);
-            while (container.children.length > 3) container.removeChild(container.firstChild);
-        }
+        <div class="counter-box">
+            <div class="counter-live-badge">
+                <span class="live-dot"></span>Live
+            </div>
+            <div class="counter-content">
+                <span class="counter-number" id="users-online">847</span>
+                <div class="counter-label">
+                    <i class="fas fa-users"></i> ONLINE NOW
+                </div>
+            </div>
+        </div>
+    </div>
 
-        startNotificationEngine();
+    <!-- ==================== COUNTDOWN TIMER ==================== -->
+    
+    <div class="timer-container">
+        <div class="timer-box">
+            <i class="fas fa-clock"></i>
+            <span class="timer-label">OFFER ENDS IN:</span>
+            <div id="timer">23:59:59</div>
+        </div>
+    </div>
+	
+    <!-- ==================== POPULAR BOX (COMPACT) ==================== -->
+    
+    <div class="popular-box">
+        <div class="popular-text">⭐ CLAIM YOUR FREE TOP GIFT CARDS</div>
+    </div>
 
-        // ==================== TIMER ====================
-        function initTimer() {
-            const cycleStart = parseInt(localStorage.getItem(START_KEY));
-            const endTime = cycleStart + TWELVE_HOURS;
+    <!-- ==================== GIFT CARDS GRID ==================== -->
+    
+    <div class="container">
+        <div class="card-grid" id="card-grid">
+            
+            <!-- Roblox Card -->
+            <div class="card" data-card="roblox" onclick="openModal('roblox')">
+                <div class="card-live-badge">
+                    <span class="live-dot"></span>Live
+                </div>
+                <div class="card-free-badge">FREE</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg" 
+                     alt="Roblox" 
+                     class="card-logo"
+                     loading="lazy">
+                <h3>ROBLOX</h3>
+                <p class="card-value">$100 Gift Card</p>
+                <p class="stock" id="stock-roblox">📦 Stock: 1,043 left</p>
+                <button class="claim-btn">CLAIM NOW</button>
+            </div>
 
-            function updateTimer() {
-                const now = Date.now();
-                let remaining = endTime - now;
+            <!-- PlayStation Card -->
+            <div class="card" data-card="playstation" onclick="openModal('playstation')">
+                <div class="card-live-badge">
+                    <span class="live-dot"></span>Live
+                </div>
+                <div class="card-free-badge">FREE</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/200px-PlayStation_logo.svg.png" 
+                     alt="PlayStation" 
+                     class="card-logo"
+                     loading="lazy">
+                <h3>PLAYSTATION</h3>
+                <p class="card-value">$100 Gift Card</p>
+                <p class="stock" id="stock-playstation">📦 Stock: 987 left</p>
+                <button class="claim-btn">CLAIM NOW</button>
+            </div>
 
-                if (remaining <= 0) {
-                    initializeStockSystem();
-                    buildStockGrid();
-                    displayAllStock();
-                    currentNotifIndex = 0;
-                    claimingCount = Math.floor(Math.random() * 150) + 200;
-                    saveClaimingState(claimingCount, (Math.random() * 0.15) + 0.2);
-                    updateClaimingDisplayIfOpen();
-                    initTimer();
-                    return;
-                }
+            <!-- Xbox Card -->
+            <div class="card" data-card="xbox" onclick="openModal('xbox')">
+                <div class="card-live-badge">
+                    <span class="live-dot"></span>Live
+                </div>
+                <div class="card-free-badge">FREE</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Xbox_one_logo.svg/200px-Xbox_one_logo.svg.png" 
+                     alt="Xbox" 
+                     class="card-logo"
+                     loading="lazy">
+                <h3>XBOX</h3>
+                <p class="card-value">$100 Gift Card</p>
+                <p class="stock" id="stock-xbox">📦 Stock: 1,124 left</p>
+                <button class="claim-btn">CLAIM NOW</button>
+            </div>
 
-                const hours = Math.floor(remaining / (1000 * 60 * 60));
-                const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+            <!-- Steam Card -->
+            <div class="card" data-card="steam" onclick="openModal('steam')">
+                <div class="card-live-badge">
+                    <span class="live-dot"></span>Live
+                </div>
+                <div class="card-free-badge">FREE</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/200px-Steam_icon_logo.svg.png" 
+                     alt="Steam" 
+                     class="card-logo"
+                     loading="lazy">
+                <h3>STEAM</h3>
+                <p class="card-value">$100 Gift Card</p>
+                <p class="stock" id="stock-steam">📦 Stock: 865 left</p>
+                <button class="claim-btn">CLAIM NOW</button>
+            </div>
 
-                document.getElementById('countdown-timer').textContent =
-                    `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            <!-- Apple Card -->
+            <div class="card" data-card="apple" onclick="openModal('apple')">
+                <div class="card-live-badge">
+                    <span class="live-dot"></span>Live
+                </div>
+                <div class="card-free-badge">FREE</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/200px-Apple_logo_black.svg.png" 
+                     alt="Apple" 
+                     class="card-logo"
+                     loading="lazy">
+                <h3>APPLE</h3>
+                <p class="card-value">$100 Gift Card</p>
+                <p class="stock" id="stock-apple">📦 Stock: 1,056 left</p>
+                <button class="claim-btn">CLAIM NOW</button>
+            </div>
+
+            <!-- Google Play Card -->
+            <div class="card" data-card="googleplay" onclick="openModal('googleplay')">
+                <div class="card-live-badge">
+                    <span class="live-dot"></span>Live
+                </div>
+                <div class="card-free-badge">FREE</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/200px-Google_Play_Store_badge_EN.svg.png" 
+                     alt="Google Play" 
+                     class="card-logo"
+                     loading="lazy">
+                <h3>GOOGLE PLAY</h3>
+                <p class="card-value">$100 Gift Card</p>
+                <p class="stock" id="stock-googleplay">📦 Stock: 943 left</p>
+                <button class="claim-btn">CLAIM NOW</button>
+            </div>
+
+            <!-- Amazon Card -->
+            <div class="card" data-card="amazon" onclick="openModal('amazon')">
+                <div class="card-live-badge">
+                    <span class="live-dot"></span>Live
+                </div>
+                <div class="card-free-badge">FREE</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/200px-Amazon_logo.svg.png" 
+                     alt="Amazon" 
+                     class="card-logo"
+                     loading="lazy">
+                <h3>AMAZON</h3>
+                <p class="card-value">$100 Gift Card</p>
+                <p class="stock" id="stock-amazon">📦 Stock: 1,189 left</p>
+                <button class="claim-btn">CLAIM NOW</button>
+            </div>
+
+            <!-- Netflix Card -->
+            <div class="card" data-card="netflix" onclick="openModal('netflix')">
+                <div class="card-live-badge">
+                    <span class="live-dot"></span>Live
+                </div>
+                <div class="card-free-badge">FREE</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/200px-Netflix_2015_logo.svg.png" 
+                     alt="Netflix" 
+                     class="card-logo"
+                     loading="lazy">
+                <h3>NETFLIX</h3>
+                <p class="card-value">$100 Gift Card</p>
+                <p class="stock" id="stock-netflix">📦 Stock: 1,012 left</p>
+                <button class="claim-btn">CLAIM NOW</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ==================== NOTIFICATIONS CONTAINER ==================== -->
+    
+    <div class="notifications-container" id="notifications-container"></div>
+
+    <!-- ==================== MODAL POPUP ==================== -->
+    
+    <div id="modal" class="modal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">✖</span>
+            <img id="modal-logo" src="" alt="Logo" class="modal-logo">
+            <h2 id="modal-title">$100 GIFT CARD CODE</h2>
+            <div class="code-box" id="code-box">
+                <code id="modal-code">XXXX-XXXX-XXXX-WR8D</code>
+                <button class="copy-btn" onclick="copyCode()">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+            <p class="modal-instructions">Complete verification below to unlock your complete code!</p>
+            <button class="unlock-btn" onclick="handleUnlockClick()">UNLOCK CODE</button>
+            <div class="error-message" id="error-message">⚠️ Task incomplete. Try again.</div>
+        </div>
+    </div>
+
+    <!-- ==================== LOCKER OVERLAY ==================== -->
+    
+    <div id="locker-overlay" class="locker-overlay">
+        <div class="locker-container">
+            <button class="locker-close-btn" onclick="attemptCloseLocker()">✖</button>
+            <iframe id="locker-iframe" class="locker-iframe" src=""></iframe>
+        </div>
+    </div>
+
+    <!-- ==================== CLOSE CONFIRMATION ==================== -->
+    
+    <div id="confirmation-modal" class="confirmation-modal">
+        <div class="confirmation-box">
+            <h3>Are you sure?</h3>
+            <p>Do you really want to close? Your verification progress will be lost.</p>
+            <div class="confirmation-buttons">
+                <button class="btn-cancel" onclick="cancelClose()">No, Continue</button>
+                <button class="btn-confirm" onclick="confirmClose()">Yes, Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    
+    <script>
+        const CONTENT_LOCKER_URL = 'https://checkmyapp.store/cl/i/krv7q8';
+        
+        const GIFT_CARDS = {
+            roblox: {
+                name: 'ROBLOX',
+                codePrefix: 'XXXX-XXXX-XXXX-',
+                codeLength: 4,
+                logo: 'https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg'
+            },
+            playstation: {
+                name: 'PLAYSTATION',
+                codePrefix: 'XXXX-XXXX-',
+                codeLength: 4,
+                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/200px-PlayStation_logo.svg.png'
+            },
+            xbox: {
+                name: 'XBOX',
+                codePrefix: 'XXXXX-XXXXX-XXXXX-XXXXX-',
+                codeLength: 5,
+                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Xbox_one_logo.svg/200px-Xbox_one_logo.svg.png'
+            },
+            steam: {
+                name: 'STEAM',
+                codePrefix: 'XXXXX-XXXXX-',
+                codeLength: 4,
+                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/200px-Steam_icon_logo.svg.png'
+            },
+            apple: {
+                name: 'APPLE',
+                codePrefix: 'XXXX-XXXX-XXXX-',
+                codeLength: 4,
+                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/200px-Apple_logo_black.svg.png'
+            },
+            googleplay: {
+                name: 'GOOGLE PLAY',
+                codePrefix: 'XXXX-XXXX-XXXX-',
+                codeLength: 4,
+                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/200px-Google_Play_Store_badge_EN.svg.png'
+            },
+            amazon: {
+                name: 'AMAZON',
+                codePrefix: 'XXXX-XXXXXX-',
+                codeLength: 5,
+                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/200px-Amazon_logo.svg.png'
+            },
+            netflix: {
+                name: 'NETFLIX',
+                codePrefix: 'XXXX-XXXX-XXXX-',
+                codeLength: 4,
+                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/200px-Netflix_2015_logo.svg.png'
             }
+        };
 
-            updateTimer();
-            setInterval(updateTimer, 1000);
+        const NAMES = [
+            'David', 'Sarah', 'Michael', 'Jessica', 'Alex', 'Emma', 'James', 'Olivia',
+            'William', 'Sophia', 'John', 'Isabella', 'Robert', 'Mia', 'Daniel', 'Charlotte',
+            'Matthew', 'Amelia', 'Christopher', 'Harper', 'Ryan', 'Evelyn', 'Andrew', 'Abigail',
+            'Joshua', 'Emily', 'Brandon', 'Madison', 'Tyler', 'Ashley', 'Kevin', 'Samantha'
+        ];
+
+        let recentNames = [];
+        let currentCardId = null;
+        let lockerIframeLoaded = false;
+
+        function generateRandomCode(length) {
+            const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+            let code = '';
+            for (let i = 0; i < length; i++) {
+                code += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return code;
         }
-        initTimer();
 
-        // ==================== MODAL (FIXED CLAIMING COUNTER) ====================
-        let modalOpen = false;
-        let claimingDisplayInterval = null;
-
-        function updateClaimingDisplayIfOpen() {
-            if (!modalOpen) return;
-            const el = document.getElementById('claiming-count');
-            if (!el) return;
-            const count = getCurrentClaimingCount();
-            el.textContent = `${count.toLocaleString()} people are claiming right now`;
+        function regenerateCode() {
+            if (!currentCardId) return;
+            
+            const card = GIFT_CARDS[currentCardId];
+            const randomEnd = generateRandomCode(card.codeLength);
+            const fullCode = card.codePrefix + randomEnd;
+            
+            const codeBox = document.getElementById('code-box');
+            const codeElement = document.getElementById('modal-code');
+            
+            // Add regeneration animation
+            codeBox.classList.add('regenerating');
+            
+            setTimeout(() => {
+                codeElement.textContent = fullCode;
+                codeBox.classList.remove('regenerating');
+            }, 250);
         }
 
-        function startClaimingDisplay() {
-            // Immediately show current count
-            updateClaimingDisplayIfOpen();
+        function updateCountdown() {
+            const nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
+            const now = new Date(nyTime);
+            const midnight = new Date(now);
+            midnight.setHours(24, 0, 0, 0);
+            const diff = midnight - now;
+            
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('timer').textContent = 
+                `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+        }
 
-            // Clear any existing interval
-            if (claimingDisplayInterval) clearInterval(claimingDisplayInterval);
+        function pad(num) {
+            return num.toString().padStart(2, '0');
+        }
 
-            // Update display every 3-4 seconds with smooth animation
-            claimingDisplayInterval = setInterval(() => {
-                if (!modalOpen) {
-                    clearInterval(claimingDisplayInterval);
-                    claimingDisplayInterval = null;
-                    return;
+        function getUserRangeForTime() {
+            const nyTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
+            const now = new Date(nyTime);
+            const hour = now.getHours();
+            
+            if (hour >= 0 && hour < 6) return { min: 471, max: 800 };
+            if (hour >= 6 && hour < 8) return { min: 600, max: 1200 };
+            if (hour >= 8 && hour < 12) return { min: 1200, max: 3500 };
+            if (hour >= 12 && hour < 16) return { min: 2000, max: 4500 };
+            if (hour >= 16 && hour < 22) return { min: 2500, max: 5487 };
+            return { min: 1500, max: 2800 };
+        }
+
+        function getNotificationInterval() {
+            const users = parseInt(document.getElementById('users-online').textContent.replace(/,/g, ''));
+            
+            if (users >= 3001) return randomInt(5, 10);
+            if (users >= 1501) return randomInt(7, 15);
+            if (users >= 801) return randomInt(10, 20);
+            return randomInt(15, 25);
+        }
+
+        function initStock() {
+            const stockData = localStorage.getItem('stockData');
+            const now = Date.now();
+            
+            if (!stockData || isNewCycle(stockData)) {
+                const newStock = {
+                    roblox: randomInt(1030, 1180),
+                    playstation: randomInt(1030, 1180),
+                    xbox: randomInt(1030, 1180),
+                    steam: randomInt(1030, 1180),
+                    apple: randomInt(1030, 1180),
+                    googleplay: randomInt(1030, 1180),
+                    amazon: randomInt(1030, 1180),
+                    netflix: randomInt(1030, 1180),
+                    cycleStart: now
+                };
+                
+                const values = Object.values(newStock).filter(v => typeof v === 'number');
+                const uniqueValues = new Set(values);
+                while (uniqueValues.size < 8) {
+                    const key = Object.keys(newStock)[randomInt(0, 7)];
+                    if (key !== 'cycleStart') {
+                        newStock[key] = randomInt(1030, 1180);
+                        const vals = Object.values(newStock).filter(v => typeof v === 'number');
+                        uniqueValues.clear();
+                        vals.forEach(v => uniqueValues.add(v));
+                    }
                 }
-                const el = document.getElementById('claiming-count');
-                if (!el) return;
-
-                const count = getCurrentClaimingCount();
-                el.textContent = `${count.toLocaleString()} people are claiming right now`;
-
-                // Subtle fade animation
-                el.style.transition = 'none';
-                el.style.opacity = '0.7';
-                setTimeout(() => {
-                    el.style.transition = 'opacity 0.4s';
-                    el.style.opacity = '1';
-                }, 50);
-            }, 3500);
+                
+                localStorage.setItem('stockData', JSON.stringify(newStock));
+            }
+            
+            displayAllStock();
         }
 
-        function openModal(index) {
-            const card = giftCards[index];
-            const modal = document.getElementById('modal-overlay');
-            const modalLogo = document.getElementById('modal-logo');
-            const title = document.getElementById('modal-title');
-            const code = document.getElementById('modal-code');
+        function isNewCycle(stockDataString) {
+            const data = JSON.parse(stockDataString);
+            const hoursPassed = (Date.now() - data.cycleStart) / (1000 * 60 * 60);
+            return hoursPassed >= 24;
+        }
+
+        function decreaseStock(cardName) {
+            const stockData = JSON.parse(localStorage.getItem('stockData'));
+            
+            if (stockData[cardName] > 10) {
+                stockData[cardName]--;
+                localStorage.setItem('stockData', JSON.stringify(stockData));
+                updateStockDisplay(cardName, stockData[cardName]);
+                updateCardsClaimedCounter(2);
+            }
+        }
+
+        function updateStockDisplay(cardName, count) {
+            const element = document.getElementById(`stock-${cardName}`);
+            if (!element) return;
+            
+            element.textContent = `📦 Stock: ${count.toLocaleString()} left`;
+            element.classList.remove('low', 'critical');
+            
+            if (count < 20) {
+                element.classList.add('critical');
+            } else if (count < 100) {
+                element.classList.add('low');
+            }
+            
+            element.classList.add('updating');
+            setTimeout(() => element.classList.remove('updating'), 500);
+        }
+
+        function displayAllStock() {
+            const stockData = JSON.parse(localStorage.getItem('stockData'));
+            Object.keys(stockData).forEach(key => {
+                if (key !== 'cycleStart') {
+                    updateStockDisplay(key, stockData[key]);
+                }
+            });
+        }
+
+        function randomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function highlightCard(cardName) {
+            // Remove highlight from all cards
+            document.querySelectorAll('.card').forEach(card => {
+                card.classList.remove('just-claimed');
+            });
+            
+            // Add highlight to the claimed card
+            const element = document.querySelector(`[data-card="${cardName}"]`);
+            if (element) {
+                element.classList.add('just-claimed');
+            }
+        }
+
+        function initCardsClaimedCounter() {
+            const saved = localStorage.getItem('cardsClaimedToday');
+            if (saved && !isNewCycle(localStorage.getItem('stockData'))) {
+                document.getElementById('cards-claimed').textContent = parseInt(saved).toLocaleString();
+            } else {
+                const stockData = JSON.parse(localStorage.getItem('stockData'));
+                let totalStarting = 0;
+                let totalCurrent = 0;
+                
+                Object.keys(stockData).forEach(key => {
+                    if (key !== 'cycleStart') {
+                        totalCurrent += stockData[key];
+                        totalStarting += 1100;
+                    }
+                });
+                
+                const depleted = totalStarting - totalCurrent;
+                const display = 1000 + (depleted * 2);
+                
+                document.getElementById('cards-claimed').textContent = display.toLocaleString();
+                localStorage.setItem('cardsClaimedToday', display);
+            }
+        }
+
+        function updateCardsClaimedCounter(increment) {
+            const current = parseInt(document.getElementById('cards-claimed').textContent.replace(/,/g, ''));
+            const newValue = current + increment;
+            animateCounter('cards-claimed', current, newValue);
+            localStorage.setItem('cardsClaimedToday', newValue);
+        }
+
+        function initUsersOnline() {
+            const range = getUserRangeForTime();
+            const initial = randomInt(range.min, range.max);
+            document.getElementById('users-online').textContent = initial.toLocaleString();
+            
+            setInterval(updateUsersOnline, randomInt(10, 30) * 1000);
+        }
+
+        function updateUsersOnline(fromNotification = false) {
+            const current = parseInt(document.getElementById('users-online').textContent.replace(/,/g, ''));
+            const range = getUserRangeForTime();
+            let newValue;
+            
+            if (fromNotification) {
+                if (Math.random() < 0.7) {
+                    newValue = current + randomInt(1, 10);
+                } else {
+                    newValue = current - randomInt(1, 5);
+                }
+            } else {
+                const change = randomInt(-50, 50);
+                newValue = current + change;
+            }
+            
+            newValue = Math.max(471, Math.min(5487, newValue));
+            newValue = Math.max(range.min, Math.min(range.max, newValue));
+            
+            animateCounter('users-online', current, newValue);
+        }
+
+        function animateCounter(id, from, to) {
+            const element = document.getElementById(id);
+            const duration = 500;
+            const steps = 20;
+            const increment = (to - from) / steps;
+            let current = from;
+            let step = 0;
+            
+            const timer = setInterval(() => {
+                step++;
+                current += increment;
+                if (step >= steps) {
+                    current = to;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.round(current).toLocaleString();
+            }, duration / steps);
+        }
+
+        function showNotification() {
+            const name = getUniqueName();
+            const cardKeys = Object.keys(GIFT_CARDS);
+            const cardKey = cardKeys[Math.floor(Math.random() * cardKeys.length)];
+            const cardName = GIFT_CARDS[cardKey].name;
+            
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.innerHTML = `<i class="fas fa-check-circle"></i> ${name} just claimed ${cardName} $100`;
+            
+            const container = document.getElementById('notifications-container');
+            container.appendChild(notification);
+            
+            const notifications = container.querySelectorAll('.notification');
+            if (notifications.length > 3) {
+                notifications[0].remove();
+            }
+            
+            decreaseStock(cardKey);
+            updateUsersOnline(true);
+            
+            // Highlight the card that was just claimed
+            highlightCard(cardKey);
+            
+            const displayTime = randomInt(2, 4) * 1000;
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                setTimeout(() => notification.remove(), 500);
+            }, displayTime);
+        }
+
+        function getUniqueName() {
+            const availableNames = NAMES.filter(n => !recentNames.includes(n));
+            
+            if (availableNames.length === 0) {
+                recentNames = [];
+                return NAMES[Math.floor(Math.random() * NAMES.length)];
+            }
+            
+            const name = availableNames[Math.floor(Math.random() * availableNames.length)];
+            recentNames.push(name);
+            
+            if (recentNames.length > 10) {
+                recentNames.shift();
+            }
+            
+            return name;
+        }
+
+        function scheduleNextNotification() {
+            const interval = getNotificationInterval();
+            setTimeout(() => {
+                showNotification();
+                scheduleNextNotification();
+            }, interval * 1000);
+        }
+
+        function openModal(cardId) {
+            currentCardId = cardId;
+            const modal = document.getElementById('modal');
+            const card = GIFT_CARDS[cardId];
+            
+            // Generate new random code ONLY when modal opens (CLAIM NOW)
+            regenerateCode();
+            
+            document.getElementById('modal-logo').src = card.logo;
+            document.getElementById('modal-title').textContent = `${card.name} $100 GIFT CARD CODE`;
+            
             const errorMsg = document.getElementById('error-message');
-
-            modalLogo.innerHTML = `<img src="${card.logo}" alt="${card.name}" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\\'font-size:2.5rem;\\'>${getEmoji(card.name)}</div>'">`;
-            title.textContent = card.name + ' Gift Card';
-            code.textContent = card.maskedCode;
-            errorMsg.classList.remove('show');
-
-            modalOpen = true;
-            modal.classList.add('active');
+            const clickCount = parseInt(sessionStorage.getItem('unlockClickCount') || '0');
+            
+            // Show permanent error if already clicked 2+ times
+            if (clickCount >= 2) {
+                errorMsg.classList.add('show', 'permanent');
+            } else {
+                errorMsg.classList.remove('show', 'permanent');
+            }
+            
+            modal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
-
-            // Start the claiming counter display
-            startClaimingDisplay();
+            
+            createConfetti();
+            trackEvent('gift_card_click', { card_name: card.name });
         }
 
         function closeModal() {
-            modalOpen = false;
-            document.getElementById('modal-overlay').classList.remove('active');
-            document.body.style.overflow = '';
-            if (claimingDisplayInterval) {
-                clearInterval(claimingDisplayInterval);
-                claimingDisplayInterval = null;
+            document.getElementById('modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+            currentCardId = null;
+        }
+
+        function copyCode() {
+            const code = document.getElementById('modal-code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.innerHTML = '<i class="fas fa-check"></i> COPIED!';
+                btn.classList.add('copied');
+                
+                setTimeout(() => {
+                    btn.innerHTML = '<i class="fas fa-copy"></i>';
+                    btn.classList.remove('copied');
+                }, 2000);
+            }).catch(() => {
+                // Fallback for older browsers
+                const textarea = document.createElement('textarea');
+                textarea.value = code;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+            });
+        }
+
+        function handleUnlockClick() {
+            if (!currentCardId) return;
+            
+            let clickCount = parseInt(sessionStorage.getItem('unlockClickCount') || '0');
+            const errorMsg = document.getElementById('error-message');
+            
+            // DO NOT generate new code on unlock click - keep the same code
+            
+            openLockerOverlay();
+            
+            clickCount++;
+            sessionStorage.setItem('unlockClickCount', clickCount.toString());
+            
+            if (clickCount === 1) {
+                // First click - show temporary error
+                errorMsg.classList.add('show');
+                setTimeout(() => {
+                    errorMsg.classList.remove('show');
+                }, 3000);
+            } else if (clickCount >= 2) {
+                // Second click and beyond - show permanent error
+                errorMsg.classList.add('show', 'permanent');
             }
         }
 
-        document.getElementById('modal-close').addEventListener('click', closeModal);
-        document.getElementById('modal-overlay').addEventListener('click', (e) => {
-            if (e.target === document.getElementById('modal-overlay')) closeModal();
-        });
+        function openLockerOverlay() {
+            const overlay = document.getElementById('locker-overlay');
+            const iframe = document.getElementById('locker-iframe');
+            
+            lockerIframeLoaded = false;
+            iframe.src = CONTENT_LOCKER_URL;
+            
+            iframe.onload = () => {
+                lockerIframeLoaded = true;
+                iframe.classList.add('loaded');
+            };
+            
+            overlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
 
-        // ==================== UNLOCK BUTTON ====================
-        document.getElementById('unlock-btn').addEventListener('click', () => {
-            const errorMsg = document.getElementById('error-message');
-            errorMsg.classList.remove('show');
-            void errorMsg.offsetWidth;
-            errorMsg.classList.add('show');
+        function attemptCloseLocker() {
+            document.getElementById('confirmation-modal').style.display = 'flex';
+        }
+
+        function cancelClose() {
+            document.getElementById('confirmation-modal').style.display = 'none';
+        }
+
+        function confirmClose() {
+            closeLockerOverlay();
+            document.getElementById('confirmation-modal').style.display = 'none';
+        }
+
+        function closeLockerOverlay() {
+            const overlay = document.getElementById('locker-overlay');
+            const iframe = document.getElementById('locker-iframe');
+            
+            overlay.style.display = 'none';
+            iframe.src = '';
+            iframe.classList.remove('loaded');
+            document.body.style.overflow = 'auto';
+        }
+
+        function createConfetti() {
+            const colors = ['#8A2BE2', '#00FFFF', '#FF00FF', '#39FF14', '#FFD700'];
+            const confettiCount = 50;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDuration = (Math.random() * 2 + 1) + 's';
+                    document.body.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 2000);
+                }, i * 30);
+            }
+        }
+
+        function trackEvent(eventName, params) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, params);
+            }
+        }
+
+        function trackTimeOnPage() {
+            const intervals = [30, 60, 120, 300];
+            
+            intervals.forEach(seconds => {
+                setTimeout(() => {
+                    trackEvent('time_on_page', { seconds: seconds });
+                }, seconds * 1000);
+            });
+        }
+
+        // Initialize everything on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            trackEvent('page_view', {});
+            trackTimeOnPage();
+            
+            initStock();
+            initCardsClaimedCounter();
+            initUsersOnline();
+            
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            
             setTimeout(() => {
-                document.getElementById('locker-overlay').classList.add('active');
-            }, 1500);
+                scheduleNextNotification();
+            }, 2000);
+            
+            setInterval(() => {
+                if (isNewCycle(localStorage.getItem('stockData'))) {
+                    location.reload();
+                }
+            }, 60000);
         });
 
-        document.getElementById('locker-close').addEventListener('click', () => {
-            document.getElementById('locker-overlay').classList.remove('active');
+        // Close modals with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+                cancelClose();
+            }
         });
+    </script>
+
+    <!-- Google Analytics (Replace YOUR-GA4-ID with your actual GA4 ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA4-ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR-GA4-ID');
     </script>
 
 </body>
